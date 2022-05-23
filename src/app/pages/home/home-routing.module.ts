@@ -6,7 +6,7 @@ import { VarianzaComponent } from './varianza/varianza.component';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     children: [
       { path: 'home-medias', component: MediasComponent },
       { path: 'home-proporcion', component: ProporcionComponent },
