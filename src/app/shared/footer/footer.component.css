@@ -4,6 +4,11 @@
 }
 .box__col1, .box__col1, .box__col1{
   width: 33%;
+<<<<<<< HEAD
   display: flex;
+=======
+  display: inline-block;
+  
+>>>>>>> develop
 }
 
