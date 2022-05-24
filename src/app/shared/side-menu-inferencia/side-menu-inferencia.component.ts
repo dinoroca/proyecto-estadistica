@@ -25,6 +25,10 @@ export class SideMenuInferenciaComponent implements OnInit {
       texto: 'Título 3',
       ruta: '#'
     },
+    {
+      texto: 'Distribuciones',
+      ruta: '/inferencia/distribuciones'
+    },
   ];
 
   constructor() { }
