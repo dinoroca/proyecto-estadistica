@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow" style="background-color: rgba(255, 255, 255, 0.123); backdrop-filter: blur(10px);">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top shadow" style="background-color: rgb(255, 255, 255); backdrop-filter: blur(10px);">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold" style="padding: 0vw 1vw 0vw 1vw;"
             routerLink="/home">
@@ -8,26 +8,17 @@
         <span class="navbar-toggler-icon"></span>
     </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="list-group navbar-nav ms-auto my-2 my-lg-0">
 
-                <li class="nav-item">
-                    <a class="nav-link active text-center fw-bold" href="#" aria-current="page" style="padding: 0vw 1vw 0vw 1vw;"
+                <!-- <li class="nav-item">
+                    <a class="nav-link active text-center fw-bold" style="padding: 0vw 1vw 0vw 1vw;"
                     routerLink="/home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-center fw-bold" href="#" aria-current="page" style="padding: 0vw 1vw 0vw 1vw;"
-                    routerLink="/inferencia">Inferencia estadística</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active fw-bold" href="#" style="padding: 0vw 1vw 0vw 1vw; margin: 0vw 1vw 0vw 1vw;"
-                    routerLink="/formulario">
-                Formulario</a>
-                </li>
-                <li class="nav-item">
-
-                    <a class="nav-link active fw-bold" style="padding: 0vw 1vw 0vw 1vw; margin: 0vw 0vw 0vw 1vw;"
-                    routerLink="/calculadora">
-                    Calculadora</a>
+                </li> -->
+                <li class="list-group-item nav-item" 
+                *ngFor="let item of headerMenu"
+                [routerLink]="[item.ruta]"
+                routerLinkActive="active">
+                {{ item.texto }}
                 </li>
             </ul>
         </div>
