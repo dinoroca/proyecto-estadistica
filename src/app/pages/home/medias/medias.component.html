@@ -1,7 +1,37 @@
-<p>medias works!</p>
 
-<h2>hola mundo !</h2>
-<h3>hola gil</h3>
-<h4>hola 322</h4>
-<h4>hola 223</h4>
-<h4>aloh</h4>
+<div class="row">
+ <div class="col-12 col-md-3 -menu">
+    <app-side-menu-home></app-side-menu-home>
+ </div>
+
+ <div class="col-12 col-md-9 -content">
+
+    <div class="card inicial-card">
+        <div class="card-body text-center fw-bold">
+          Datos conocidos de <em class="fw-normal">medias</em>
+        </div>
+    </div>
+
+    <div class="card shadow">
+        <div class="card-body">
+            Aquí van todos loss selectores :v
+        </div>
+
+        <button class="btn btn-success btn-buscar">
+            Buscar
+        </button>
+    </div>
+
+    <div class="card sugerencia-card">
+        <div class="card-body">
+            <p class="text-center fw-bold">Sugerencia:</p>
+            Aquí irá la sugerencia <em>Se mostrará con condicionales...</em> <br>
+
+            <!-- Ecuación de prueba de Latex -->
+            Ecuación de prueba de Latex
+            <ng-katex [equation] ="mathequations"> </ng-katex>
+
+        </div>
+    </div>
+ </div>
+</div>

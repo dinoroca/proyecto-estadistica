@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { InferenciaRoutingModule } from './inferencia-routing.module';
 import { InferenciaComponent } from './inferencia.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { InferenciaComponent } from './inferencia.component';
   ],
   imports: [
     CommonModule,
-    InferenciaRoutingModule
+    InferenciaRoutingModule,
+    SharedModule
   ]
 })
 export class InferenciaModule { }

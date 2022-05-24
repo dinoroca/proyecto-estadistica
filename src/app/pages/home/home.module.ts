@@ -5,6 +5,8 @@ import { HomeRoutingModule } from './home-routing.module';
 import { MediasComponent } from './medias/medias.component';
 import { ProporcionComponent } from './proporcion/proporcion.component';
 import { VarianzaComponent } from './varianza/varianza.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { KatexModule } from 'ng-katex';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { VarianzaComponent } from './varianza/varianza.component';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    SharedModule,
+    KatexModule
   ]
 })
 export class HomeModule { }

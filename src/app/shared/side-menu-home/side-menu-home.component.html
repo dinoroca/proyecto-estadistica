@@ -1,1 +1,13 @@
-<p>side-menu-home works!</p>
+
+<h3 class="text-center text-black-50">Tipo</h3>
+
+<hr>
+
+<ul class="list-group">
+    <li class="list-group-item text-center"
+        *ngFor="let item of templateMenu"
+        [routerLink]="[item.ruta]"
+        routerLinkActive="active">
+        {{ item.texto }}
+    </li>
+</ul>
