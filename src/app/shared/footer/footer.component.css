@@ -4,5 +4,7 @@
 }
 .box__col1, .box__col1, .box__col1{
   width: 33%;
+  display: inline-block;
+  
 }
 
