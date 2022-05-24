@@ -17,11 +17,12 @@ import { RouterModule } from '@angular/router';
     SideMenuHomeComponent,
     SideMenuInferenciaComponent,
     SideMenuFormularioComponent,
-    SideMenuCalculadoraComponent
+    SideMenuCalculadoraComponent,
+
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [
     HeaderComponent,
@@ -31,6 +32,7 @@ import { RouterModule } from '@angular/router';
     SideMenuFormularioComponent,
     SideMenuCalculadoraComponent,
     RouterModule
+    
   ]
 })
 export class SharedModule { }

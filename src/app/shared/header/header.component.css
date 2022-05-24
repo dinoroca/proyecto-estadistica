@@ -1,1 +1,11 @@
+<<<<<<< HEAD
 .encabezado {}
+=======
+li{
+    cursor: pointer;
+}
+li:hover{
+    background-color: rgb(39, 39, 133);
+    color: #fff;
+}
+>>>>>>> develop
