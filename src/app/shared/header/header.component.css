@@ -4,5 +4,6 @@ li{
 }
 li:hover{
     background-color: rgb(39, 39, 133);
+    border-color: rgb(39, 39, 133);
     color: #fff;
 }

@@ -1,10 +1,10 @@
-.box {
-  background-color: #222;
-  color: #fff;
+
+.foot-section {
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.box__col1, .box__col1, .box__col1{
-  width: 33%;
-  display: inline-block;
+a:hover {
+  text-decoration: underline;
 }
 

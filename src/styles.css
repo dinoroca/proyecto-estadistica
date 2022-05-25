@@ -4,6 +4,10 @@
     font-family: 'IBM Plex';
 }
 
+*::selection{  
+    background: #98ffc0;
+}
+
 @font-face {
     font-family: 'IBM Plex';
     src: url('../src/fonts/IBMPlexSans-Regular.ttf');
