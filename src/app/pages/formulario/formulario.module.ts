@@ -8,6 +8,7 @@ import { DmDiferencia2ProporcionesComponent } from './dm-diferencia2-proporcione
 import { DmProporcionComponent } from './dm-proporcion/dm-proporcion.component';
 import { DmRazon2VarianzasComponent } from './dm-razon2-varianzas/dm-razon2-varianzas.component';
 import { DmVarianzaComponent } from './dm-varianza/dm-varianza.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { DmVarianzaComponent } from './dm-varianza/dm-varianza.component';
   ],
   imports: [
     CommonModule,
-    FormularioRoutingModule
+    FormularioRoutingModule,
+    SharedModule
   ]
 })
 export class FormularioModule { }

@@ -1,0 +1,18 @@
+.-menu{
+    margin-top: 10vh;
+}
+
+.-content {
+    margin-top: 12vh; 
+}
+
+.inicial-card{
+    background-color: rgb(210, 210, 210);
+    border-color: rgb(210, 210, 210);
+    margin-bottom: 2vh;
+}
+
+.formulas{
+    background-color: rgb(255, 250, 205);
+    border-color: rgb(255, 240, 101);
+}

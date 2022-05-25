@@ -1,9 +1,9 @@
 .-menu{
-    margin-top: 8vh;
+    margin-top: 10vh;
 }
 
 .-content {
-    margin-top: 10vh; 
+    margin-top: 12vh; 
 }
 
 @media screen and (max-width: 768px) {
