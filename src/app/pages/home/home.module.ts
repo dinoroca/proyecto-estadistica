@@ -7,6 +7,7 @@ import { ProporcionComponent } from './proporcion/proporcion.component';
 import { VarianzaComponent } from './varianza/varianza.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { KatexModule } from 'ng-katex';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { KatexModule } from 'ng-katex';
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-    KatexModule
+    KatexModule,
+    ReactiveFormsModule
   ]
 })
 export class HomeModule { }

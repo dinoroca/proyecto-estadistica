@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { KatexOptions } from 'ng-katex';
 
 @Component({
@@ -17,9 +18,18 @@ export class MediasComponent implements OnInit {
   mu = '\\mu';
   n = 'n';
 
-  constructor() { }
+  formCantidad: FormGroup = this.formBuilder.group({
+    numPoblation: ['1', Validators.required]
+  });
+
+  porDefecto = {
+    numPoblation: '1'
+  }
+
+  constructor( private formBuilder: FormBuilder ) { }
 
   ngOnInit(): void {
+    this.formCantidad.setValue( this.porDefecto );
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-proporcion',
@@ -12,7 +13,16 @@ export class ProporcionComponent implements OnInit {
   n = 'n';
   p = 'p';
 
-  constructor() { }
+  formCantidad: FormGroup = this.formBuilder.group({
+    numPoblation: ['1', Validators.required]
+  });
+
+  porDefecto = {
+    numPoblation: '1'
+  }
+
+
+  constructor( private formBuilder: FormBuilder ) { }
 
   ngOnInit(): void {
   }
