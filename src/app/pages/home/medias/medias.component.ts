@@ -13,6 +13,10 @@ export class MediasComponent implements OnInit {
     displayMode: true,
   };
 
+  sigma = '\\sigma^2';
+  mu = '\\mu';
+  n = 'n';
+
   constructor() { }
 
   ngOnInit(): void {

@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProporcionComponent implements OnInit {
 
+  sigma = '\\sigma^2';
+  mu = '\\mu';
+  n = 'n';
+  p = 'p';
+
   constructor() { }
 
   ngOnInit(): void {

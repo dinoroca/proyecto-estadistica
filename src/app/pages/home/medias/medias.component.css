@@ -10,7 +10,7 @@
     .-content {
         margin-top: 3vh; 
     }
-  }
+}
 
   .inicial-card{
     background-color: rgb(210, 210, 210);
@@ -34,3 +34,10 @@
     background-color: #2cb360;
     border-color: #2cb360;
   }
+
+@media screen and (max-width: 768px) {
+  .num-poblacion {
+      margin-left: 30vw;
+      
+  }
+}

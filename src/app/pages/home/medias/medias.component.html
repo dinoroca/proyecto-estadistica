@@ -2,6 +2,27 @@
 <div class="row">
  <div class="col-12 col-md-3 -menu">
     <app-side-menu-home></app-side-menu-home>
+
+    <div class="text-center mt-3 text-black-50">
+        Número de población
+    </div>
+
+    <div class="row num-poblacion">
+        <div class="form-check col-12 col-sm-6">
+            <input class="form-check-input" type="checkbox">
+            <label class="form-check-label">
+                1 Población
+            </label>
+        </div>
+    
+        <div class="form-check col-12 col-sm-6">
+            <input class="form-check-input" type="checkbox">
+            <label class="form-check-label">
+                2 Poblaciones
+            </label>
+        </div>
+    </div>
+
  </div>
 
  <div class="col-12 col-md-9 -content">
@@ -14,7 +35,47 @@
 
     <div class="card shadow">
         <div class="card-body">
-            Aquí van todos loss selectores :v
+
+            <div class="row">
+                <div class="form-check col-12 col-sm-6">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">
+                        Media <ng-katex [equation] ="mu"> </ng-katex>
+                    </label>
+                </div>
+    
+                <div class="form-check col-12 col-sm-6">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">
+                        Varianza <ng-katex [equation] ="sigma"> </ng-katex>
+                    </label>
+                </div>
+                
+                <div class="form-check col-12 col-sm-6">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">
+                      La distribucion es Normal 
+                    </label>
+                </div>
+
+                <div class="form-check col-12 col-sm-6">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">
+                        <ng-katex [equation] ="n | uppercase"> </ng-katex> 
+                        conocida
+                    </label>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <label class="col col-form-label">
+                    Tamaño de la muestra <ng-katex [equation] ="n"> </ng-katex>
+                </label>
+                <div class="col">
+                  <input type="number" class="form-control">
+                </div>
+            </div>
+
         </div>
 
         <button class="btn btn-success btn-buscar">
