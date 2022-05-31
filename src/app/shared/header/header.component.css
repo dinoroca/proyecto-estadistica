@@ -1,0 +1,10 @@
+
+li{
+    cursor: pointer;
+    border-color: #fff;
+}
+li:hover{
+    background-color: #33D271;
+    border-color: #33D271;
+    color: #fff;
+}

@@ -1,1 +1,173 @@
-<p>medias works!</p>
+
+<div class="row">
+ <div class="col-12 col-md-3 -menu">
+    <app-side-menu-home></app-side-menu-home>
+
+    <form [formGroup]="formCantidad">
+        <div class="text-center mt-3 text-black-50">
+            Número de población
+        </div>
+    
+        <div class="row num-poblacion">
+            <div class="form-check col-12 col-sm-6">
+                <input class="form-check-input" 
+                    type="radio" 
+                    value = "1"
+                    formControlName="numPoblation"
+                    id="onePob">
+    
+                <label class="form-check-label" for="onePob">
+                    1 Población
+                </label>
+            </div>
+        
+            <div class="form-check col-12 col-sm-6">
+                <input class="form-check-input" 
+                    type="radio"
+                    value = "2"
+                    formControlName="numPoblation"
+                    id="twoPob">
+                    
+                <label class="form-check-label" for="twoPob">
+                    2 Poblaciones
+                </label>
+            </div>
+        </div>
+    </form>
+
+ </div>
+
+ <!-- Para una ppblación -->
+ <div class="col-12 col-md-9 -content" *ngIf="formCantidad.value.numPoblation == 1">
+
+    <div class="card inicial-card">
+        <div class="card-body text-center fw-bold">
+          Datos conocidos de <em class="fw-normal">medias de una población</em>
+        </div>
+    </div>
+
+
+    <form (ngSubmit)="guardar()" [formGroup]="formCondiciones" autocomplete="off">
+        <div class="card shadow">
+            <div class="card-body">
+    
+                <div class="row container">
+                    <div class="form-check col-12 col-sm-4">
+                        <input class="form-check-input" 
+                                type="checkbox"
+                                formControlName="media">
+                        <label class="form-check-label">
+                            Media <ng-katex [equation] ="mu"> </ng-katex>
+                        </label>
+                    </div>
+        
+                    <div class="form-check col-12 col-sm-4">
+                        <input class="form-check-input" 
+                                type="checkbox"
+                                formControlName="varianza">
+                        <label class="form-check-label">
+                            Varianza <ng-katex [equation] ="sigma"> </ng-katex>
+                        </label>
+                    </div>
+                    
+                    <div class="form-check col-12 col-sm-4">
+                        <input class="form-check-input" 
+                                type="checkbox"
+                                formControlName="normal">
+                        <label class="form-check-label">
+                          La distribucion es Normal 
+                        </label>
+                    </div>
+                </div>
+
+                <!-- <span class="form-text text-danger text-center"
+                    *ngIf="sinMarcar">
+                    Se debe marcar por lo menos 1
+                </span> -->
+    
+                <div class="mt-3">
+                    <label class="col col-form-label">
+                        Tamaño de la muestra <ng-katex [equation] ="n"> </ng-katex>
+                    </label>
+                    <div class="col">
+                      <input type="number" 
+                        class="form-control"
+                        formControlName="valorN"
+                        placeholder="Ingrese el valor de n">
+                    </div>
+    
+                    <span class="form-text text-danger"
+                        *ngIf="campoEsValido('valorN')">
+                        El valor debe ser mayor a 0
+                    </span>
+                </div>
+    
+            </div>
+    
+            <button class="btn btn-success btn-buscar"
+                    type="submit">
+                Buscar
+            </button>
+        </div>
+    </form>
+
+    <div *ngIf="mostrarSugerencia" class="card sugerencia-card">
+        <div class="card-body">
+            <p class="text-center fw-bold">Sugerencia:</p>
+            <!-- <ng-katex [equation] ="mathequations"> </ng-katex> -->
+
+            {{ mensajeSugerencia }}
+        </div>
+    </div>
+
+    
+ </div>
+
+ <!-- Para 2 poblaciones -->
+ <div class="col-12 col-md-9 -content" *ngIf="formCantidad.value.numPoblation == 2">
+
+    <div class="card inicial-card">
+        <div class="card-body text-center fw-bold">
+          Datos conocidos de <em class="fw-normal">medias de 2 poblaciones</em>
+        </div>
+    </div>
+
+    <div class="card shadow">
+        <div class="card-body">
+
+            <div class="row">
+                <div class="form-check col-12 col-sm-6">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">
+                        Media <ng-katex [equation] ="mu"> </ng-katex>
+                    </label>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <label class="col col-form-label">
+                    Tamaño de la muestra <ng-katex [equation] ="n"> </ng-katex>
+                </label>
+                <div class="col">
+                  <input type="number" class="form-control">
+                </div>
+            </div>
+
+        </div>
+
+        <button class="btn btn-success btn-buscar">
+            Buscar
+        </button>
+    </div>
+
+    <div class="card sugerencia-card">
+        <div class="card-body">
+            <p class="text-center fw-bold">Sugerencia:</p>
+            Aquí irá la sugerencia <em>Se mostrará con condicionales...</em> <br>
+
+        </div>
+    </div>
+
+    
+ </div>
+</div>

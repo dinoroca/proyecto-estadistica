@@ -6,6 +6,7 @@ import { SideMenuHomeComponent } from './side-menu-home/side-menu-home.component
 import { SideMenuInferenciaComponent } from './side-menu-inferencia/side-menu-inferencia.component';
 import { SideMenuFormularioComponent } from './side-menu-formulario/side-menu-formulario.component';
 import { SideMenuCalculadoraComponent } from './side-menu-calculadora/side-menu-calculadora.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -16,10 +17,12 @@ import { SideMenuCalculadoraComponent } from './side-menu-calculadora/side-menu-
     SideMenuHomeComponent,
     SideMenuInferenciaComponent,
     SideMenuFormularioComponent,
-    SideMenuCalculadoraComponent
+    SideMenuCalculadoraComponent,
+
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
   ],
   exports: [
     HeaderComponent,
@@ -27,7 +30,9 @@ import { SideMenuCalculadoraComponent } from './side-menu-calculadora/side-menu-
     SideMenuHomeComponent,
     SideMenuInferenciaComponent,
     SideMenuFormularioComponent,
-    SideMenuCalculadoraComponent
+    SideMenuCalculadoraComponent,
+    RouterModule
+    
   ]
 })
 export class SharedModule { }

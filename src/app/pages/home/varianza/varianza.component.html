@@ -1,1 +1,92 @@
-<p>varianza works!</p>
+<div class="row">
+    <div class="col-12 col-md-3 -menu">
+       <app-side-menu-home></app-side-menu-home>
+
+    <form [formGroup]="formCantidad">
+        <div class="text-center mt-3 text-black-50">
+            Número de población
+        </div>
+    
+        <div class="row num-poblacion">
+            <div class="form-check col-12 col-sm-6">
+                <input class="form-check-input" 
+                    type="radio" 
+                    value = "1"
+                    formControlName="numPoblation"
+                    id="onePob">
+    
+                <label class="form-check-label" for="onePob">
+                    1 Población
+                </label>
+            </div>
+        
+            <div class="form-check col-12 col-sm-6">
+                <input class="form-check-input" 
+                    type="radio"
+                    value = "2"
+                    formControlName="numPoblation"
+                    id="twoPob">
+                    
+                <label class="form-check-label" for="twoPob">
+                    2 Poblaciones
+                </label>
+            </div>
+        </div>
+    </form>
+    </div>
+
+    <!-- Una población -->
+    <div class="col-12 col-md-9 -content" *ngIf="formCantidad.value.numPoblation == 1">
+   
+       <div class="card inicial-card">
+           <div class="card-body text-center fw-bold">
+             Datos conocidos de <em class="fw-normal">varianza de una población</em>
+           </div>
+       </div>
+   
+       <div class="card shadow">
+           <div class="card-body">
+               Aquí van todos loss selectores :v
+           </div>
+           
+            <button class="btn btn-success btn-buscar">
+                Buscar
+            </button>
+       </div>
+   
+       <div class="card sugerencia-card">
+           <div class="card-body">
+               <p class="text-center fw-bold">Sugerencia:</p>
+               Aquí irá la sugerencia <em>Se mostrará con condicionales...</em>
+           </div>
+       </div>
+    </div>
+    
+    <!-- 2 Poblaciones -->
+    <div class="col-12 col-md-9 -content" *ngIf="formCantidad.value.numPoblation == 2">
+   
+        <div class="card inicial-card">
+            <div class="card-body text-center fw-bold">
+              Datos conocidos de <em class="fw-normal">varianza de 2 poblaciones</em>
+            </div>
+        </div>
+    
+        <div class="card shadow">
+            <div class="card-body">
+                Aquí van todos loss selectores :v
+            </div>
+            
+             <button class="btn btn-success btn-buscar">
+                 Buscar
+             </button>
+        </div>
+    
+        <div class="card sugerencia-card">
+            <div class="card-body">
+                <p class="text-center fw-bold">Sugerencia:</p>
+                Aquí irá la sugerencia <em>Se mostrará con condicionales...</em>
+            </div>
+        </div>
+     </div>
+   </div>
+   

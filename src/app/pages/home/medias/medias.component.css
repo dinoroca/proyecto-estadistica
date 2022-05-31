@@ -1,0 +1,43 @@
+.-menu{
+    margin-top: 10vh;
+}
+
+.-content {
+    margin-top: 12vh; 
+}
+
+@media screen and (max-width: 768px) {
+    .-content {
+        margin-top: 3vh; 
+    }
+}
+
+  .inicial-card{
+    background-color: rgb(210, 210, 210);
+    border-color: rgb(210, 210, 210);
+    margin-bottom: 2vh;
+  }
+
+  .sugerencia-card{
+    background-color: #D6FFE6;
+    border-color: #33D271;
+    margin-top: 3vh;
+  }
+
+  .btn-buscar {
+    background-color: #33D271;
+    border-color: #33D271;
+    border-radius: 5px;
+  }
+
+  .btn-buscar:hover {
+    background-color: #2cb360;
+    border-color: #2cb360;
+  }
+
+@media screen and (max-width: 768px) {
+  .num-poblacion {
+      margin-left: 30vw;
+      
+  }
+}
