@@ -111,12 +111,13 @@
         </div>
     </form>
 
-    <div *ngIf="mostrarSugerencia" class="card sugerencia-card">
+    <div *ngIf="mostrarSugerencia" class="card sugerencia-card text-center">
         <div class="card-body">
             <p class="text-center fw-bold">Sugerencia:</p>
             <!-- <ng-katex [equation] ="mathequations"> </ng-katex> -->
 
-            {{ mensajeSugerencia }}
+            {{ mensajeSugerencia }} <br>
+            <ng-katex [equation] ="ecuacion"> </ng-katex>
         </div>
     </div>
 

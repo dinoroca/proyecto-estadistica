@@ -20,6 +20,7 @@ export class MediasComponent implements OnInit{
 
   // sinMarcar: boolean = false;
   mostrarSugerencia: boolean = false;
+  ecuacion = '';
   mensajeSugerencia: String = 'Esto es una prueba';
   ecuacionSugerencia: string = '';
 
@@ -61,7 +62,8 @@ export class MediasComponent implements OnInit{
       this.formCondiciones.controls['normal'].value &&
       (this.formCondiciones.controls['valorN'].value > 0)
       ){
-      this.mensajeSugerencia = 'Se puede usar la Z';
+      this.mensajeSugerencia = 'Se puede usar la distribución Z y la ecuación es:';
+  this.ecuacion = 'Z = \\dfrac{\\bar{x}-\\mu}{\\dfrac{\\sigma}{\\sqrt{n}}} \\sim N(0,1)';
     }
     
     else if(
@@ -98,6 +100,7 @@ export class MediasComponent implements OnInit{
     
     else {
       this.mensajeSugerencia = 'No se tiene datos suficientes';
+      this.ecuacion = '';
     }
 
     console.log(this.formCondiciones.value);
