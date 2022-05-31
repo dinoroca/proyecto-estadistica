@@ -46,65 +46,77 @@
         </div>
     </div>
 
-    <div class="card shadow">
-        <div class="card-body">
 
-            <div class="row">
-                <div class="form-check col-12 col-sm-6">
-                    <input class="form-check-input" type="checkbox">
-                    <label class="form-check-label">
-                        Media <ng-katex [equation] ="mu"> </ng-katex>
+    <form (ngSubmit)="guardar()" [formGroup]="formCondiciones" autocomplete="off">
+        <div class="card shadow">
+            <div class="card-body">
+    
+                <div class="row container">
+                    <div class="form-check col-12 col-sm-4">
+                        <input class="form-check-input" 
+                                type="checkbox"
+                                formControlName="media">
+                        <label class="form-check-label">
+                            Media <ng-katex [equation] ="mu"> </ng-katex>
+                        </label>
+                    </div>
+        
+                    <div class="form-check col-12 col-sm-4">
+                        <input class="form-check-input" 
+                                type="checkbox"
+                                formControlName="varianza">
+                        <label class="form-check-label">
+                            Varianza <ng-katex [equation] ="sigma"> </ng-katex>
+                        </label>
+                    </div>
+                    
+                    <div class="form-check col-12 col-sm-4">
+                        <input class="form-check-input" 
+                                type="checkbox"
+                                formControlName="normal">
+                        <label class="form-check-label">
+                          La distribucion es Normal 
+                        </label>
+                    </div>
+                </div>
+
+                <!-- <span class="form-text text-danger text-center"
+                    *ngIf="sinMarcar">
+                    Se debe marcar por lo menos 1
+                </span> -->
+    
+                <div class="mt-3">
+                    <label class="col col-form-label">
+                        Tamaño de la muestra <ng-katex [equation] ="n"> </ng-katex>
                     </label>
+                    <div class="col">
+                      <input type="number" 
+                        class="form-control"
+                        formControlName="valorN"
+                        placeholder="Ingrese el valor de n">
+                    </div>
+    
+                    <span class="form-text text-danger"
+                        *ngIf="campoEsValido('valorN')">
+                        El valor debe ser mayor a 0
+                    </span>
                 </div>
     
-                <div class="form-check col-12 col-sm-6">
-                    <input class="form-check-input" type="checkbox">
-                    <label class="form-check-label">
-                        Varianza <ng-katex [equation] ="sigma"> </ng-katex>
-                    </label>
-                </div>
-                
-                <div class="form-check col-12 col-sm-6">
-                    <input class="form-check-input" type="checkbox">
-                    <label class="form-check-label">
-                      La distribucion es Normal 
-                    </label>
-                </div>
-
-                <div class="form-check col-12 col-sm-6">
-                    <input class="form-check-input" type="checkbox">
-                    <label class="form-check-label">
-                        <ng-katex [equation] ="n | uppercase"> </ng-katex> 
-                        conocida
-                    </label>
-                </div>
             </div>
-
-            <div class="mt-3">
-                <label class="col col-form-label">
-                    Tamaño de la muestra <ng-katex [equation] ="n"> </ng-katex>
-                </label>
-                <div class="col">
-                  <input type="number" class="form-control">
-                </div>
-            </div>
-
+    
+            <button class="btn btn-success btn-buscar"
+                    type="submit">
+                Buscar
+            </button>
         </div>
+    </form>
 
-        <button class="btn btn-success btn-buscar">
-            Buscar
-        </button>
-    </div>
-
-    <div class="card sugerencia-card">
+    <div *ngIf="mostrarSugerencia" class="card sugerencia-card">
         <div class="card-body">
             <p class="text-center fw-bold">Sugerencia:</p>
-            Aquí irá la sugerencia <em>Se mostrará con condicionales...</em> <br>
+            <!-- <ng-katex [equation] ="mathequations"> </ng-katex> -->
 
-            <!-- Ecuación de prueba de Latex -->
-            Ecuación de prueba de Latex
-            <ng-katex [equation] ="mathequations"> </ng-katex>
-
+            {{ mensajeSugerencia }}
         </div>
     </div>
 
