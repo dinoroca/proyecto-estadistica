@@ -92,7 +92,7 @@ export class MediasComponent implements OnInit{
       (this.formCondiciones.controls['varianza'].value == false || 
       this.formCondiciones.controls['varianza'].value == null) &&
       this.formCondiciones.controls['normal'].value &&
-      (this.formCondiciones.controls['valorN'].value >= 30)
+      (this.formCondiciones.controls['valorN'].value < 30)
       ){
       this.mensajeSugerencia = 'Se puede usar la T';
       console.log('Usa la T')
