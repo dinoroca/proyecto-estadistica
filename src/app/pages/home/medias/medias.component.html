@@ -105,7 +105,8 @@
             </div>
     
             <button class="btn btn-success btn-buscar"
-                    type="submit">
+                    type="submit"
+                    [disabled]="formCondiciones.invalid">
                 Buscar
             </button>
         </div>
@@ -133,33 +134,97 @@
         </div>
     </div>
 
-    <div class="card shadow">
-        <div class="card-body">
+    <form>
+        <div class="card shadow">
+            <div class="card-body">
+    
+                <div class="row container">
+                    <div class="form-check col-12 col-sm-4">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Media 1 <ng-katex [equation] ="mu1"> </ng-katex>
+                        </label>
+                    </div>
 
-            <div class="row">
-                <div class="form-check col-12 col-sm-6">
-                    <input class="form-check-input" type="checkbox">
-                    <label class="form-check-label">
-                        Media <ng-katex [equation] ="mu"> </ng-katex>
-                    </label>
+                    <div class="form-check col-12 col-sm-4">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Media 2 <ng-katex [equation] ="mu2"> </ng-katex>
+                        </label>
+                    </div>
+
+                    <div class="form-check col-12 col-sm-4">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            <ng-katex [equation] ="sigma1"> </ng-katex> = 
+                            <ng-katex [equation] ="sigma2"> </ng-katex>
+                        </label>
+                    </div>
+                    
+                    <div class="form-check col-12 col-sm-4">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Varianza 1 <ng-katex [equation] ="sigma1"> </ng-katex>
+                        </label>
+                    </div>
+
+                    <div class="form-check col-12 col-sm-4">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Varianza 2 <ng-katex [equation] ="sigma2"> </ng-katex>
+                        </label>
+                    </div>
+                    
+                    <div class="form-check col-12 col-sm-4">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            <ng-katex [equation] ="sigma1"> </ng-katex> =! 
+                            <ng-katex [equation] ="sigma2"> </ng-katex>
+                        </label>
+                    </div>
+
+                    <div class="form-check col-12 col-sm-4">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            La distribución es Normal
+                        </label>
+                    </div>
+
+                    <div class="form-check col-12 col-sm-4">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Con reemplazo pob. finitas
+                        </label>
+                    </div>
                 </div>
-            </div>
 
-            <div class="mt-3">
-                <label class="col col-form-label">
-                    Tamaño de la muestra <ng-katex [equation] ="n"> </ng-katex>
-                </label>
-                <div class="col">
-                  <input type="number" class="form-control">
+                <div class="mt-3 row container">
+                    <div class="col-12 col-sm-6">
+                        <label class="col col-form-label">
+                            Tamaño de la muestra <ng-katex [equation] ="n1"> </ng-katex>
+                        </label>
+                        <div class="col">
+                          <input type="number" class="form-control">
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-sm-6">
+                        <label class="col col-form-label">
+                            Tamaño de la muestra <ng-katex [equation] ="n2"> </ng-katex>
+                        </label>
+                        <div class="col">
+                          <input type="number" class="form-control">
+                        </div>
+                    </div>
                 </div>
+    
             </div>
-
+    
+            <button class="btn btn-success btn-buscar">
+                Buscar
+            </button>
         </div>
-
-        <button class="btn btn-success btn-buscar">
-            Buscar
-        </button>
-    </div>
+    </form>
 
     <div class="card sugerencia-card">
         <div class="card-body">

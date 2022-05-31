@@ -15,8 +15,14 @@ export class MediasComponent implements OnInit{
   };
 
   sigma = '\\sigma^2';
+  sigma1 = '\\sigma_{1}^2';
+  sigma2 = '\\sigma_{2}^2';
   mu = '\\mu';
+  mu1 = '\\mu_1';
+  mu2 = '\\mu_2';
   n = 'n';
+  n1 = 'n_1';
+  n2 = 'n_2';
 
   // sinMarcar: boolean = false;
   mostrarSugerencia: boolean = false;
@@ -36,7 +42,7 @@ export class MediasComponent implements OnInit{
     media: [false],
     varianza: [false],
     normal: [true],
-    valorN: [, [Validators.required, Validators.min(0)]]
+    valorN: [, [Validators.required, Validators.min(1)]]
   })
 
   campoEsValido( campo: string ) {
