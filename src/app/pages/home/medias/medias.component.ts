@@ -45,6 +45,18 @@ export class MediasComponent implements OnInit{
     valorN: [, [Validators.required, Validators.min(1)]]
   })
 
+  formCondiciones2: FormGroup = this.formBuilder.group({
+    media1: [false],
+    media2: [false],
+    varianza1: [false],
+    varianza2: [false],
+    mediasIguales: [false],
+    varianzasIguales: [false],
+    normal: [false],
+    valorN1: [, [Validators.required, Validators.min(1)]],
+    valorN2: [, [Validators.required, Validators.min(1)]]
+  })
+
   campoEsValido( campo: string ) {
     return this.formCondiciones.controls[campo].errors && 
         this.formCondiciones.controls[campo].touched;
@@ -111,6 +123,10 @@ export class MediasComponent implements OnInit{
 
     console.log(this.formCondiciones.value);
     this.formCondiciones.reset();
+  }
+
+  guardar2() {
+
   }
 
   constructor( private formBuilder: FormBuilder ) { }
