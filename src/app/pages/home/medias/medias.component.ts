@@ -87,7 +87,7 @@ export class MediasComponent implements OnInit{
       (this.formCondiciones.controls['valorN'].value > 0)
       ){
       this.mensajeSugerencia = 'Se puede usar la distribución Z y la ecuación es:';
-  this.ecuacion = 'Z = \\dfrac{\\bar{x}-\\mu}{\\dfrac{\\sigma}{\\sqrt{n}}} \\sim N(0,1)';
+      this.ecuacion = 'Z = \\dfrac{\\bar{x}-\\mu}{\\dfrac{\\sigma}{\\sqrt{n}}} \\sim N(0,1)';
     }
     
     else if(
@@ -119,7 +119,6 @@ export class MediasComponent implements OnInit{
       (this.formCondiciones.controls['valorN'].value < 30)
       ){
       this.mensajeSugerencia = 'Se puede usar la T';
-      console.log('Usa la T')
     } 
     
     else {
@@ -128,7 +127,7 @@ export class MediasComponent implements OnInit{
     }
 
     console.log(this.formCondiciones.value);
-    this.formCondiciones.reset();
+    // this.formCondiciones.reset();
   }
 
   guardar2() {
