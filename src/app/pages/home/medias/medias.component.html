@@ -73,7 +73,7 @@
                     <div class="form-check col-12 col-sm-4">
                         <input class="form-check-input" 
                                 type="checkbox"
-                                formControlName="poblacion">
+                                formControlName="varianza">
                         <label class="form-check-label">
                             N es conocida
                         </label>
@@ -238,7 +238,7 @@
                         </div>
 
                         <span class="form-text text-danger"
-                        *ngIf="campoEsValido('valorN1')">
+                        *ngIf="campoEsValido2('valorN1')">
                             <em>El valor de n debe ser mayor a 0</em>
                         </span>
                     </div>
@@ -249,8 +249,16 @@
                             Tamaño de la muestra <ng-katex [equation] ="n2"> </ng-katex>
                         </label>
                         <div class="col">
-                          <input type="number" class="form-control">
+                          <input type="number" 
+                                class="form-control"
+                                formControlName="valorN2"
+                                placeholder="Ingrese el valor de n2">
                         </div>
+
+                        <span class="form-text text-danger"
+                        *ngIf="campoEsValido2('valorN2')">
+                            <em>El valor de n debe ser mayor a 0</em>
+                        </span>
                     </div>
                 </div>
     

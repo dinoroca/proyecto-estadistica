@@ -51,8 +51,9 @@ export class MediasComponent implements OnInit{
     varianza1: [false],
     varianza2: [false],
     mediasIguales: [false],
-    varianzasIguales: [false],
+    varianzasDiferentes: [false],
     normal: [false],
+    reemplazo: [false],
     valorN1: [, [Validators.required, Validators.min(1)]],
     valorN2: [, [Validators.required, Validators.min(1)]]
   })
@@ -60,6 +61,11 @@ export class MediasComponent implements OnInit{
   campoEsValido( campo: string ) {
     return this.formCondiciones.controls[campo].errors && 
         this.formCondiciones.controls[campo].touched;
+  }
+
+  campoEsValido2( campo: string ) {
+    return this.formCondiciones2.controls[campo].errors && 
+        this.formCondiciones2.controls[campo].touched;
   }
 
   guardar(){
