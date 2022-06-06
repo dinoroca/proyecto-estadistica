@@ -14,12 +14,12 @@ export class SideMenuInferenciaComponent implements OnInit {
 
   templateMenu: MenuItem[] = [
     {
-      texto: 'Título 1',
-      ruta: ''
+      texto: 'Dist. Bernoulli',
+      ruta: '/inferencia/vad-bernoulli'
     },
     {
-      texto: 'Título 2',
-      ruta: '#'
+      texto: 'Dist. Binomial',
+      ruta: '/inferencia/vad-binomial'
     },
     {
       texto: 'Título 3',
