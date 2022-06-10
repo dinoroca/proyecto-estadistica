@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-tlc-chicuad-normal',
   templateUrl: './tlc-chicuad-normal.component.html',
-  styleUrls: ['./tlc-chicuad-normal.component.css']
+  styleUrls: ['../importantes.css']
 })
 export class TlcChicuadNormalComponent implements OnInit {
 

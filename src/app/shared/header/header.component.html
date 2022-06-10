@@ -19,7 +19,8 @@
                 *ngFor="let item of headerMenu"
                 [routerLink]="[item.ruta]"
                 routerLinkActive="active">
-                {{ item.texto }}
+                
+                {{ item.texto }} <i class={{item.icon}}></i>
                 </li>
             </ul>
         </div>

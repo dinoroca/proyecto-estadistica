@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 interface MenuItem {
   texto: string;
   ruta: string;
+  icon: string;
 }
 
 @Component({
@@ -15,19 +16,23 @@ export class HeaderComponent implements OnInit {
   headerMenu: MenuItem[] = [
     {
       texto: 'Home',
-      ruta: '/home'
+      ruta: '/home',
+      icon: 'bi bi-house'
     },
     {
       texto: 'Inferencia estadística',
-      ruta: '/inferencia'
+      ruta: '/inferencia',
+      icon: 'bi bi-house'
     },
     {
       texto: 'Formulario',
-      ruta: '/formulario'
+      ruta: '/formulario',
+      icon: 'bi bi-house'
     },
     {
       texto: 'Calculadora',
-      ruta: '/calculadora'
+      ruta: '/calculadora',
+      icon: 'bi bi-house'
     }
   ];
 

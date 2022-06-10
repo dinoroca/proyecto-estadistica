@@ -1,3 +1,37 @@
 li{
     cursor: pointer;
 }
+
+.bot-menu-importantes{
+    background-color: rgb(22, 212, 255);
+    border-color: rgb(22, 212, 255);
+    padding-right: 5vw;
+    padding-left: 5vw;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.bot-menu-importantes:hover{
+    background-color: rgb(255, 162, 22);
+    border-color: rgb(255, 162, 22);
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.bot-menu-muestrales{
+    background-color: rgb(24, 220, 132);
+    border-color: rgb(24, 220, 132);
+    padding-right: 5vw;
+    padding-left: 5vw;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.bot-menu-muestrales:hover{
+    background-color: rgb(183, 78, 215);
+    border-color: rgb(183, 78, 215);
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: underline;
+}

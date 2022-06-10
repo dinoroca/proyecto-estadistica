@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-vad-bernoulli',
   templateUrl: './vad-bernoulli.component.html',
-  styleUrls: ['./vad-bernoulli.component.css']
+  styleUrls: ['../importantes.css']
 })
 export class VadBernoulliComponent implements OnInit {
 
