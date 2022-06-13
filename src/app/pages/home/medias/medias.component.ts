@@ -28,7 +28,7 @@ export class MediasComponent implements OnInit{
   mostrarSugerencia: boolean = false;
   mostrarSugerencia2: boolean = false;
   ecuacion = '';
-  mensajeSugerencia: String = 'Esto es una prueba';
+  mensajeSugerencia: String = '';
   ecuacionSugerencia: string = '';
 
   mensajeError: boolean = false;
@@ -46,7 +46,7 @@ export class MediasComponent implements OnInit{
     varianza: [false],
     normal: [true],
     valorN: [, [Validators.required, Validators.min(1)]]
-  })
+  });
 
   formCondiciones2: FormGroup = this.formBuilder.group({
     media1: [false],
@@ -59,7 +59,7 @@ export class MediasComponent implements OnInit{
     reemplazo: [false],
     valorN1: [, [Validators.required, Validators.min(1)]],
     valorN2: [, [Validators.required, Validators.min(1)]]
-  })
+  });
 
   campoEsValido( campo: string ) {
     return this.formCondiciones.controls[campo].errors && 
