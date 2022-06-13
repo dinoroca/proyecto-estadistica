@@ -9,7 +9,12 @@ const routes: Routes = [
 
   {
     path: 'inferencia',
-    loadChildren: () => import('./pages/inferencia/inferencia.module').then( m => m.InferenciaModule )
+    loadChildren: () => import('./pages/inferencia/dist-importantes/dist-importantes.module').then( m => m.DistImportantesModule )
+  },
+
+  {
+    path: 'inferencia-ma',
+    loadChildren: () => import('./pages/inferencia/dist-muestrales/dist-muestrales.module').then( m => m.DistMuestralesModule )
   },
 
   {

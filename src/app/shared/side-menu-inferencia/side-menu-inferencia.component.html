@@ -1,13 +1,265 @@
+<h4 class="text-center text-black-50">Distribuciones importantes</h4>
 
-<h3 class="text-center text-black-50">Tema</h3>
+<hr />
 
-<hr>
+<div class="text-center">
+  <button class="btn bot-menu-importantes" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
+      <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+      <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+    </svg>
+    Ver menú
+  </button>
+</div>
 
-<ul class="list-group">
-    <li class="list-group-item text-center"
-        *ngFor="let item of templateMenu"
-        [routerLink]="[item.ruta]"
-        routerLinkActive="active">
-        {{ item.texto }}
-    </li>
-</ul>
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title text-black-50 text-center" id="offcanvasWithBothOptionsLabel">Menú de distribuciones importantes</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="accordion" id="accordion1">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Ditribuciones de v. a. discretas
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse show"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordion1"
+        >
+          <div class="accordion-body">
+            <ul class="list-group">
+              <li
+                class="list-group-item text-center"
+                *ngFor="let item of distVadMenu"
+                [routerLink]="[item.ruta]"
+                routerLinkActive="active"
+              >
+                {{ item.texto }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="accordion" id="accordion2">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo"
+            aria-expanded="true"
+            aria-controls="collapseTwo"
+          >
+            Ditribuciones de v. a. contínuas
+          </button>
+        </h2>
+        <div
+          id="collapseTwo"
+          class="accordion-collapse show"
+          aria-labelledby="headingTwo"
+          data-bs-parent="#accordion2"
+        >
+          <div class="accordion-body">
+            <ul class="list-group">
+              <li
+                class="list-group-item text-center"
+                *ngFor="let item of distVacMenu"
+                [routerLink]="[item.ruta]"
+                routerLinkActive="active"
+              >
+                {{ item.texto }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="accordion" id="accordion3">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button
+            class="accordion-button {{ btn3 }}"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseThree"
+            aria-expanded="true"
+            aria-controls="collapseThree"
+            (click)="asignar('btn3')"
+          >
+            Teorema del límite central
+          </button>
+        </h2>
+        <div
+          id="collapseThree"
+          class="accordion-collapse {{ item3 }}"
+          aria-labelledby="headingThree"
+          data-bs-parent="#accordion3"
+        >
+          <div class="accordion-body">
+            <ul class="list-group">
+              <li
+                class="list-group-item text-center"
+                *ngFor="let item of tlcMenu"
+                [routerLink]="[item.ruta]"
+                routerLinkActive="active"
+                (click)="asignar('btn3')"
+              >
+                {{ item.texto }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<h4 class="text-center text-black-50 mt-3">Distribuciones Muestrales</h4>
+  
+<hr />
+    
+<div class="text-center">
+  <button class="btn bot-menu-muestrales" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions2" aria-controls="offcanvasWithBothOptions2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
+      <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+      <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+    </svg>
+    Ver menú
+  </button>
+</div>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions2" aria-labelledby="offcanvasWithBothOptionsLabel2">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title text-black-50 text-center" id="offcanvasWithBothOptionsLabel2">Menú de distribuciones muestrales</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="accordion" id="accordion1">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Ditribuciones de v. a. discretas
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse show"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordion1"
+        >
+          <div class="accordion-body">
+            <ul class="list-group">
+              <li
+                class="list-group-item text-center"
+                *ngFor="let item of distVadMenu"
+                [routerLink]="[item.ruta]"
+                routerLinkActive="active"
+              >
+                {{ item.texto }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="accordion" id="accordion2">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo"
+            aria-expanded="true"
+            aria-controls="collapseTwo"
+          >
+            Ditribuciones de v. a. contínuas
+          </button>
+        </h2>
+        <div
+          id="collapseTwo"
+          class="accordion-collapse show"
+          aria-labelledby="headingTwo"
+          data-bs-parent="#accordion2"
+        >
+          <div class="accordion-body">
+            <ul class="list-group">
+              <li
+                class="list-group-item text-center"
+                *ngFor="let item of distVacMenu"
+                [routerLink]="[item.ruta]"
+                routerLinkActive="active"
+              >
+                {{ item.texto }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="accordion" id="accordion3">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button
+            class="accordion-button {{ btn3 }}"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseThree"
+            aria-expanded="true"
+            aria-controls="collapseThree"
+            (click)="asignar('btn3')"
+          >
+            Teorema del límite central
+          </button>
+        </h2>
+        <div
+          id="collapseThree"
+          class="accordion-collapse {{ item3 }}"
+          aria-labelledby="headingThree"
+          data-bs-parent="#accordion3"
+        >
+          <div class="accordion-body">
+            <ul class="list-group">
+              <li
+                class="list-group-item text-center"
+                *ngFor="let item of tlcMenu"
+                [routerLink]="[item.ruta]"
+                routerLinkActive="active"
+                (click)="asignar('btn3')"
+              >
+                {{ item.texto }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -8,6 +8,27 @@
     background: #98ffc0;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgb(228, 228, 228);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(195, 195, 195);
+    border-radius: 3px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
 @font-face {
     font-family: 'IBM Plex';
     src: url('../src/fonts/IBMPlexSans-Regular.ttf');

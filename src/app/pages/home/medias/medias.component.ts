@@ -15,11 +15,18 @@ export class MediasComponent implements OnInit{
   };
 
   sigma = '\\sigma^2';
+  sigma1 = '\\sigma_{1}^2';
+  sigma2 = '\\sigma_{2}^2';
   mu = '\\mu';
+  mu1 = '\\mu_1';
+  mu2 = '\\mu_2';
   n = 'n';
+  n1 = 'n_1';
+  n2 = 'n_2';
 
   // sinMarcar: boolean = false;
   mostrarSugerencia: boolean = false;
+  ecuacion = '';
   mensajeSugerencia: String = 'Esto es una prueba';
   ecuacionSugerencia: string = '';
 
@@ -35,12 +42,30 @@ export class MediasComponent implements OnInit{
     media: [false],
     varianza: [false],
     normal: [true],
-    valorN: [, [Validators.required, Validators.min(0)]]
+    valorN: [, [Validators.required, Validators.min(1)]]
+  })
+
+  formCondiciones2: FormGroup = this.formBuilder.group({
+    media1: [false],
+    media2: [false],
+    varianza1: [false],
+    varianza2: [false],
+    mediasIguales: [false],
+    varianzasDiferentes: [false],
+    normal: [false],
+    reemplazo: [false],
+    valorN1: [, [Validators.required, Validators.min(1)]],
+    valorN2: [, [Validators.required, Validators.min(1)]]
   })
 
   campoEsValido( campo: string ) {
     return this.formCondiciones.controls[campo].errors && 
         this.formCondiciones.controls[campo].touched;
+  }
+
+  campoEsValido2( campo: string ) {
+    return this.formCondiciones2.controls[campo].errors && 
+        this.formCondiciones2.controls[campo].touched;
   }
 
   guardar(){
@@ -61,7 +86,8 @@ export class MediasComponent implements OnInit{
       this.formCondiciones.controls['normal'].value &&
       (this.formCondiciones.controls['valorN'].value > 0)
       ){
-      this.mensajeSugerencia = 'Se puede usar la Z';
+      this.mensajeSugerencia = 'Se puede usar la distribución Z y la ecuación es:';
+      this.ecuacion = 'Z = \\dfrac{\\bar{x}-\\mu}{\\dfrac{\\sigma}{\\sqrt{n}}} \\sim N(0,1)';
     }
     
     else if(
@@ -90,18 +116,22 @@ export class MediasComponent implements OnInit{
       (this.formCondiciones.controls['varianza'].value == false || 
       this.formCondiciones.controls['varianza'].value == null) &&
       this.formCondiciones.controls['normal'].value &&
-      (this.formCondiciones.controls['valorN'].value >= 30)
+      (this.formCondiciones.controls['valorN'].value < 30)
       ){
       this.mensajeSugerencia = 'Se puede usar la T';
-      console.log('Usa la T')
     } 
     
     else {
       this.mensajeSugerencia = 'No se tiene datos suficientes';
+      this.ecuacion = '';
     }
 
     console.log(this.formCondiciones.value);
-    this.formCondiciones.reset();
+    // this.formCondiciones.reset();
+  }
+
+  guardar2() {
+
   }
 
   constructor( private formBuilder: FormBuilder ) { }
