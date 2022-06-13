@@ -26,9 +26,12 @@ export class MediasComponent implements OnInit{
 
   // sinMarcar: boolean = false;
   mostrarSugerencia: boolean = false;
+  mostrarSugerencia2: boolean = false;
   ecuacion = '';
   mensajeSugerencia: String = 'Esto es una prueba';
   ecuacionSugerencia: string = '';
+
+  mensajeError: boolean = false;
 
   formCantidad: FormGroup = this.formBuilder.group({
     numPoblation: ['1', Validators.required]
@@ -81,7 +84,6 @@ export class MediasComponent implements OnInit{
     console.log(this.formCondiciones.controls['normal'].value);
 
     if(
-      this.formCondiciones.controls['media'].value &&
       this.formCondiciones.controls['varianza'].value &&
       this.formCondiciones.controls['normal'].value &&
       (this.formCondiciones.controls['valorN'].value > 0)
@@ -91,38 +93,39 @@ export class MediasComponent implements OnInit{
     }
     
     else if(
-      this.formCondiciones.controls['media'].value &&
       this.formCondiciones.controls['varianza'].value &&
       (this.formCondiciones.controls['normal'].value == false || 
       this.formCondiciones.controls['normal'].value == null) &&
       (this.formCondiciones.controls['valorN'].value >= 30)
       ){
-      this.mensajeSugerencia = 'Se puede usar la Z';
+      this.mensajeSugerencia = 'Se puede usar la distribución Z y la ecuación es:';
+      this.ecuacion = 'Z = \\dfrac{\\bar{x}-\\mu}{\\dfrac{\\sigma}{\\sqrt{n}}} \\sim N(0,1)';
     }
     
     else if(
-      this.formCondiciones.controls['media'].value &&
       (this.formCondiciones.controls['varianza'].value == false || 
       this.formCondiciones.controls['varianza'].value == null) &&
       this.formCondiciones.controls['normal'].value &&
       (this.formCondiciones.controls['valorN'].value >= 30)
       ){
-      this.mensajeSugerencia = 'Se puede usar la Z';
+      this.mensajeSugerencia = 'Se puede usar la distribución Z y al ecuación es:';
+      this.ecuacion = 'Z = \\dfrac{\\bar{x}-\\mu}{\\dfrac{S}{\\sqrt{n}}} \\sim N(0,1)';
     }
     
     else if(
-      (this.formCondiciones.controls['media'].value == false || 
-      this.formCondiciones.controls['media'].value == null) &&
       (this.formCondiciones.controls['varianza'].value == false || 
       this.formCondiciones.controls['varianza'].value == null) &&
       this.formCondiciones.controls['normal'].value &&
       (this.formCondiciones.controls['valorN'].value < 30)
       ){
-      this.mensajeSugerencia = 'Se puede usar la T';
+        this.mensajeError = false;
+      this.mensajeSugerencia = 'Se puede usar la distribución T-student y la ecuación es:';
+      this.ecuacion = 'T_{(n-1)gl} = \\dfrac{\\bar{x}-\\mu}{\\dfrac{S}{\\sqrt{n}}} \\sim N(0,1)';
     } 
     
     else {
-      this.mensajeSugerencia = 'No se tiene datos suficientes';
+      this.mensajeError = true;
+      this.mensajeSugerencia = 'Los compos ingreados son incorrectos, verifique sus datos.';
       this.ecuacion = '';
     }
 

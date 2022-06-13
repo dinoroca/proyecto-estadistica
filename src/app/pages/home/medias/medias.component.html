@@ -69,15 +69,6 @@
                             Varianza <ng-katex [equation] ="sigma"> </ng-katex>
                         </label>
                     </div>
-
-                    <div class="form-check col-12 col-sm-4">
-                        <input class="form-check-input" 
-                                type="checkbox"
-                                formControlName="varianza">
-                        <label class="form-check-label">
-                            N es conocida
-                        </label>
-                    </div>
                     
                     <div class="form-check col-12 col-sm-4">
                         <input class="form-check-input" 
@@ -121,13 +112,27 @@
         </div>
     </form>
 
-    <div *ngIf="mostrarSugerencia" class="card sugerencia-card text-center">
+    <div *ngIf="mostrarSugerencia && !mensajeError" class="card sugerencia-card text-center">
         <div class="card-body">
-            <p class="text-center fw-bold">Sugerencia:</p>
+            <p class="text-center fw-bold text-success fs-4">Sugerencia:</p>
             <!-- <ng-katex [equation] ="mathequations"> </ng-katex> -->
 
             {{ mensajeSugerencia }} <br>
-            <ng-katex [equation] ="ecuacion"> </ng-katex>
+            <div class="mt-4">
+                <ng-katex [equation] ="ecuacion"> </ng-katex>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="mostrarSugerencia && mensajeError" class="card error-card text-center">
+        <div class="card-body">
+            <p class="text-center fw-bold text-danger fs-4">-- Error --</p>
+            <!-- <ng-katex [equation] ="mathequations"> </ng-katex> -->
+
+            {{ mensajeSugerencia }} <br>
+            <div class="mt-4">
+                <ng-katex [equation] ="ecuacion"> </ng-katex>
+            </div>
         </div>
     </div>
 
@@ -272,11 +277,27 @@
         </div>
     </form>
 
-    <div class="card sugerencia-card">
+    <div *ngIf="mostrarSugerencia2 && !mensajeError" class="card sugerencia-card text-center">
         <div class="card-body">
-            <p class="text-center fw-bold">Sugerencia:</p>
-            Aquí irá la sugerencia <em>Se mostrará con condicionales...</em> <br>
+            <p class="text-center fw-bold text-success fs-4">Sugerencia:</p>
+            <!-- <ng-katex [equation] ="mathequations"> </ng-katex> -->
 
+            {{ mensajeSugerencia }} <br>
+            <div class="mt-4">
+                <ng-katex [equation] ="ecuacion"> </ng-katex>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="mostrarSugerencia2 && mensajeError" class="card error-card text-center">
+        <div class="card-body">
+            <p class="text-center fw-bold text-danger fs-4">-- Error --</p>
+            <!-- <ng-katex [equation] ="mathequations"> </ng-katex> -->
+
+            {{ mensajeSugerencia }} <br>
+            <div class="mt-4">
+                <ng-katex [equation] ="ecuacion"> </ng-katex>
+            </div>
         </div>
     </div>
 
