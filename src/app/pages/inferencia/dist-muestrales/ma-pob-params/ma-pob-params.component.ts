@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaPobParamsComponent implements OnInit {
 
+  //Ecuacios del texto para
+  fx = 'f(x)';
+  x = 'x';
+  n = 'n';
+  mu = '\\mu';
+  pi = '\\pi';
+  ro = '\\rho';
+  sigma = '\\sigma';
+  sigma2 = '\\sigma^2';
+
   constructor() { }
 
   ngOnInit(): void {

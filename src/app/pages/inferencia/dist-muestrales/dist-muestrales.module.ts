@@ -12,6 +12,7 @@ import { DmDifDosMediasComponent } from './dm-dif-dos-medias/dm-dif-dos-medias.c
 import { DmDifDosProporcionesComponent } from './dm-dif-dos-proporciones/dm-dif-dos-proporciones.component';
 import { DmDifDosVarianzasComponent } from './dm-dif-dos-varianzas/dm-dif-dos-varianzas.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { KatexModule } from 'ng-katex';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     DistMuestralesRoutingModule,
-    SharedModule
+    SharedModule,
+    KatexModule
   ]
 })
 export class DistMuestralesModule { }
