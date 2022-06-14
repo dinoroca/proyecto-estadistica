@@ -89,6 +89,7 @@ export class MediasComponent implements OnInit{
       this.formCondiciones.controls['normal'].value &&
       (this.formCondiciones.controls['valorN'].value > 0)
       ){
+      this.mensajeError = false;
       this.mensajeSugerencia = 'Se puede usar la distribución Z y la ecuación es:';
       this.ecuacion = 'Z = \\dfrac{\\bar{x}-\\mu}{\\dfrac{\\sigma}{\\sqrt{n}}} \\sim N(0,1)';
     }
@@ -99,6 +100,7 @@ export class MediasComponent implements OnInit{
       this.formCondiciones.controls['normal'].value == null) &&
       (this.formCondiciones.controls['valorN'].value >= 30)
       ){
+      this.mensajeError = false;
       this.mensajeSugerencia = 'Se puede usar la distribución Z y la ecuación es:';
       this.ecuacion = 'Z = \\dfrac{\\bar{x}-\\mu}{\\dfrac{\\sigma}{\\sqrt{n}}} \\sim N(0,1)';
     }
@@ -109,6 +111,7 @@ export class MediasComponent implements OnInit{
       this.formCondiciones.controls['normal'].value &&
       (this.formCondiciones.controls['valorN'].value >= 30)
       ){
+      this.mensajeError = false;
       this.mensajeSugerencia = 'Se puede usar la distribución Z y al ecuación es:';
       this.ecuacion = 'Z = \\dfrac{\\bar{x}-\\mu}{\\dfrac{S}{\\sqrt{n}}} \\sim N(0,1)';
     }
@@ -119,7 +122,7 @@ export class MediasComponent implements OnInit{
       this.formCondiciones.controls['normal'].value &&
       (this.formCondiciones.controls['valorN'].value < 30)
       ){
-        this.mensajeError = false;
+      this.mensajeError = false;
       this.mensajeSugerencia = 'Se puede usar la distribución T-student y la ecuación es:';
       this.ecuacion = 'T_{(n-1)gl} = \\dfrac{\\bar{x}-\\mu}{\\dfrac{S}{\\sqrt{n}}} \\sim N(0,1)';
     } 
