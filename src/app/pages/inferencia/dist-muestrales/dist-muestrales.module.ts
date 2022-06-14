@@ -11,6 +11,8 @@ import { DmVarianzaComponent } from './dm-varianza/dm-varianza.component';
 import { DmDifDosMediasComponent } from './dm-dif-dos-medias/dm-dif-dos-medias.component';
 import { DmDifDosProporcionesComponent } from './dm-dif-dos-proporciones/dm-dif-dos-proporciones.component';
 import { DmDifDosVarianzasComponent } from './dm-dif-dos-varianzas/dm-dif-dos-varianzas.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { KatexModule } from 'ng-katex';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { DmDifDosVarianzasComponent } from './dm-dif-dos-varianzas/dm-dif-dos-va
   ],
   imports: [
     CommonModule,
-    DistMuestralesRoutingModule
+    DistMuestralesRoutingModule,
+    SharedModule,
+    KatexModule
   ]
 })
 export class DistMuestralesModule { }
