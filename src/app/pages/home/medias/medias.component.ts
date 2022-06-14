@@ -239,8 +239,10 @@ export class MediasComponent implements OnInit{
     }
     //6to caso
     else if(
-      this.formCondiciones2.controls['varianza1'].value &&
-      this.formCondiciones2.controls['varianza2'].value &&
+      (this.formCondiciones2.controls['varianza1'].value == false || 
+      this.formCondiciones2.controls['varianza1'].value == null) &&
+      (this.formCondiciones2.controls['varianza2'].value == false ||
+      this.formCondiciones2.controls['varianza2'].value == null) &&
       this.formCondiciones2.controls['varianzasIguales'].value &&
       (this.formCondiciones2.controls['varianzasDiferentes'].value == false ||
       this.formCondiciones2.controls['varianzasDiferentes'].value == null) &&
@@ -255,8 +257,10 @@ export class MediasComponent implements OnInit{
     }
     //Septiomo caso
     else if(
-      this.formCondiciones2.controls['varianza1'].value &&
-      this.formCondiciones2.controls['varianza2'].value &&
+      (this.formCondiciones2.controls['varianza1'].value == false || 
+      this.formCondiciones2.controls['varianza1'].value == null) &&
+      (this.formCondiciones2.controls['varianza2'].value == false ||
+      this.formCondiciones2.controls['varianza2'].value == null) &&
       (this.formCondiciones2.controls['varianzasIguales'].value == false ||
       this.formCondiciones2.controls['varianzasIguales'].value == null) &&
       this.formCondiciones2.controls['varianzasDiferentes'].value &&
