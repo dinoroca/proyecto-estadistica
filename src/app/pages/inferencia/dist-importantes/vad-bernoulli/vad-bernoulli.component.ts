@@ -23,7 +23,11 @@ export class VadBernoulliComponent implements OnInit {
   formula2 = 'f(x) = \\Rho[';
   formula21 = '=x]= \\rho^{x}q^{1-x}';
   formula3 = 'x = 0,1';
-  formula4 = '\\left. \\begin{array}{rcl}2x+y & = & 1\\ x+y & = & 4 \\ x+y+z & = & 6\\end{array}\\right\\}';
+  formula4 = `\\left. \\begin{array}{rcl}
+  2x+y & = & 1
+  \\ x+y & = & 4 
+  \\ x+y+z & = & 6
+  \\end{array}\\right\\}`;
 
   ngOnInit(): void {
   }
