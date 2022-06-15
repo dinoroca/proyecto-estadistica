@@ -129,7 +129,7 @@ export class MediasComponent implements OnInit{
     
     else {
       this.mensajeError = true;
-      this.mensajeSugerencia = 'Los compos ingresados son incorrectos, verifique sus datos.';
+      this.mensajeSugerencia = 'Datos insuficientes, verifique y vuelva a ingresar.';
       this.ecuacion = '';
     }
 
@@ -275,7 +275,7 @@ export class MediasComponent implements OnInit{
     }
     else{
       this.mensajeError = true;
-      this.mensajeSugerencia2 = 'Los compos ingresados son incorrectos, verifique sus datos.';
+      this.mensajeSugerencia2 = 'Datos insuficientes, verifique y vuelva a ingresar.';
       this.ecuacion = '';
     }
   }
