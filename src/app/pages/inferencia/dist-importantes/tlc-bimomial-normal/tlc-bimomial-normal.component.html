@@ -4,6 +4,100 @@
     </div>
 
     <div class="col-12 col-md-9 -content">
-        TLC Binomial - normal
+        <h2 class="fw-bold mt-1">Teorema del Límite Central</h2>
+        <hr>
+
+        <p>
+            Uno de los teoremas sobre límite que justifica la importancia que tiene la 
+            distribución normal es denominado teorema del límite central. Este teorema nos 
+            permite aproximar a la distribución normal sumas finitas de variables aleatorias 
+            independientes que pueden tener cualquier clase de distribución con medias y 
+            varianzas conocidas.    <br>
+
+            Se dice que <ng-katex [equation]="n"></ng-katex> variables aleatorias <ng-katex [equation]="xn"></ng-katex> 
+            tienen la misma distribución de probabilidad con media |i y varianza a 2 si, tienen la misma función de probabilidad 
+            en el caso discreto, o la misma función de densidad en el caso continuo, y si además,
+
+        </p>
+
+        <section class = "text-center">
+            <ng-katex [equation]="ex"></ng-katex>, &nbsp;
+            <ng-katex [equation]="varx"></ng-katex> &nbsp; para &nbsp;
+            <ng-katex [equation]="i123"></ng-katex>
+        </section>
+
+        <p>
+            Si estas <ng-katex [equation]="n"></ng-katex> variables aleatorias son independientes, entonces, la variable 
+            aleatoria  <ng-katex [equation]="yn"></ng-katex> , tiene:
+
+        </p>
+
+        <section class="text-center">
+            media <ng-katex [equation]="eyn"></ng-katex> &nbsp; o &nbsp;
+            <ng-katex [equation]="muyn"></ng-katex> <br>
+
+            y varianza <ng-katex [equation]="varyn"></ng-katex> &nbsp; o &nbsp;
+            <ng-katex [equation]="sigmayn"></ng-katex>
+        </section>
+
+        <h2 class="fw-bold mt-3"><em>Teorema</em></h2>
+        <p>
+            Si <ng-katex [equation]="xn"></ng-katex> son <ng-katex [equation]="n"></ng-katex> variables aleatorias independientes igualmente
+            distribuidas con media <ng-katex [equation]="mu"></ng-katex> y varianza <ng-katex [equation]="sigma2"></ng-katex>, 
+            entonces, la distribución de la variable aleatoria: <br>
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="zn"></ng-katex>
+        </section>
+
+        <p>
+            tiende a la distribución normal <ng-katex [equation]="n01"></ng-katex>, cuando <ng-katex [equation]="n"></ng-katex> 
+            tiende al infinito. Esto es, 
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="limp"></ng-katex>
+        </section>
+
+        <h2 class="fw-bold mt-3"><em>Notas</em></h2>
+        <hr>
+
+        <p>
+            <b>1. </b>La distribución de la variable aleatoria <ng-katex [equation]="yn"></ng-katex> es
+            aproximadamente normal con media <ng-katex [equation]="muyn"></ng-katex>, y con desviación estándar
+            <ng-katex [equation]="sigman"></ng-katex> . Luego,
+
+        </p>
+        <section class="text-center">
+            <ng-katex [equation]="pyn"></ng-katex> <br><br>
+
+            Se dice que <em class="fw-bold">la eproximación es buena si </em><ng-katex [equation]="nmay30"></ng-katex>.
+        </section>
+
+        <p>
+            <b>2. </b> Si la variable aleatoria <ng-katex [equation]="yn"></ng-katex> es discreta y con valores enteros
+            consecutivos, entonces,
+            
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="pynk"></ng-katex> <br>
+            y
+            <br>
+            <ng-katex [equation]="payn"></ng-katex>. <br><br>
+
+            El ajuste 0.5 se denomina <em class="fw-bold">factor de corrección por continuidad</em>.
+        </section>
+
+        <div class="text-center">
+            <!-- Siguiente -->
+            <button class="btn btn-primary mt-3" routerLink="/inferencia/tlc-hipergeometrica-normal">
+                Siguiente
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                  </svg>
+            </button>
+        </div>
     </div>
 </div>
