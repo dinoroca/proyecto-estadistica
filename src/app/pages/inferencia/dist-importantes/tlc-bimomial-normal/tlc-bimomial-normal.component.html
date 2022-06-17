@@ -90,7 +90,76 @@
             El ajuste 0.5 se denomina <em class="fw-bold">factor de corrección por continuidad</em>.
         </section>
 
+        <h1 class="fw-bold text-center mt-4">Aproximaciones a la distribución normal</h1>
+        <hr>
+
+        <h2 class="fw-bold">Aproximación de la Binomial a la Normal</h2>
+        <p>
+            Sean <ng-katex [equation]="xn"></ng-katex> variables aleatorias independientes e idénticamente
+            distribuidas según el modelo Bernoullí con parámetro <ng-katex [equation]="rho"></ng-katex>. Cada variable 
+            <ng-katex [equation]="xi"></ng-katex> tiene
+            media <ng-katex [equation]="muxi"></ng-katex> y varianza <ng-katex [equation]="sigxi"></ng-katex>, 
+            siendo <ng-katex [equation]="q1p"></ng-katex>. Luego, la variable aleatoria:
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="xsum"></ng-katex> <br>
+            tiene distribución binomial con media <ng-katex [equation]="mux"></ng-katex> y con varianza 
+            <ng-katex [equation]="npq"></ng-katex>.
+        </section>
+        <br>
+        <p>
+            Por el teorema central del límite, la variable aleatoria estándar:
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="z2"></ng-katex>
+        </section>
+
+        <p>
+            tiene aproximadamente distribución normal <ng-katex [equation]="n01"></ng-katex>, cuando 
+            <ng-katex [equation]="n"></ng-katex> es suficientemente grande, luego, si <ng-katex [equation]="x | uppercase"></ng-katex> 
+            es una variable aleatoria binomial con media <ng-katex [equation]="n"></ng-katex><ng-katex [equation]="rho"></ng-katex> 
+            y varianza <ng-katex [equation]="npq"></ng-katex>, entonces, cuando
+            <ng-katex [equation]="ninf"></ng-katex> la distribución de la variable aleatoria es:
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="z3"></ng-katex> <br>
+            es aproximadamente la distribución normal <ng-katex [equation]="n01"></ng-katex>.
+        </section>
+        <br>
+
+        <p>
+            La aproximación es buena si <ng-katex [equation]="nmay30"></ng-katex>. Si <ng-katex [equation]="nmen30"></ng-katex> , 
+            la aproximación es buena si <ng-katex [equation]="rho"></ng-katex> 
+            es cercano a 0.5, cuánto más se aleja <ng-katex [equation]="rho"></ng-katex> de 0.5, se requiere n cada vez más grande
+            para tener una aproximación aceptable.
+            
+            Además, se puede tener mayor precisión en la aproximación si se utiliza <b>la
+                corrección por continuidad</b>
+            de los valores discretos de la variable, sumando o
+            restando 0.5 como sigue:
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="pax"></ng-katex> <br>
+            y
+            <br>
+            <ng-katex [equation]="pxk"></ng-katex>.
+        </section>
+        
+
+        <!-- Botones de navegación inferior -->
         <div class="text-center">
+            <!-- Atrás -->
+            <button class="btn btn-warning mx-1 mt-3" routerLink="/inferencia/vac-f">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                </svg>
+                Anterior
+            </button>
+
             <!-- Siguiente -->
             <button class="btn btn-primary mt-3" routerLink="/inferencia/tlc-hipergeometrica-normal" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
                 Siguiente

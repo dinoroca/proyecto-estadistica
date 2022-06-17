@@ -4,8 +4,34 @@
     </div>
 
     <div class="col-12 col-md-9 -content">
-        TLC Hiper geometrica - normal
+        <h2 class="fw-bold">Aproximación de la hipergeométrica a la normal</h2>
 
+        <p>
+            Sea <ng-katex [equation]="x | uppercase"></ng-katex> la variable aleatoria hipergeométrica. esto es, 
+            el número de éxitos que se
+            encuentran en una muestra de tamaño <ng-katex [equation]="n"></ng-katex> 
+            escogida al azar una a una sin reposición de
+            <ng-katex [equation]="n | uppercase"></ng-katex> elementos dc los cuales <ng-katex [equation]="r"></ng-katex> 
+            son clasificados como éxitos y el resto <ng-katex [equation]="n | uppercase"></ng-katex> — <ng-katex [equation]="r"></ng-katex>
+            como fracasos. La media y la varianza de la variable son respectivamente:
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="munp"></ng-katex> &nbsp; y &nbsp;
+            <ng-katex [equation]="signpq"></ng-katex> &nbsp; donde &nbsp;
+            <ng-katex [equation]="pr"></ng-katex> &nbsp;, &nbsp;
+            <ng-katex [equation]="q1p"></ng-katex> <br><br>
+
+            Cuando <ng-katex [equation]="ninf"></ng-katex>, <br><br>
+
+            <ng-katex [equation]="z"></ng-katex> <br><br>
+
+            es aproximadamente la distribución <ng-katex [equation]="n01"></ng-katex>.
+        </section>
+
+        <h2 class="fw-bold mt-3"><em>Ejemplo</em></h2>
+
+        <!-- Botones de navegación inferior -->
         <div class="text-center">
             <!-- Atrás -->
             <button class="btn btn-warning mx-1 mt-3" routerLink="/inferencia/tlc-binomial-normal">
