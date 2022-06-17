@@ -43,11 +43,11 @@
       </div>
     </div>
 
-    <form ngSubmit="guardar()" [formGroup]="formCondiciones" autocomplete="off">
+    <form (ngSubmit)="guardar()" [formGroup]="formCondiciones" autocomplete="off">
       <div class="card shadow">
           <div class="card-body">
   
-              <div class="row">
+              <div class="row container">
                   <div class="form-check col-12 col-sm-6">
                       <input class="form-check-input" 
                             type="checkbox"
@@ -68,19 +68,19 @@
                       <div class="col">
                         <input type="number" 
                               class="form-control"
-                              formControlName="valorN"
+                              formControlName="valorn"
                               placeholder="Ingrese el valor n">
                       </div>
 
                       <span class="form-text text-danger"
-                        *ngIf="campoEsValido('valorN')">
-                        <em>El valor de n debe estar entre 0 y 1</em>
+                        *ngIf="campoEsValido('valorn')">
+                        <em>El valor de n debe debe ser mayor a 0</em>
                     </span>
                   </div>
   
                   <div class="col-12 col-sm-6">
                       <label class="col col-form-label">
-                          Valor de <ng-katex [equation] ="p"> </ng-katex>
+                          Valor de <ng-katex [equation] ="rho"> </ng-katex>
                       </label>
                       <div class="col">
                         <input type="number" 
@@ -118,7 +118,7 @@
               <ng-katex [equation] ="ecuacion"> </ng-katex>
           </div>
       </div>
-  </div>
+    </div>
 
     <!-- Card de ERROR -->
     <div *ngIf="mostrarSugerencia && mensajeError" class="card error-card text-center">
@@ -168,7 +168,7 @@
 
                 <div class="mt-3 col-6">
                     <label class="col col-form-label">
-                        Valor de <ng-katex [equation] ="p"> </ng-katex>
+                        Valor de <ng-katex [equation] ="rho"> </ng-katex>
                     </label>
                     <div class="col">
                       <input type="number" class="form-control">

@@ -11,13 +11,16 @@ export class ProporcionComponent {
   sigma = '\\sigma^2';
   mu = '\\mu';
   n = 'n';
-  p = 'p';
+  rho = '\\rho';
 
   mostrarSugerencia: boolean = false;
   mostrarSugerencia2: boolean = false;
   ecuacion = '';
-  mensajeSugerencia: String = '';
+  mensajeSugerencia: String = 'Prueba';
   ecuacionSugerencia: string = '';
+  valorq = 0;
+  pn = 0;
+  qn = 0;
 
   mensajeError: boolean = false;
 
@@ -25,9 +28,13 @@ export class ProporcionComponent {
     numPoblation: ['1', Validators.required]
   });
 
+  porDefecto = {
+    numPoblation: '1'
+  }
+
   formCondiciones: FormGroup = this.formBuilder.group({
     poblacionN: [false],
-    valorN: [, [Validators.required, Validators.min(0), Validators.max(1)]],
+    valorn: [, [Validators.required, Validators.min(1)]],
     valorP: [, [Validators.required, Validators.min(0), Validators.max(1)]]
   });
 
@@ -54,15 +61,59 @@ export class ProporcionComponent {
         this.formCondiciones2.controls[campo].touched;
   }
 
-  porDefecto = {
-    numPoblation: '1'
-  }
 
 
   constructor( private formBuilder: FormBuilder ) { }
 
   guardar(){
+    this.mostrarSugerencia = true;
+    this.valorq = Number((1 - this.formCondiciones.controls['valorP'].value).toFixed(2));
+    this.pn = this.formCondiciones.controls['valorP'].value * this.formCondiciones.controls['valorn'].value;
+    this.qn = this.valorq * this.formCondiciones.controls['valorn'].value;
 
+    if(this.formCondiciones.invalid){
+      this.formCondiciones.markAllAsTouched();
+      return;
+    }
+
+    //Primer caso
+    if(
+      (this.formCondiciones.controls['poblacionN'].value == false ||
+      this.formCondiciones.controls['poblacionN'].value == null) &&
+      (this.formCondiciones.controls['valorn'].value >= 30) &&
+      this.pn >= 5 && this.qn >= 5
+    ){
+      this.mensajeError = false;
+      this.mensajeSugerencia = 'Se puede usar la distribución Z y la ecuación es:';
+      this.ecuacion = 'Z = \\dfrac{\\hat{p}-\\rho}{\\sqrt{\\dfrac{\\rho q}{n}}} \\sim N(0, 1)';
+    }
+
+    //Segundo caso
+    else if(
+      this.formCondiciones.controls['poblacionN'].value &&
+      (this.formCondiciones.controls['valorn'].value >= 30) &&
+      this.pn >= 5 && this.qn >= 5
+    ){
+      this.mensajeError = false;
+      this.mensajeSugerencia = 'Como se tiene el valor N, se debe usar la distribución Z y la ecuación es:';
+      this.ecuacion = 'Z = \\dfrac{\\hat{p}-\\rho}{\\sqrt{\\dfrac{\\rho q}{n} \\cdot \\left( \\dfrac{N-n}{N-1} \\right) }} \\sim N(0, 1)';
+    }
+
+    //Tercer caso n pequeña
+    else if(
+      (this.formCondiciones.controls['poblacionN'].value == false ||
+      this.formCondiciones.controls['poblacionN'].value == null) &&
+      (this.formCondiciones.controls['valorn'].value < 30)
+    ){
+      this.mensajeError = false;
+      this.mensajeSugerencia = 'Como n es pequeña, se debe usar la distribución Z y la ecuación es:';
+      this.ecuacion = 'Z = \\dfrac{\\hat{p}\\pm\\dfrac{1}{2n} - \\rho} {\\sqrt{\\dfrac{\\rho q}{n}}} \\sim N(0, 1)';
+    }
+    else{
+      this.mensajeError = true;
+      this.mensajeSugerencia = 'Los datos ingresados son incorrectos, verifique y vuelva a ingresar.';
+      this.ecuacion = '';
+    }
   }
 
 }
