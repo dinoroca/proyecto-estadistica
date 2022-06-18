@@ -16,19 +16,29 @@ export class VadBernoulliComponent implements OnInit {
   rho ='\\rho';
   rhoF ='\\rho = \\Rho[ \\Chi = 1]';
   x = 'x';
-  formula ='0<\\rho<1';
+  X = 'X';
+  p = 'p';
   q = 'q';
+  formula ='0<\\rho<1';
   qF = 'q = [';
   qF2 = '= 0 ] = 1 -\\rho';
   formula2 = 'f(x) = \\Rho[';
   formula21 = '=x]= \\rho^{x}q^{1-x}';
   formula3 = 'x = 0,1';
-  formula4 = `\\left. \\begin{array}{rcl}
-  2x+y & = & 1
-  \\ x+y & = & 4 
-  \\ x+y+z & = & 6
-  \\end{array}\\right\\}`;
+  formula4 = `F(x)=\\left\\{\\begin{array}{lcc}
+  0, & si & x<0\\\\
+  \\\\ q, & si & 0\\leq x<1\\\\
+  \\\\ 1, & si & x\\geq1
+  \\end{array}
+  \\right.`;
+  formula5 = 'f(x)';
+  valorEsperado = 'E(X) = p';
+  varianza = 'Var(X) = pq';
 
+  pruebaA = '\\mu = E(X) = 0\\times (1-p)+1\\times p = p';
+  pruebaB = '\\sigma^2 = E(X^2)-\\mu^2 = [(0)^2(1-p)+(1)^2( p )]-p^2 = p-p^2 = pq';
+
+  nota = '\\sigma^2 = p - p^2  = -\\left(p-\\dfrac{1}{2}\\right)^2+\\dfrac{1}{4}\\leq\\dfrac{1}{4}'
   ngOnInit(): void {
   }
 
