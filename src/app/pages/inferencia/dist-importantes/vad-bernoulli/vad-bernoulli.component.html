@@ -1,44 +1,141 @@
+<style>
+  table {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+
+  td {
+    width: 100px;
+  }
+
+  h1 {
+    font-weight: bold;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .formula{
+    text-align: center;
+    margin: 20px auto;
+  }
+  .espacio{
+    word-spacing: 15px;
+  }
+
+
+</style>
 
 <div class="row">
-    <div class="col-12 col-md-3 -menu">
-        <app-side-menu-inferencia></app-side-menu-inferencia>
+  <div class="col-12 col-md-3 -menu">
+    <app-side-menu-inferencia></app-side-menu-inferencia>
+  </div>
+
+  <div class="col-12 col-md-9 -content">
+    <h1>Distribución de Bernoullí</h1>
+    <p>
+      <b>Definición.</b> Se denomina prueba o ensayo de Bernoullí a todo experimento aleatorio
+      que consiste de sólo dos resultados posibles mutuamente excluyentes,
+      generalmente llamados: <b>éxito(<em>E</em>)</b> y <b>fracaso(<em>F</em>)</b>.
+      <br>
+      Por ejemplo, son ensayos de Bernoullí, lanzar una moneda al aire con los resutltados:
+      cara o sello. Elegir al azar un objeto fabricado, con los resultados: defectusoso
+      o no defectuoso, etc..
+      <br>
+      El espacio muestral esociado al experimento aleatorio de Bernoullí se puede escribir
+      como el conjunto: <ng-katex [equation]="OhmegaF"> </ng-katex>
+    </p>
+    <p>
+      <b>Definición.</b> La variable aleatoria <ng-katex [equation]="x | uppercase"> </ng-katex> definida en <ng-katex
+        [equation]="Ohmega"> </ng-katex> de
+      manera que atribuye a <em>E</em> el valor 1 y a <em>F</em> el valor 0, se denomina <b> variables aleatorias de
+        Bernoullí.</b>
+    </p>
+    <p>
+      <b>Definición.</b> si <ng-katex [equation]="rhoF"> </ng-katex> es la problabilidad de éxito, donde <ng-katex
+        [equation]="formula"> </ng-katex>, y
+      <ng-katex [equation]="qF"></ng-katex>
+      <ng-katex [equation]="x | uppercase"></ng-katex>
+      <ng-katex [equation]="qF2"></ng-katex>, es
+      la problabilidad de fracaso, la <b>distribución de probabilidad de Bernoullí de parámetro p</b> ,
+      es descrita por la tabla:
+    </p>
+
+    <div class="table1">
+      <table class="table-bernoulli">
+        <tr>
+          <td>
+            <ng-katex [equation]="X"></ng-katex>
+          </td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>
+            <ng-katex [equation]="formula5"></ng-katex>
+          </td>
+          <td>
+            <ng-katex [equation]="q"></ng-katex>
+          </td>
+          <td>
+            <ng-katex [equation]="p"></ng-katex>
+          </td>
+        </tr>
+
+      </table>
+    </div>
+    <p>o por la ecuación:</p>
+    <div class="text-center">
+      <p class="formula espacio">
+        <ng-katex [equation]="formula2"></ng-katex>
+        <ng-katex [equation]="x | uppercase"> </ng-katex>
+        <ng-katex [equation]="formula21"> </ng-katex>, <ng-katex [equation]="formula3"> </ng-katex>.
+      </p>
     </div>
 
-    <div class="col-12 col-md-9 -content">
-        <h1>Distribución de Bernoullí</h1>
-        <p> 
-            <b>Definición.</b>  Se denomina prueba o ensayo de Bernoullí a todo experimento aleatorio
-            que consiste de sólo dos resultados posibles mutuamente excluyentes,
-            generalmente llamados: <b>éxito(<em>E</em>)</b>  y <b>fracaso(<em>F</em>)</b>.            
-            <br>
-            Por ejemplo, son ensayos de Bernoullí, lanzar una moneda al aire con los resutltados:
-            cara o sello. Elegir al azar un objeto fabricado, con los resultados: defectusoso
-            o no defectuoso, etc..
-            <br>
-            El espacio muestral esociado al experimento aleatorio de Bernoullí se puede escribir
-            como el conjunto: <ng-katex [equation] ="OhmegaF"> </ng-katex>
-        </p>
-        <p>
-            <b>Definición.</b> La variable aleatoria <ng-katex [equation] ="x | uppercase"> </ng-katex> definida en <ng-katex [equation] ="Ohmega"> </ng-katex> de
-             manera que atribuye a <em>E</em> el valor 1 y a <em>F</em> el valor 0, se denomina <b> variables aleatorias de Bernoullí.</b>
-        </p>
-        <p>
-            <b>Definición.</b> si <ng-katex [equation] ="rhoF"> </ng-katex> es la problabilidad de éxito, donde <ng-katex [equation] ="formula"> </ng-katex>, y
-            <ng-katex [equation] ="qF"></ng-katex> <ng-katex [equation] ="x | uppercase"></ng-katex> <ng-katex [equation] ="qF2"></ng-katex>, es 
-            la problabilidad de fracaso, la <b>distribución de probabilidad de Bernoullí de parámetro p</b> ,
-            es descrita por la tabla:
-        </p>
-        <br>
-        <div class="text-center">
-            <p>tabla</p>
-        </div>
-        <p>o por la ecuación:</p>
-        <div class="text-center">
-            <p><ng-katex [equation] ="formula2"></ng-katex><ng-katex [equation] ="x | uppercase"> </ng-katex><ng-katex [equation] ="formula21"> </ng-katex>, <ng-katex [equation] ="formula3"> </ng-katex>. </p>
-        </div>
-        <p>la <b>funcion de distribución acumulada</b>  de Bernoullí es:</p>
-        <div class="text-center">
-            <p><ng-katex [equation] ="formula4"></ng-katex></p>
-        </div>
+    <p>La <b>funcion de distribución acumulada</b> de Bernoullí es:</p>
+    <div class="text-center">
+      <p class="formula">
+        <ng-katex [equation]="formula4"></ng-katex>
+      </p>
     </div>
+
+    <h2>teorema 1.1</h2>
+    <p> Si <ng-katex [equation]="X"></ng-katex> tiene distribución de Bernoullí de parámetro <ng-katex [equation]="p">
+      </ng-katex>, entonces,</p>
+
+    <p class="formula espacio">a) <ng-katex [equation]="valorEsperado"></ng-katex>, b) <ng-katex [equation]="varianza"></ng-katex> </p>
+
+    <h2>prueba</h2>
+    <div>
+      <p class="espacio">a) <ng-katex [equation]="pruebaA" class="espacio"></ng-katex></p>
+    </div>
+    <div>
+      <p class="espacio">b) <ng-katex [equation]="pruebaB"></ng-katex></p>
+    </div>
+
+    <h2>nota</h2>
+    <p>La varianza de la distribución de Bernoullí es menor o igual que 1/4, en efecto, </p>
+    <p class="formula"><ng-katex [equation]="nota"></ng-katex></p>
+
+    <div class="text-center">
+      <!-- Siguiente -->
+      <button class="btn btn-primary" routerLink="/inferencia/vad-binomial">
+        Siguiente
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+        </svg>
+      </button>
+    </div>
+  </div>
 </div>

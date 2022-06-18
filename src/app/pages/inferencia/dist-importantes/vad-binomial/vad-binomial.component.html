@@ -1,9 +1,99 @@
-<div class="row">
-    <div class="col-12 col-md-3 -menu">
-        <app-side-menu-inferencia></app-side-menu-inferencia>
-    </div>
+<style>
+  h1 {
+    font-weight: bold;
+  }
 
-    <div class="col-12 col-md-9 -content">
-        Contenido VAD Binomial
+  .formula{
+    text-align: center;
+    margin: 20px auto;
+  }
+  .espacio {
+    word-spacing: 5px;
+  }
+
+</style>
+
+<div class="row">
+  <div class="col-12 col-md-3 -menu">
+    <app-side-menu-inferencia></app-side-menu-inferencia>
+  </div>
+
+  <div class="col-12 col-md-9 -content">
+    <h1>Distribución Binomial</h1>
+    <p>
+      <b>Definición.</b> Se denomina <b>experimento binomial</b> a un número
+      fijo, n, de repeticiones independientes de un experimento aleatorio de
+      Bernoullí, y por lo tanto, se caracteriza por que:
+    </p>
+
+    <ol>
+      <li>Las n pruebas son estadísticamente independientes.</li>
+      <li>
+        Los resultados de cada prueba son dos mutuamente excluyentes, éxito (E)
+        y fracaso (F).
+      </li>
+      <li>
+        La probabilidad p de éxito es invariante en cada una de las pruebas.
+      </li>
+    </ol>
+
+    <p>El espacio muestral del experimento binomial es el conjunto:</p>
+    <p class="formula espacio"><ng-katex [equation]="conjunto"></ng-katex> ó <ng-katex [equation]="conjunto2"></ng-katex></p>
+
+    <p>
+      <b>Definición.</b> Se denomina <b>variable binomial</b> a la variable aleatoria X definida en <ng-katex [equation]="bigOmega"></ng-katex> como el número de éxitos que ocurren en las n pruebas de Bernoullí. Los posibles
+      valores de X son: 0, 1, 2, 3, ... ,n.
+    </p>
+
+    <p>Si k es cualquier valor de la variable binomial, el evento [X = k] consiste de todos los elementos de <ng-katex [equation]="bigOmega"></ng-katex> que contengan k éxitos(E) y n — k fracasos (F). La probabilidad de cada uno de estos eventos elementales es igual a <ng-katex [equation]="pq"></ng-katex> El número de estos eventos elementales es igual a:</p>
+
+    <p class="formula"><ng-katex [equation]="ecuacion1"></ng-katex></p>
+
+    <p>Por tanto <i>la probabilidad de obtener k éxitos en n pruebas</i> Bernoullí es.</p>
+
+    <p class="formula"><ng-katex [equation]="ecuacion2"></ng-katex></p>
+
+    <p>Para verificar que la suma de las probabilidades binomiales es igual a 1, se utiliza el binomio: <ng-katex [equation]="binomio"></ng-katex>.En efecto,</p>
+
+    <p class="formula"><ng-katex [equation]="ecuacion3"></ng-katex></p>
+
+    <p>Se dice que la variable aleatoria X definida como el número de éxitos que ocurren en las n pruebas de Bernoullí, tiene distribución binomial con parámetros n y p y se escribe <ng-katex [equation]="chi"></ng-katex> si su función de probabilidad es:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="text-center">
+      <!-- Atrás -->
+      <button class="btn btn-warning mx-1" routerLink="/inferencia/vad-bernoulli">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+        </svg>
+        Anterior
+      </button>
+
+      <!-- Siguiente -->
+      <button class="btn btn-primary mx-1" routerLink="/inferencia/vad-geometrica">
+        Siguiente
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+        </svg>
+      </button>
     </div>
+  </div>
 </div>
