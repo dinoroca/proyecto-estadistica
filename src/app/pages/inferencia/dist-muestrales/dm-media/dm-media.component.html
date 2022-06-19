@@ -1,1 +1,68 @@
-<p>dm-media works!</p>
+<div class="row">
+  <div class="col-12 col-md-3 -menu">
+    <app-side-menu-inferencia></app-side-menu-inferencia>
+  </div>
+
+  <div class="col-12 col-md-9 -content">       
+    <h1 class="fw-bold mt-1">Distribución muestral de la media</h1>
+    <hr>
+    <h2 class="fw-bold mt-3"><em>Teorema</em></h2>
+    <p>Sea <ng-katex [equation]="xn"></ng-katex>, una muestra aleatoria de tamaño <ng-katex [equation]="n"></ng-katex> escogida de una población<ng-katex [equation]="fx"></ng-katex>
+    con media <ng-katex [equation]="mu"></ng-katex> y con varianza <ng-katex [equation]="sigma2"></ng-katex>.Si <ng-katex [equation]="xs"></ng-katex> 
+    es la media muestral, entonces,<br> <br>
+    a) <ng-katex [equation]="ex"></ng-katex> <br> <br>
+    b) <ng-katex [equation]="varx"></ng-katex> <br> <br>
+    c) para <ng-katex [equation]="n"></ng-katex> suficientemente grande, la variable aleatoria, <br>
+    </p>
+    <section class="text-center">
+      <ng-katex [equation]="z"></ng-katex>
+    </section>
+    <p>
+      tiene distribución aproximadamente normal <ng-katex [equation]="N01"></ng-katex>.
+    </p>
+
+    <h2 class="fw-bold mt-3"><em>PRUEBA</em></h2>
+    <hr>
+    <p>Por la definicion de muestra aleatoria, las variable aleatorias <ng-katex [equation]="xn"></ng-katex>, son independientes e identicamente distribuidas
+      como <ng-katex [equation]="fx"></ng-katex> con <ng-katex [equation]="ex2"></ng-katex> y con <ng-katex [equation]="varx2"></ng-katex>. Entonces.
+      <br> <br>      
+      a) <ng-katex [equation]="ex3"></ng-katex> <br> <br>
+      b) <ng-katex [equation]="var3"></ng-katex> <br> <br>
+      c) Se deduce del teorema del limite central escribiendo <br>
+    </p>
+    <section class="text-center">
+      <ng-katex [equation]="z2"></ng-katex>
+    </section>
+    <br>
+    <br>
+    <h2 class="fw-bold mt-3"><em>NOTAS</em></h2>
+    <hr>
+    <p>
+      1. La aproximacion de <ng-katex [equation]="xs"></ng-katex> a la normal <ng-katex [equation]="n2"></ng-katex> es buena si 
+      <ng-katex [equation]="n30"></ng-katex>, sin  importar si la poblacion es discreta o continua. <br>
+      <br>
+       2. Si la muestra aleatoria es escogida de una población normal <ng-katex [equation]="n3"></ng-katex>.
+      entonces, la distribucion de <ng-katex [equation]="xs"></ng-katex> es exactamente normal <ng-katex [equation]="n2"></ng-katex>, para 
+      cualquier tamaño de muestra, <ng-katex [equation]="nm2"></ng-katex>. <br>
+      <br>
+       3. la varianza de la media: <ng-katex [equation]="varm"></ng-katex> es válido, si <b>el muestreo es con o sin reemplazo</b> en una población infinita,
+      o es con reemplazo en una población finita de tamaño <ng-katex [equation]="N"></ng-katex>. 
+      <br>
+      Si el muestreo es sin reemplazo es una población finita de tamaño N, entonces la varianza de la distribución de <ng-katex [equation]="xs"></ng-katex> es: 
+      <br>      
+    </p>
+    <section class="text-center">
+      <ng-katex [equation]="sigma2x"></ng-katex>
+    </section>
+    
+    <p>
+      El coeficiente <ng-katex [equation]="factorc"></ng-katex> se denomina <b>factor de corrección para poblacion finita.</b>
+      Observar que cuando <ng-katex [equation]="ninf"></ng-katex> el factor de corrección tiende a uno. 
+      <br>
+      <br>
+      4. la desviación estándar de una estadistica es conocida como <b>error estándar.</b>
+    </p>
+
+
+  </div>
+</div>

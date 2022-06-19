@@ -1,1 +1,78 @@
-<p>ma-pob-params works!</p>
+
+<div class="row container">
+    <div class="col-12 col-md-3 -menu">
+        <app-side-menu-inferencia></app-side-menu-inferencia>
+    </div>
+
+    <div class="col-12 col-md-9 -content">
+        <h2 class="text-center fw-bold">DISTRIBUCIONES MUESTRALES</h2>
+        <hr>
+        <h3 class="fw-bold">Muestreo aleatorio</h3>
+        <h4 class="fw-bold">Población y parámetros</h4>
+        <p class="">
+            <strong>Definición.</strong> Se denomina <strong>población</strong> o universo a la totalidad de personas u
+            objetos que tienen una o más características medibles o contables de naturaleza
+            cualitativa o cuantitativa. La característica medible o contable es una variable 
+            estadística cuyo valor, numérico o no numérico, es una observación. <br>
+            Si la variable estadística a estudiar es una sola, cada elemento de la población
+            puede asociarse con una observación. En este sentido, se denon.ina población al
+            corjurtto de valores posibles de la variable. <br>
+            Si los elementos de la población se definen en forma aleatoria, entonces la
+            variable estadística cuantitativa es una variable aleatoria cuyos valores constituyen
+            la población. En este caso, la distribución de la población es la distribución de la
+            variable aleatoria, por lo tanto, la media y la varianza de la variable aleatoria,
+            vienen a ser la media y la varianza de la población. <br>
+
+            Si la variable aleatoria <ng-katex [equation] ="x | uppercase"> </ng-katex> tiene distribución 
+            <ng-katex [equation] ="fx"> </ng-katex>, se puede referir a la población
+            <ng-katex [equation] ="fx"> </ng-katex>, Por ejemplo, si <ng-katex [equation] ="x | uppercase"> </ng-katex> está 
+            normalmente distribuida se  dice que la población está
+            normalmente distribuida o que se tiene una población normal.
+            Por el número de observaciones la población puede ser finita de tamaño <ng-katex [equation] ="n | uppercase"> </ng-katex>, 
+            o <em>infinita</em>. 
+            Algunas poblaciones finitas son tan grandes que en teoría son asumidascomo poblaciones infinitas.
+            <br><br>
+
+            <strong>Definición</strong> . Se denominan <strong>parámetros</strong> a las medidas descriptivas que caracterizan
+            a la distribución de la población. Entre otros, los parámetros poblacionales son. <br><br>
+            
+            <b>
+                Media : <ng-katex [equation] ="mu"> </ng-katex> <br>
+                Proporción :<ng-katex [equation] ="pi"> </ng-katex> o <ng-katex [equation] ="ro"> </ng-katex> <br>
+                Varianza : <ng-katex [equation] ="sigma2"> </ng-katex> <br>
+                Desviación estándar: <ng-katex [equation] ="sigma"> </ng-katex> <br>
+                <br>
+            </b>
+
+            En diversas aplicaciones estadísticas al estudiar una población, la variable
+            aleatoria que la define puede tener distribución conocida o no. La distribución de la población 
+            es conocida, si se conocen sus parámetros y su forma, es decir si se
+            conoce su distribución de probabilidad .
+            Si la distribución de la población es desconocida, podemos estar interesados en: <br>
+
+            <b>* Estimar sus parámetros</b>, si se conoce su distribución, y
+            <b>* Probar determinada suposición</b> acerca de un valor determinado del
+            parámetro, o probar la suposición acerca del tipo de distribución de
+            probabilidades de la población.
+            
+        </p>
+
+        <div class="text-center">
+            <!-- Atrás -->
+            <button class="btn btn-warning mx-1 mt-3" routerLink="/inferencia/tlc-chicuadrado-normal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                </svg>
+                Anterior
+            </button>
+
+            <!-- Siguiente -->
+            <button class="btn btn-primary mx-1 mt-3" routerLink="/inferencia-ma/tipos-de-muestra">
+                Siguiente
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                  </svg>
+            </button>
+        </div>
+    </div>
+</div>

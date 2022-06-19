@@ -1,0 +1,17 @@
+h1 {
+  font-weight: bold;
+}
+
+.formula{
+  text-align: center;
+  margin: 20px auto;
+}
+.espacio {
+  word-spacing: 5px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

@@ -24,6 +24,12 @@
     margin-top: 3vh;
   }
 
+  .error-card{
+    background-color: #ffdbd6;
+    border-color: #d24b33;
+    margin-top: 3vh;
+  }
+
   .btn-buscar {
     background-color: #33D271;
     border-color: #33D271;
@@ -33,4 +39,11 @@
   .btn-buscar:hover {
     background-color: #2cb360;
     border-color: #2cb360;
+  }
+
+  @media screen and (max-width: 768px) {
+    .num-poblacion {
+        margin-left: 30vw;
+        
+    }
   }

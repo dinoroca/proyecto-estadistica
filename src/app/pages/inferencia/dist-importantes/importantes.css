@@ -3,12 +3,12 @@
 }
 
 .-content {
-    margin-top: 12vh; 
+    margin-top: 12vh;
 }
 
 @media screen and (max-width: 768px) {
     .-content {
-        margin-top: 3vh; 
+        margin-top: 3vh;
     }
 }
 
@@ -16,4 +16,8 @@
     background-color: rgb(210, 210, 210);
     border-color: rgb(210, 210, 210);
     margin-bottom: 2vh;
+  }
+
+  p{
+    text-align: justify;
   }

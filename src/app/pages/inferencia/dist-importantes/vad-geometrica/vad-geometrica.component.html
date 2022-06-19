@@ -4,7 +4,48 @@
     </div>
 
     <div class="col-12 col-md-9 -content">
-        Contenido VAD Geométrica
+        <h1>Distribución Geométrica</h1>
+        <p><b>Definición.</b> Se denomina <b>experimento geométrico</b> a las repeticiones independientes de un experimento aleatorio de Bernoullí hasta obtener el primer éxito. En cada ensayo de Bernoullí puede ocurrir un éxito (E ) con probabilidad <ng-katex [equation]="p"></ng-katex> o un fracaso (F) con probabilidad <ng-katex [equation]="q"></ng-katex> siendo <ng-katex [equation]="desigualdad"></ng-katex>. </p>
+
+        <p>El espacio muestral del experimento geométrico es el conjunto:</p>
+        <p class="formula"><ng-katex [equation]="omegaConj"></ng-katex></p>
+
+        <p> <b>Definición</b> Se denomina variable geométrica a la variable aleatoria X definida como el número repeticiones independientes de un ensayo de Bernoullí hasta que resulte el primer éxito. Los posibles valores de X son: 1, 2, 3,..., etc..</p>
+
+        <p>Si k es uno de los valores de la variable, el evento, [X = A:] consiste del suceso elemental de Q que contenga los primeros <i>k</i>— 1 resultados fracasos y el último o <i>k</i>-ésimo resultado un éxito. <i>La probabilidad de que ocurra el primer éxito en la k-ésima</i> prueba es igual a <ng-katex [equation]="qp"></ng-katex>, luego:</p>
+
+        <p class="formula"><ng-katex [equation]="funcion"></ng-katex></p>
+
+        <p>Para probar que la suma de las probabilidades geométricas es igual a 1, se utiliza la suma infinita:</p>
+        <p class="formula"><ng-katex [equation]="funcion1"></ng-katex></p>
+        <p>En efecto, <ng-katex [equation]="funcion2"></ng-katex></p>
+
+        <h2>teorema 1.3</h2>
+        <p>Si X es una variable aleatoria con distribución geométrica de parámetro p, entonces,</p>
+        <p class="espacio">a) <ng-katex [equation]="teoremaa"></ng-katex>, b) <ng-katex [equation]="teoremab"></ng-katex></p>
+
+
+        <div class="text-center">
+          <!-- Atrás -->
+          <button class="btn btn-warning mx-1" routerLink="/inferencia/vad-binomial">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+            </svg>
+            Anterior
+          </button>
+
+          <!-- Siguiente -->
+          <button class="btn btn-primary mx-1" routerLink="/inferencia/vad-pascal">
+            Siguiente
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            </svg>
+          </button>
+        </div>
     </div>
 </div>
 

@@ -4,7 +4,53 @@
     </div>
 
     <div class="col-12 col-md-9 -content">
-        TLC Poisson - normal
+        <h2 class="fw-bold">Aproximación de la Poisson a la normal</h2>
+
+        <p>
+            Sean <ng-katex [equation]="xn"></ng-katex> variables aleatorias independientes e idénticamente 
+            distribuidas como Poisson cada una con promedio <ng-katex [equation]="lambda"></ng-katex> en un intervalo 
+            dado. Es decir en el mismo intervalo cada <ng-katex [equation]="xi"></ng-katex>, ocurre con 
+            media y varianza iguales a <ng-katex [equation]="lambda"></ng-katex>. 
+            Entonces, para <ng-katex [equation]="n"></ng-katex> suficientemente grande la variable:
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="x"></ng-katex>
+        </section>
+
+        <p>
+            tiene distribución de Poisson con media y varianzas iguales a <ng-katex [equation]="lambda"></ng-katex>
+            <ng-katex [equation]="n"></ng-katex>. En consecuencia, por el teorema del límite central, la variable aleatoria:
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="z"></ng-katex>
+        </section>
+
+        <p>
+            tiene aproximadamente distribución <ng-katex [equation]="n01"></ng-katex>, cuando <ng-katex [equation]="n"></ng-katex> es 
+            suficientemente grande. <br>
+            La aproximación es buena si <ng-katex [equation]="lambda"></ng-katex><ng-katex [equation]="n"></ng-katex> > 5.
+
+        </p>
+
+        <div class="text-center">
+            <!-- Atrás -->
+            <button class="btn btn-warning mx-1 mt-3" routerLink="/inferencia/tlc-hipergeometrica-normal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                </svg>
+                Anterior
+            </button>
+
+            <!-- Siguiente -->
+            <button class="btn btn-primary mx-1 mt-3" routerLink="/inferencia/tlc-chicuadrado-normal">
+                Siguiente
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                  </svg>
+            </button>
+        </div>
     </div>
 </div>
 

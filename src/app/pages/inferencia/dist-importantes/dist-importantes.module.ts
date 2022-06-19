@@ -19,6 +19,7 @@ import { TlcHiperNormalComponent } from './tlc-hiper-normal/tlc-hiper-normal.com
 import { TlcPoissonNormalComponent } from './tlc-poisson-normal/tlc-poisson-normal.component';
 import { TlcChicuadNormalComponent } from './tlc-chicuad-normal/tlc-chicuad-normal.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { KatexModule } from 'ng-katex';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     DistImportantesRoutingModule,
-    SharedModule
+    SharedModule,
+    KatexModule
   ]
 })
 export class DistImportantesModule { }
