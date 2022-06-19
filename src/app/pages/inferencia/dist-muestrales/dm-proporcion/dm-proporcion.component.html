@@ -1,9 +1,88 @@
 <div class="row">
-    <div class="col-12 col-md-3 -menu">
-        <app-side-menu-inferencia></app-side-menu-inferencia>
-    </div>
+  <div class="col-12 col-md-3 -menu">
+      <app-side-menu-inferencia></app-side-menu-inferencia>
+  </div>
 
-    <div class="col-12 col-md-9 -content">
-        Distribución muestral de la proporción
-    </div>
+  <div class="col-12 col-md-9 -content">
+    Distribución muestral de la proporción
+    <h2 class="fw-bold mt-1">Distribución muestral de la proporción</h2>
+    <hr>
+    <h2 class="fw-bold mt-3"><em>Teorema</em></h2>
+    <p>Sea <ng-katex [equation]="xn"></ng-katex>, una muestra aleatoria de tamaño <ng-katex [equation]="n"></ng-katex> extraída de la población<ng-katex [equation]="fx"></ng-katex>
+    de Bernoullí <ng-katex [equation]="B"></ng-katex> donde <ng-katex [equation]="p"></ng-katex> es el porcentaje de éxitos en la poblacion y sea
+    <br>
+    </p>
+   
+    <section class="text-center">
+      <ng-katex [equation]="pf"></ng-katex>
+    </section>
+    
+    <br> <br>
+    <p>
+      la <b>proporción de éxito en la muestra,</b> siendo , <ng-katex [equation]="xn2"></ng-katex> una variable binomial
+      <ng-katex [equation]="B2"></ng-katex> entonces 
+      <br>
+      <br>
+    a) <ng-katex [equation]="mup"></ng-katex> <br> <br>
+    b) <ng-katex [equation]="sigma3x"></ng-katex> <br> <br>
+    c) Si <ng-katex [equation]="n"></ng-katex> es suficientemente grande, entonces la variable aleatoria:
+    <br>
+  </p>
+     
+    <section class="text-center">
+      <ng-katex [equation]="z3"></ng-katex>
+    </section>
+    <br>
+    <p>
+      tiene aproximadamente distribución <ng-katex [equation]="N01"></ng-katex> <br>
+    </p>
+    
+    <h2 class="fw-bold mt-3"><em>NOTAS</em></h2>
+    <hr>
+    <p>
+      1. El error estándar de <ng-katex [equation]="Ps"></ng-katex> es: 
+      
+      <ng-katex [equation]="sigma5x"></ng-katex> 
+      <br>
+      2. <b>Si la población es finita de tamaño <ng-katex [equation]="N"></ng-katex></b> y el muestreo es sin reposición el erros
+      estándar (desviación estándar de la hipergeometrica) es: <br>
+    </p>
+    <section class="text-center">
+      <ng-katex [equation]="sigma4x"></ng-katex> 
+    </section>
+    <br>
+    <p>
+      Observar que si <ng-katex [equation]="N"></ng-katex> es grande con respecto a <ng-katex [equation]="n"></ng-katex> el factor de corrección 
+      <ng-katex [equation]="factorc"></ng-katex> se aproxima a la unidad.
+      <br> 
+      <br>
+      3. si <ng-katex [equation]="n"></ng-katex> es suficientemente grande <ng-katex [equation]="n30"></ng-katex> 
+      <br>
+    </p>
+    <section class="text-center">
+      <ng-katex [equation]="p1"></ng-katex> 
+    </section>
+    <br>
+    <p>
+      Sin embargo aproximaciones satisfactorias se obtiene si se introduce el <b>factor de corrección por continuidad </b>
+      <ng-katex [equation]="factorcpc"></ng-katex>. Luego,
+    </p>
+    <section class="text-center">
+      <ng-katex [equation]="p2"></ng-katex> 
+    </section>
+    <br>
+    <p>
+      4. Observar que las dos expreciones de Z
+    </p>
+    <section class="text-center">
+      <ng-katex [equation]="z4"></ng-katex> 
+    </section>
+    <br>
+    <p>
+      donde <ng-katex [equation]="X"></ng-katex> es binomial y <ng-katex [equation]="Ps"></ng-katex> es el porcentaje de éxito en la muestra, 
+      tiene distribución <ng-katex [equation]="N01"></ng-katex>
+    </p>
+
+      
+  </div>
 </div>
