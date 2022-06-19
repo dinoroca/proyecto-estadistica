@@ -39,8 +39,6 @@ export class VarianzaComponent implements OnInit {
   });
 
   formCondiciones2: FormGroup = this.formBuilder.group({
-    media1: [true],
-    media2: [true],
     varianza1: [false],
     varianza2: [false],
     varianzasIguales: [false],
