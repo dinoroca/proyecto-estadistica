@@ -30,7 +30,7 @@ export class SideMenuInferenciaComponent {
       ruta: '/inferencia/vad-pascal'
     },
     {
-      texto: 'Distribución Hopergeométrica',
+      texto: 'Distribución Hipergeométrica',
       ruta: '/inferencia/vad-hipergeometrica'
     },
     {
