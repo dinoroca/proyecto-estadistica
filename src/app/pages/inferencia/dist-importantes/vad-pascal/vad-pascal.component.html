@@ -1,10 +1,80 @@
 <div class="row">
-    <div class="col-12 col-md-3 -menu">
-        <app-side-menu-inferencia></app-side-menu-inferencia>
+  <div class="col-12 col-md-3 -menu">
+    <app-side-menu-inferencia></app-side-menu-inferencia>
+  </div>
+
+  <div class="col-12 col-md-9 -content">
+    <h1>Distribución de Pascal o binomial negativa</h1>
+    <p>
+      <b>Definición.</b> Se denomina experimento binomial negativo o de Pascal a las repeticiones independientes de un experimento aleatorio de Bernoullí hasta obtener el número <ng-katex [equation]="r"></ng-katex>. En cada ensayo de Bernoullí puede ocurrir un éxito con probabilidad <ng-katex [equation]="p"></ng-katex> o un fracaso con probabilidad <ng-katex [equation]="q"></ng-katex>
+    </p>
+
+    <p>
+      A la variable aleatoria X que se define como el número de intentos hasta que ocurra el éxito número <i>r</i> se le denomina <b>variable aleatoria binomial</b> negativa o <b>de Pascal.</b> Su rango es el conjunto: <ng-katex [equation]="Rx"></ng-katex>
+    </p>
+
+    <p>Si <ng-katex [equation]="k"></ng-katex>, el evento <i>[X = k]</i> ocurre, si resulta éxito en la <i>k</i>-ésima prueba y en las restantes <i>k</i>—1 pruebas resultan <i>r</i>— 1 éxitos y (<i>k</i> - 1) - (<i>r</i> - 1 ) = <i>k - r</i> fracasos. Luego, <i>la probabilidad de tener el r-ésimo éxito en ¡a k-ésima prueba</i> es igual a: </p>
+
+    <p class="formula"><ng-katex [equation]="ecuacion"></ng-katex></p>
+
+    <p> <b>Definición.</b> Si se repite en forma independiente un ensayo de Bernoullí, donde cada resultado puede ser un éxito con probabilidad <ng-katex [equation]="p"></ng-katex> o un fracaso con probabilidad <ng-katex [equation]="q"></ng-katex>, <b>se dice que la variable aleatoria X que se define como el número de intentos hasta que ocurran <ng-katex [equation]="r"></ng-katex> éxitos</b> se dice que la variable aleatoria X que se define como el número de intentos hasta que ocurran r éxitos, tiene distribución binomial negativa o de Pascal con parámetros <ng-katex [equation]="r"></ng-katex> y <ng-katex [equation]="p"></ng-katex> y se escribe <ng-katex [equation]="X"></ng-katex>, si su función de probabilidad es:</p>
+
+    <p class="formula"><ng-katex [equation]="funcion"></ng-katex></p>
+
+    <p>Para verificar que la suma de las probabilidades de Pascal es igual a uno, se usa la siguiente serie binomial negativa:</p>
+
+    <p class="formula"><ng-katex [equation]="ecuacion2"></ng-katex> </p>
+
+    <h2>nota</h2>
+    <p>Sean <ng-katex [equation]="Xs"></ng-katex>variables aleatorias ependientes cada una con distribución geométrica <i>G(p)</i>. tales que:</p>
+
+    <div class = "notas">
+      <p><ng-katex [equation]="x1"></ng-katex> es el número de repeticiones necesarias hasta la ocurrencia del primer éxito <i>(E)</i></p>
+      <p><ng-katex [equation]="x2"></ng-katex> es el número de repeticiones entre la primera ocurrencia de E hasta la segunda ocurrencia de <i>E</i>.</p>
+      <p>... Etc</p>
+      <p><ng-katex [equation]="xr"></ng-katex> es el número de repeticiones necesarias entre la r — 1 ocurrencia de E hasta la <i>r</i>-ésima ocurrencia de <i>E</i>.</p>
+      <p>Entonces, la variable aleatoria:</p>
+
+      <p class="formula"><ng-katex [equation]="xvar"></ng-katex></p>
+
+      <p>es el número de repeticiones independientes de un ensayo de Bernoullí hasta que se obtenga el éxito número r. Luego, X tiene distribución de Pascal con  parámetros r y p.</p>
     </div>
 
-    <div class="col-12 col-md-9 -content">
-        Contenido VAD Pascal
+    <h2>teorema 1.4</h2>
+    <p>Si X es una variable aleatoria con distribución de Pascal con parámetros r y p. entonces,</p>
+    <p class="formula espacio">a) <ng-katex [equation]="teoremaa"></ng-katex>, b) <ng-katex [equation]="teoremab"></ng-katex></p>
+
+    <h2>prueba</h2>
+    <p> Sean <ng-katex [equation]="Xs"></ng-katex>variables aleatorias independientes cada una con distribución geométrica, <i>G(p)</i>, entonces, la variable aleatoria:</p>
+    <p class="formula"><ng-katex [equation]="xvar"></ng-katex></p>
+
+    <p>tiene distribución de Pascal con parámetros r y p. Luego,</p>
+
+    <p class="formula"><ng-katex [equation]="ecuacion3"></ng-katex> </p>
+    <p class="formula"><ng-katex [equation]="ecuacion4"></ng-katex> </p>
+
+
+    <div class="text-center">
+      <!-- Atrás -->
+      <button class="btn btn-warning mx-1" routerLink="/inferencia/vad-geometrica">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+        </svg>
+        Anterior
+      </button>
+
+      <!-- Siguiente -->
+      <button class="btn btn-primary mx-1" routerLink="/inferencia/vad-hipergeo">
+        Siguiente
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+        </svg>
+      </button>
     </div>
+
+  </div>
 </div>
-

@@ -18,3 +18,35 @@
   margin-bottom: 2vh;
 }
 
+table {
+  margin: 0 auto;
+  text-align: center;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+td {
+  width: 100px;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.formula{
+  text-align: center;
+  margin: 20px auto;
+}
+.espacio{
+  word-spacing: 15px;
+}
+

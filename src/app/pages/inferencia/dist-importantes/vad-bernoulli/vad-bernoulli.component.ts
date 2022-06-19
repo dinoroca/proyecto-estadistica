@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-vad-bernoulli',
   templateUrl: './vad-bernoulli.component.html',
-  styleUrls: ['../importantes.css']
+  styleUrls: ['../importantes.css', './vad-bernoulli.component.css']
 })
 export class VadBernoulliComponent implements OnInit {
 
@@ -38,7 +38,9 @@ export class VadBernoulliComponent implements OnInit {
   pruebaA = '\\mu = E(X) = 0\\times (1-p)+1\\times p = p';
   pruebaB = '\\sigma^2 = E(X^2)-\\mu^2 = [(0)^2(1-p)+(1)^2( p )]-p^2 = p-p^2 = pq';
 
-  nota = '\\sigma^2 = p - p^2  = -\\left(p-\\dfrac{1}{2}\\right)^2+\\dfrac{1}{4}\\leq\\dfrac{1}{4}'
+  nota = '\\sigma^2 = p - p^2  = -\\left(p-\\dfrac{1}{2}\\right)^2+\\dfrac{1}{4}\\leq\\dfrac{1}{4}';
+
+
   ngOnInit(): void {
   }
 
