@@ -4,6 +4,70 @@
     </div>
 
     <div class="col-12 col-md-9 -content">
-        Diferencia de 2 varianzas
+        <h2 class="fw-bold">Distribución muestral de la diferencia de dos
+            medias con varianzas poblacionales conocidas</h2>
+        <hr>
+
+        <p>
+            Sean <ng-katex [equation]="x1bar"></ng-katex> y <ng-katex [equation]="x2bar"></ng-katex> las 
+            medias de dos muestras aleatorias
+            independientes de tamaños <ng-katex [equation]="n1"></ng-katex> y <ng-katex [equation]="n2"></ng-katex> 
+            seleccionadas de dos poblaciones con medias
+            <ng-katex [equation]="mu1"></ng-katex> y <ng-katex [equation]="mu2"></ng-katex> y varianzas 
+            <ng-katex [equation]="sigma1"></ng-katex> y <ng-katex [equation]="sigma2"></ng-katex> respectivamente, 
+            supuestas conocidas, entonces, 
+            la variable aleatoria <ng-katex [equation]="x1bar"></ng-katex> - <ng-katex [equation]="x2bar"></ng-katex> 
+            tiene las siguientes propiedades.
+        </p>
+
+        <ol type="a">
+            <li><ng-katex [equation]="mux1bar"></ng-katex></li>
+            <li><ng-katex [equation]="sigmax1bar"></ng-katex></li>
+            <li>Para <ng-katex [equation]="n1"></ng-katex>, y <ng-katex [equation]="n2"></ng-katex> 
+                suficientemente grandes , la variable aleatoria:
+            </li>
+        </ol>
+
+        <section class="text-center">
+            <ng-katex [equation]="z"></ng-katex> <br>
+            tiene aproximadamente distribución normal <ng-katex [equation]="n01"></ng-katex>
+        </section>
+
+        <h3 class="fw-bold">NOTA.</h3>
+        <p>
+            La aproximación de <ng-katex [equation]="zmay"></ng-katex> a la normal es muy 
+            buena si <ng-katex [equation]="n1"></ng-katex> <ng-katex [equation]="mayig"></ng-katex> 30 y <ng-katex [equation]="n2">   
+            </ng-katex> <ng-katex [equation]="mayig"></ng-katex> 30 sin 
+            importar si las poblaciones son discretas o continuas y sin importar sus formas.
+            Pero, si las dos poblaciones son normales, entonces, la media <ng-katex [equation]="x1bar"></ng-katex>, es
+            <ng-katex [equation]="nmu1"></ng-katex> y <ng-katex [equation]="x2bar"></ng-katex> es 
+            <ng-katex [equation]="nmu2"></ng-katex> para <ng-katex [equation]="n1"></ng-katex> 
+            <ng-katex [equation]="mayig"></ng-katex> 2 y <ng-katex [equation]="n2"></ng-katex> 
+            <ng-katex [equation]="mayig"></ng-katex> 2. <br><br>
+
+            Por la propiedad reproductiva de la normal <ng-katex [equation]="x1bar"></ng-katex> - 
+            <ng-katex [equation]="x2bar"></ng-katex>  es normal con media = <ng-katex [equation]="mu1"></ng-katex> - 
+            <ng-katex [equation]="mu2"></ng-katex> y varianza = <ng-katex [equation]="sigma1n"></ng-katex>. <br><br>
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="z"></ng-katex> <br>
+            es normal <ng-katex [equation]="n01"></ng-katex>  para cualquier valor de
+            <ng-katex [equation]="n1"></ng-katex> <ng-katex [equation]="mayig"></ng-katex> 2 y 
+            <ng-katex [equation]="n2"></ng-katex> <ng-katex [equation]="mayig"></ng-katex> 2.
+        </section>
+
+        <h2 class="fw-bold mt-4">Distribución m uestral de la diferencia de dos
+            m edias con varianzas poblacionales desconocidas</h2>
+
+        <div class="text-center">
+            <!-- Atrás -->
+            <button class="btn btn-warning mx-1 mt-3" routerLink="/inferencia-ma/dm-dos-proporciones">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                </svg>
+                Anterior
+            </button>
+        </div>
     </div>
 </div>
