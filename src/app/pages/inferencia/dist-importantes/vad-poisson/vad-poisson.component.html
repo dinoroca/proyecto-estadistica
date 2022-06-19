@@ -1,32 +1,57 @@
 <div class="row">
-    <div class="col-12 col-md-3 -menu">
-        <app-side-menu-inferencia></app-side-menu-inferencia>
+  <div class="col-12 col-md-3 -menu">
+    <app-side-menu-inferencia></app-side-menu-inferencia>
+  </div>
+
+  <div class="col-12 col-md-9 -content">
+    <h1>Distribución de Poisson</h1>
+    <hr>
+    <p><b>Definición.</b> Se dice que la variable aleatoria discreta <em>X</em>, cuyos valores posibles son: 0,1,2,..., tiene distribución de Poisson con parámetro <ng-katex [equation]="landa"></ng-katex> y se escribe <ng-katex [equation]="x"></ng-katex>, si su funcion de probabilidad es:</p>
+
+    <p class="formula"><ng-katex [equation]="funcion"></ng-katex></p>
+
+    <p>Para verificar que la suma de las probabilidades de Poisson es igual a 1, se utiliza , la suma:</p>
+
+    <p class="formula"><ng-katex [equation]="suma"></ng-katex></p>
+    <p>En efecto,</p>
+    <p class="formula"><ng-katex [equation]="suma2"></ng-katex></p>
+
+    <h2>nota</h2>
+    <p><b>La distribución de Poisson se aplica </b>a problemas donde la variable aleatoria es el número de eventos dependientes que ocurren en un intervalo de tiempo, o en una región plana (con un promedio dado), por ejemplo, entre otros: </p>
+    <ul>
+      <li>Número de llamadas que recibe una central telefónica en el período de un minuto.</li>
+      <li>Número de accidentes de trabajo que ocurren en una fábrica durante una semana.</li>
+      <li>Número de fallas en la superficie de una cerámica rectangular.</li>
+      <li>Número de bacterias en un volumen de un <ng-katex [equation]="mt"></ng-katex> de agua.</li>
+    </ul>
+
+    <h2>teorema</h2>
+    <p>Si <ng-katex [equation]="x"></ng-katex>, entonces,</p>
+    <p>a) Media: <ng-katex [equation]="me"></ng-katex></p>
+    <p>b) Varianza: <ng-katex [equation]="vari"></ng-katex></p>
+
+
+
+    <div class="text-center">
+      <!-- Atrás -->
+      <button class="btn btn-warning mx-1" routerLink="/inferencia/vad-hipergeometrica">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+        </svg>
+        Anterior
+      </button>
+
+      <!-- Siguiente -->
+      <button class="btn btn-primary mx-1" routerLink="/inferencia/vac-normal">
+        Siguiente
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+        </svg>
+      </button>
     </div>
-
-    <div class="col-12 col-md-9 -content">
-        Contenido VAD Poisson
-
-        <div class="text-center">
-          <!-- Atrás -->
-          <button class="btn btn-warning mx-1" routerLink="/inferencia/vad-hipergeo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
-              viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-            </svg>
-            Anterior
-          </button>
-
-          <!-- Siguiente -->
-          <button class="btn btn-primary mx-1" routerLink="/inferencia/vac-normal">
-            Siguiente
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
-              viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-            </svg>
-          </button>
-        </div>
-    </div>
+  </div>
 </div>
-
