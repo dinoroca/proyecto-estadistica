@@ -59,6 +59,66 @@
 
         <h2 class="fw-bold mt-4">Distribución m uestral de la diferencia de dos
             m edias con varianzas poblacionales desconocidas</h2>
+        
+        <p>
+            Sea <ng-katex [equation]="x1bar"></ng-katex> la media de una muestra aleatoria de tamaño 
+            <ng-katex [equation]="n1"></ng-katex> extraída de la <b>población normal</b> 
+            <ng-katex [equation]="nmusigma1"></ng-katex>, y sea <ng-katex [equation]="x2bar"></ng-katex> 
+            la media de otra muestra aleatoria de
+            tamaño <ng-katex [equation]="n2"></ng-katex> extraída de la <b>población normal</b> <ng-katex [equation]="nmusigma1"></ng-katex>,
+            <b>independiente</b> de la anterior.
+        </p>
+
+        <h3 class="fw-bold">A) Varianzas poblacionales iguales: <small class="fs-6"><ng-katex [equation]="sigmaigual"></ng-katex></small></h3>
+
+        <p>
+            En este caso, la variable aleatoria <ng-katex [equation]="x1bar"></ng-katex> - 
+            <ng-katex [equation]="x2bar"></ng-katex> tiene distribución normal
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="nmu12"></ng-katex> <br>
+        </section>
+        <p>
+            y la variable aleatoria estándar:
+        </p>
+        <section class="text-center">
+            <ng-katex [equation]="zx1x2bar"></ng-katex> <br>
+        </section> <br>
+
+        <p>
+            tiene distribución normal <ng-katex [equation]="n01"></ng-katex>. Por otra parte,
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="n1men1"></ng-katex>, &nbsp; y &nbsp;
+            <ng-katex [equation]="n2men1"></ng-katex> <br><br>
+            y <ng-katex [equation]="v"></ng-katex>
+        </section> <br>
+
+        <p>
+            Por tanto, la variable aleatoria:
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="tz"></ng-katex>, <br>
+        </section> <br>
+
+        <p>
+            tiene distribución <em>T-student</em> con <ng-katex [equation]="n1"></ng-katex> + 
+            <ng-katex [equation]="n2"></ng-katex> - 2 grados de libertad.  <br>
+
+            Donde, <ng-katex [equation]="sc"></ng-katex> es <b>la varianza común</b> y tiene la espresión: 
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="sc2"></ng-katex>
+        </section>
+
+        <h3 class="fw-bold mt-4">B) Varianzas poblacionales diferentes: <small class="fs-6"><ng-katex [equation]="sigmadif"></ng-katex></small></h3>
+        <p>
+            En este caso la variable aleatoria:
+        </p>
 
         <div class="text-center">
             <!-- Atrás -->
