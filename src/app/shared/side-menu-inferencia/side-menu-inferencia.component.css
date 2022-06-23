@@ -35,3 +35,18 @@ li{
     color: #fff;
     text-decoration: underline;
 }
+
+.but-menu {
+    position: fixed;
+}
+
+.but-menu2 {
+    position: fixed;
+    margin-top: 10vh;
+}
+
+@media screen and (max-width: 768px) {
+    .but-menu {
+        position: relative;
+    }
+  }
