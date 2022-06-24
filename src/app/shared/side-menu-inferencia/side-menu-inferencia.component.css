@@ -42,11 +42,15 @@ li{
 
 .but-menu2 {
     position: fixed;
-    margin-top: 10vh;
+    margin-top: 18vh;
 }
 
 @media screen and (max-width: 768px) {
     .but-menu {
         position: relative;
+    }
+    .but-menu2 {
+        position: relative;
+        margin-top: 2vh;
     }
   }
