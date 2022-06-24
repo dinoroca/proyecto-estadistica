@@ -7,6 +7,7 @@ import { SideMenuInferenciaComponent } from './side-menu-inferencia/side-menu-in
 import { SideMenuFormularioComponent } from './side-menu-formulario/side-menu-formulario.component';
 import { SideMenuCalculadoraComponent } from './side-menu-calculadora/side-menu-calculadora.component';
 import { RouterModule } from '@angular/router';
+import { ScrolltopComponent } from './scrolltop/scrolltop.component';
 
 
 
@@ -18,6 +19,7 @@ import { RouterModule } from '@angular/router';
     SideMenuInferenciaComponent,
     SideMenuFormularioComponent,
     SideMenuCalculadoraComponent,
+    ScrolltopComponent,
 
   ],
   imports: [
@@ -31,7 +33,8 @@ import { RouterModule } from '@angular/router';
     SideMenuInferenciaComponent,
     SideMenuFormularioComponent,
     SideMenuCalculadoraComponent,
-    RouterModule
+    RouterModule,
+    ScrolltopComponent
     
   ]
 })
