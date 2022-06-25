@@ -5,6 +5,7 @@ import { FormularioRoutingModule } from './formulario-routing.module';
 import { FormularioComponent } from './formulario/formulario.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { KatexModule } from 'ng-katex';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     FormularioRoutingModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    KatexModule
   ]
 })
 export class FormularioModule { }

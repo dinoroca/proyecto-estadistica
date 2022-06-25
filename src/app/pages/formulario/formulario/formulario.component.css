@@ -1,9 +1,13 @@
+.opciones{
+    margin-top: 13vh;
+}
+
 .-menu{
     margin-top: 10vh;
 }
 
 .-content {
-    margin-top: 12vh; 
+    margin-top: 2vh;
 }
 
 .inicial-card{
@@ -15,4 +19,13 @@
 .formulas{
     background-color: rgb(255, 225, 205);
     border-color: rgb(255, 184, 137);
+}
+
+.formulas-hipo{
+    background-color: rgb(255, 205, 251);
+    border-color: rgb(255, 102, 242);
+}
+
+td {
+  border: 1px solid black;
 }
