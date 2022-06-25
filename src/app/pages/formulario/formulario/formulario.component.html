@@ -157,13 +157,86 @@
       </div>
     </div>
 
-    <div class="card formulas-hipo">
+    <div >
       <div class="card-body">
-
-        Aquí las otras formulas :V
-
-      </div>
-    </div>
+        <div>
+          <table class="tabla">
+            <tr>
+              <th colspan="4">ESTIMACIÓN Y PRUEBA DE HIPOTESIS</th>
+            </tr>
+            <tr>
+              <th>Parámetro </th>
+              <th colspan="2">Intervalos de Confianza</th>
+              <th >Estadístico de Prueba</th>
+              
+            </tr>
+            <tr>
+              <td rowspan="2"> <ng-katex [equation]="mu"></ng-katex></td>
+              <td>Varianza conocida</td>
+              <td>Varianza desconocida</td>
+              <td rowspan="2"><ng-katex [equation]="Z1"></ng-katex>&nbsp; &nbsp;&nbsp;    <ng-katex [equation]="t1"></ng-katex></td>
+            </tr>
+            <tr>
+              
+              <td> <ng-katex [equation]="IC1"></ng-katex></td>
+              <td><ng-katex [equation]="IC2"></ng-katex></td>
+              
+            </tr>
+            <tr>
+              <td><ng-katex [equation]="sigma2"></ng-katex></td>
+              <td colspan="2"> <ng-katex [equation]="LIC1"></ng-katex>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;   <ng-katex [equation]="LIC2"></ng-katex></td>
+              <td ><ng-katex [equation]="X2"></ng-katex></td>
+            </tr>
+            <tr>
+              <td><ng-katex [equation]="P"></ng-katex></td>
+              <td colspan="2"><ng-katex [equation]="ICp"></ng-katex> &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  <ng-katex [equation]="q"></ng-katex></td>
+              <td ><ng-katex [equation]="Zp"></ng-katex></td>
+            </tr>
+            <tr>
+              <td rowspan="6"> muestras <br/>independientes</td>
+              <td colspan="2">Varianzas conocidas</td>
+            </tr>
+            <tr>
+              
+              <td colspan="2"><ng-katex [equation]="ICvc"></ng-katex></td>
+              <td><ng-katex [equation]="Zvc"></ng-katex></td>
+            </tr>
+            <tr>
+              
+              <td colspan="2">Varianzas desconocidas pero iguales (homogéneas)</td>
+            </tr>
+            <tr>
+              
+              <td colspan="2">
+                <div><ng-katex [equation]="ICvdh"></ng-katex>  </div>
+                <br/>
+                <div>donde:<ng-katex [equation]="ICvdh2"></ng-katex></div>
+                <br/>
+                <div>grados de libertad: <ng-katex [equation]="gl"></ng-katex></div>
+              </td>
+              <td>
+                <div><ng-katex [equation]="Tvch"></ng-katex>  </div>
+                <br/>
+                <div>donde:<ng-katex [equation]="ICvdh2"></ng-katex></div>
+              </td>
+            </tr>
+            <tr>
+              
+              <td colspan="2">Varianzas desconocidas y diferentes (heterogéneas)</td>
+            </tr>
+            <tr>
+              
+              <td colspan="2">Ecuacion 1</td>
+              <td>Ecuacion 2</td>
+            </tr>
+            <tr>
+              <td>Muestras <br/> relacionadas</td>
+              <td colspan="2">Ecuacion 1</td>
+              <td>Ecuacion 2</td>
+            </tr>
+      
+          </table>
+        </div>
   </div>
 
 </div>

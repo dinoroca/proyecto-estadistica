@@ -84,12 +84,35 @@ media9 = 'E(X)=\\alpha \\beta';
   varianza10 = 'V(X)=\\beta^2';
   //------------------------------------------
 
+// formulas de ESTIMACIÓN Y PRUEBA DE HIPOTESIS
+  //mu 
+  mu ='\\mu';
+  IC1 = 'IC(\\mu)=\\displaystyle\\bar{X}\\pm Z_{1-\\alpha/2}\\frac{\\sigma}{\\sqrt{n}}';
+  IC2 = 'IC(\\mu)=\\displaystyle\\bar{x}\\pm t_{\\left(\\normalsize\\frac{\\alpha}{2},n-1\\right)}\\frac{s}{\\sqrt{n}}';
+  Z1 = 'Z=\\displaystyle\\frac{\\bar{x}-\\mu}{\\frac{\\sigma}{\\sqrt{n}}}\\sim N(0,1)';
+  t1 = 't=\\displaystyle\\frac{\\bar{x}-\\mu}{\\frac{S}{\\sqrt{n}}}\\sim t_(n-1)';
+  
+  //sigma^2
+  sigma2 ='\\sigma^2'
+  LIC1 = 'LIC(\\sigma^2)=\\displaystyle\\frac{\\left(n-1\\right)S^2}{{X^2}_{(\\normalsize\\frac{\\alpha}{2},n-1)}}';
+  LIC2 = 'LIC(\\sigma^2)=\\displaystyle\\frac{(n-1)S^2}{{X^2}_{(1-\\normalsize\\frac{\\alpha}{2},n-1)}}';
+  X2 = 'X^2 = \\displaystyle\\frac{(n-1)S^2}{\\sigma^2}\\sim {X^2}_(n-1)';
+  //formula de P
+  P = 'P';
+  ICp = 'IC(p)=\\displaystyle\\widehat{p}\\pm Z_{(1-\\alpha/2)} \\sqrt{\\frac{\\widehat{p}(1-\\widehat{p})}{n}}';
+  q = '\\widehat{q}=1-\\widehat{p}';
+  Zp ='Z=\\displaystyle\\frac{\\widehat{p}-p}{\\normalsize\\displaystyle\\sqrt{\\frac{p(1-p)}{n}}}\\sim N(0,1)';
 
-
-
-
-
-
+  //muestra independientes
+    //varianzas conocidas
+    ICvc = 'IC_{(\\mu_1-\\mu_2)}=(\\bar{X_1}-\\bar{X_2})\\hspace{1.5mm}\\pm \\hspace{1.5mm}\\displaystyle Z_{(1-\\alpha/2)} \\sqrt{\\frac{\\sigma^2_1}{n_1} + \\frac{\\sigma^2_2}{n_2}}';
+    Zvc = 'Z=\\displaystyle\\frac{(\\bar{X_1}-\\bar{X_2})-(\\bar{\\mu_1}-\\bar{\\mu_2})}{\\displaystyle\\sqrt{\\frac{\\sigma^2_1}{n_1} + \\frac{\\sigma^2_2}{n_2}}} \\sim N(0,1)'
+    //Varianzas desconocidas pero iguales (homogéneas)
+    ICvdh ='IC(\\mu_1-\\mu_2)=(\\bar{X_1}-\\bar{X_2})\\pm\\displaystyle \\normalsize t_{\\normalsize (\\frac{\\alpha}{2} , n_1+n_2-2)}\\sqrt{S^2_p\\left(\\frac{1}{n_1}+\\frac{1}{n_2}\\right)}'
+    ICvdh2 ='S^2_p=\\displaystyle\\frac{(n_1-1)S^2_1 + (n_2-1)S^2_2 }{n_1+n_2-2}';
+    gl = '(g.l.)=n_1+n_2-2'
+    Tvch = 't =\\displaystyle\\frac{(\\bar{X_1}-\\bar{X_2})-(\\bar{\\mu_1}-\\bar{\\mu_2})}{\\sqrt{S^2_p \\left(\\frac{1}{n_1} + \\frac{1}{n_2}\\right)}}';
+    
   ngOnInit(): void {
     this.formCantidad.setValue( this.porDefecto );
   }
