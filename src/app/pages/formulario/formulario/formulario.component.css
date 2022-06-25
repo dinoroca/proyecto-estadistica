@@ -26,6 +26,17 @@
     border-color: rgb(255, 102, 242);
 }
 
+/* estilos - DISTRIBUCIONES DE PROBABILIDAD */
+thead {
+  text-align: center;
+  font-weight: bold;
+}
+
 td {
+  padding: 8px;
   border: 1px solid black;
+}
+
+.nigga {
+  font-weight: bold;
 }

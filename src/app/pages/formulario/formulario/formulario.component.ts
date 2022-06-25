@@ -76,10 +76,12 @@ media9 = 'E(X)=\\alpha \\beta';
   varianza9 = 'V(X)=\\alpha \\beta^2';
 
   //Exponencial
-  dis10 = 'X \\sim B(1,p)';
-  p10 = 'P(X=x)=p^x(1-p)^{1-x} \\ \\ \\ \\ x=0,1';
-  media10 = 'E(X)=p';
-  varianza10 = 'V(X)=p(1-p)';
+  dis10 = 'X \\sim E(1/\\beta)';
+  p10 = 'f(x) = \\dfrac{1}{\\beta}e^{- \\dfrac{x}{\\beta}} \\ \\ , \\ \\ x>0';
+  p101 = '\\beta >0'
+  p102 = 'F(x) = P(X\\leq x) = 1-e^{- \\dfrac{x}{\\beta}}'
+  media10 = 'E(X)=\\beta';
+  varianza10 = 'V(X)=\\beta^2';
   //------------------------------------------
 
 
