@@ -4,8 +4,128 @@
   </div>
 
   <div class="col-12 col-md-9 -content">
-    Diferencia de 2 medias
+    
+    <h1 class="fw-bold mt-1">Distribución muestral de la diferencia de dos medias con varianzas poblacionales conocidas</h1>
+    <hr>
+    <h2 class="fw-bold mt-3"><em>Teorema</em></h2>
+    <p>Sean <ng-katex [equation]="xs1"></ng-katex> y <ng-katex [equation]="xs2"></ng-katex> las medidas de dos muestras aleatorias
+      idenpendientes de tamaños <ng-katex [equation]="n1"></ng-katex> y <ng-katex [equation]="n22"></ng-katex> seleccionadas de dos poblaciones con medias
+      <ng-katex [equation]="mu1"></ng-katex> y  <ng-katex [equation]="mu2"></ng-katex> y varianzas 
+      <ng-katex [equation]="sigma21"></ng-katex> y <ng-katex [equation]="sigma22"></ng-katex> respectivamente, supuestas conocidas, entonces,
+      la variable aleatoria <ng-katex [equation]="xs1mxs2"></ng-katex> tiene las siguientes propiedades:
+      <br> <br>
+    a) <ng-katex [equation]="muxs1xs2"></ng-katex> <br> <br>
+    b) <ng-katex [equation]="sigma2xs1xs2"></ng-katex> <br> <br>
+    c) Para <ng-katex [equation]="n1"></ng-katex> y <ng-katex [equation]="n22"></ng-katex> suficientemente grandes, la variable aleatoria:
+    <br>
+    </p>
+    <section class="text-center">
+      <ng-katex [equation]="z3"></ng-katex>
+    </section>
+    <p>
+      tiene aproximadamente distribución normal <ng-katex [equation]="N01"></ng-katex>.
+    </p>
 
+    <h2 class="fw-bold mt-3"><em>NOTA</em></h2>
+    <hr>
+    <p>La aproximación de <ng-katex [equation]="zm"></ng-katex> a la normal es muy buena si <ng-katex [equation]="n130"></ng-katex> y <ng-katex [equation]="n230"></ng-katex> sin 
+      importar si las poblaciones son discretas o continuas y sin importar sus formas.
+      <br>
+      Pero, si las dos poblaciones son normales, entonces la media <ng-katex [equation]="xs1"></ng-katex> es <ng-katex [equation]="n1form"></ng-katex> y <ng-katex [equation]="xs2"></ng-katex>
+      es <ng-katex [equation]="n2form"></ng-katex> para <ng-katex [equation]="n1m2"></ng-katex> y <ng-katex [equation]="n2m2"></ng-katex>
+      <br>
+      Por la propiedad reproductiva de la normal <ng-katex [equation]="xs1mxs2"></ng-katex> es normal con media <ng-katex [equation]="mu1mmu2"></ng-katex> y varianza <ng-katex [equation]="varianzanota"></ng-katex>
+      <br>
+      Luego, la distribución de la variable aleatoria <ng-katex [equation]="zm"></ng-katex>:
+      <br>
+    </p>
+    <section class="text-center">
+      <ng-katex [equation]="z3"></ng-katex>
+    </section>
+    <p>es normal <ng-katex [equation]="N01"></ng-katex> para cualquier valor de <ng-katex [equation]="n1m2"></ng-katex> y <ng-katex [equation]="n2m2"></ng-katex>
+    </p>
+    <br>
+    <br>
+
+
+    <h1 class="fw-bold mt-1">Distribución muestral de la diferencia de dos medias con varianzas poblacionales desconocidas</h1>
+    <hr>    
+    <p>Sea <ng-katex [equation]="xs1"></ng-katex> la media de una muestra aleatoria de tamaño <ng-katex [equation]="n1"></ng-katex> extraida de la <b>población normal </b> 
+      <ng-katex [equation]="n1form"></ng-katex>, y sea <ng-katex [equation]="xs2"></ng-katex> la media de otra muestra aleatoria de tamaño 
+      <ng-katex [equation]="n2"></ng-katex> extraida de la <b>población normal </b><ng-katex [equation]="n2form"></ng-katex> <b>independientemente</b> de la anterior.
+      <br>
+      <br>
+    </p>
+    <h2 class="fw-bold mt-3"><em>A) Varianzas poblacionales iguales: <ng-katex [equation]="sigmaigual"></ng-katex></em></h2>
+    <p>
+      En este caso, la variable aleatoria <ng-katex [equation]="xs1mxs2"></ng-katex> tiene distribución normal
+      <br>      
+    </p>
+
+    <section class="text-center">
+      <ng-katex [equation]="nform"></ng-katex>
+    </section>
+    <p>
+      y la variable aleatoria estándar:
+    </p>
+    <section class="text-center">
+      <ng-katex [equation]="z4"></ng-katex>
+    </section>
+    <p>
+      tiene distribución normal <ng-katex [equation]="N01"></ng-katex>. Por otra parte,
+      <br>
+    </p>
+
+    <section class="text-center">
+      <ng-katex [equation]="form1"></ng-katex>, y <ng-katex [equation]="form2"></ng-katex>
+      <br>
+      y, <ng-katex [equation]="V"></ng-katex>
+    </section>
+    <br>
+    <p>
+      Por tanto, la variable aleatoria:
+      <br>
+    </p>
+    <section class="text-center">
+      <ng-katex [equation]="T"></ng-katex>
+    </section>
+    <p>
+      tiene distribucion t-student con <ng-katex [equation]="n122"></ng-katex> grados de libertad.
+      <br> 
+      Donde, <ng-katex [equation]="Sc2"></ng-katex> <b>la varianza común</b>, tiene la expresión:
+      <br>
+    </p>
+    <section class="text-center">
+      <ng-katex [equation]="Sc2form"></ng-katex>
+    </section>
+
+
+
+
+
+
+    <h2 class="fw-bold mt-3"><em>B) Varianzas poblacionales diferentes: <ng-katex [equation]="sigmadiferente"></ng-katex></em></h2>
+    <p>
+      En este caso, la variable aleatoria: 
+      <br>
+    </p>
+
+    <section class="text-center">
+      <ng-katex [equation]="Tb"></ng-katex>
+    </section>
+
+    <p>
+      tiene distribución t-student con <ng-katex [equation]="g"></ng-katex> grados de libertad, donde.
+      <br>
+    </p>
+    
+    <section class="text-center">
+      <ng-katex [equation]="gf"></ng-katex>
+    </section>
+    <p>
+      Si <ng-katex [equation]="g"></ng-katex> no es un número entero se redondea al entero más cercano.
+      <br>
+    </p>
 
 
 

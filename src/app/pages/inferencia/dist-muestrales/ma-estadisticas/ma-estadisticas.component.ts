@@ -22,7 +22,8 @@ export class MaEstadisticasComponent implements OnInit {
   p1 = '\\overline{p}'
   p2 = '\\widehat{p}';
   pb = '\\overline{P}=\\displaystyle\\frac{1}{n}\\sum_{i=1}^{n}X_i';
-  Pb = '\\overline{P}=\\displaystyle\\frac{X}{n}, donde  X \\sim B(n,p)';
+  Pb = '\\overline{P}=\\displaystyle\\frac{X}{n}';
+  X1 = ' X \\sim B(n,p)';
   X = 'X_i \\sim B(1,p)'
 
 
