@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './dist-media.component.html',
   styleUrls: ['./dist-media.component.css']
 })
-export class DistMediaComponent implements OnInit {
+export class TablasComponent implements OnInit {
 
   constructor() { }
 

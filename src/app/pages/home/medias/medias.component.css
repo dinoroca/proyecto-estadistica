@@ -105,3 +105,8 @@ p{
     padding: 0vw 2vw 0vw 2vw;
   }
 }
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+  background-color: rgba(0, 0, 0, 0.187);
+  border-radius: 5px;
+}

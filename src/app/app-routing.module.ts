@@ -18,8 +18,8 @@ const routes: Routes = [
   },
 
   {
-    path: 'calculadora',
-    loadChildren: () => import('./pages/calculadora/calculadora.module').then( m => m.CalculadoraModule )
+    path: 'tablas',
+    loadChildren: () => import('./pages/tablas/tablas.module').then( m => m.CalculadoraModule )
   },
 
   {

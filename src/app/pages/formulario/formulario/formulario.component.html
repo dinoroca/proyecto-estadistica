@@ -1,0 +1,41 @@
+<div class="row">
+  <div class=" -content">
+    <div class="card inicial-card">
+      <div class="card-body text-center fw-bold">
+        Fórmulas de <em class="fw-normal">D.M. de la media</em>
+      </div>
+    </div>
+
+    <div class="card formulas">
+      <div class="card-body">Aquí las fórmulas :v</div>
+    </div>
+  </div>
+
+  <form [formGroup]="formCantidad">
+    <div class="row num-poblacion">
+        <div class="form-check col-12 col-sm-6">
+            <input class="form-check-input" 
+                type="radio" 
+                value = "1"
+                formControlName="numPoblation"
+                id="onePob">
+
+            <label class="form-check-label" for="onePob">
+                Dist. de probabilidad
+            </label>
+        </div>
+    
+        <div class="form-check col-12 col-sm-6">
+            <input class="form-check-input" 
+                type="radio"
+                value = "2"
+                formControlName="numPoblation"
+                id="twoPob">
+                
+            <label class="form-check-label" for="twoPob">
+                Prueba de hipótesis
+            </label>
+        </div>
+    </div>
+</form>
+</div>

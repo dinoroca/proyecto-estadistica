@@ -30,8 +30,8 @@ export class HeaderComponent implements OnInit {
       icon: 'bi bi-house'
     },
     {
-      texto: 'Calculadora',
-      ruta: '/calculadora',
+      texto: 'Tablas',
+      ruta: '/tablas',
       icon: 'bi bi-house'
     }
   ];
