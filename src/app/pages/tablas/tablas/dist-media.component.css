@@ -4,3 +4,12 @@
     height: 90vh;
     margin-top: 7vh;
 }
+
+.entrada{
+    margin-right: 10vw;
+}
+
+.resultado{
+    border-color: rgb(55, 190, 89);
+    background-color: rgb(181, 255, 199);
+}

@@ -3,8 +3,48 @@
     <iframe src="../../../../assets/docs/tablas.pdf" class="tabla col-12"></iframe>
 </div>
 
+<div class="row mt-4">
 
-<!-- Tucno -->
-<!-- Rivera -->
-<!-- Jamil -->
-<!-- Mirko -->
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-outline-secondary">Z</button>
+        <button type="button" class="btn btn-outline-secondary">T-student</button>
+        <button type="button" class="btn btn-outline-secondary">X</button>
+    </div>
+    
+      <div class="mt-4">
+        
+        <div class="card col-12 col-md-6 container">
+            <form (ngSubmit)="calcularZ()" [formGroup]="formZ" autocomplete="off">
+                <div class="mt-3 mb-3">
+                    <h5 class="text-center"> <ng-katex [equation]="zMenor"></ng-katex> </h5>
+                    <label class="col col-form-label">
+                        Ingrese el valor de <ng-katex [equation]="x"></ng-katex>
+                    </label>
+                    <div class="col">
+                      <input type="number" 
+                        class="form-control"
+                        formControlName="valorZ"
+                        placeholder="Ingrese el valor de x">
+                    </div>
+
+                    <div class="row container mt-3">
+                        <button class="btn btn-success btn-buscar"
+                            type="submit"
+                            [disabled]="formZ.invalid">
+                            Calcular
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="card container text-center resultado mb-2 fs-5" *ngIf="mostrarValorZ && !error">
+                EL valor de Z es: {{res}}
+            </div>
+
+            <div class="card container text-center resultado mb-2" *ngIf="mostrarValorZ! && error">
+                Error
+            </div>
+
+        </div>
+      </div>
+</div>
