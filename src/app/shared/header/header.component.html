@@ -19,6 +19,7 @@
                 *ngFor="let item of headerMenu"
                 [routerLink]="[item.ruta]"
                 routerLinkActive="active">
+                {{ item.texto }}
                 </li>
             </ul>
         </div>
