@@ -21,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeRoutingModule,
     SharedModule,
     KatexModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ]
 })
 export class HomeModule { }

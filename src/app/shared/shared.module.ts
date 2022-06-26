@@ -7,6 +7,7 @@ import { SideMenuInferenciaComponent } from './side-menu-inferencia/side-menu-in
 import { SideMenuCalculadoraComponent } from './side-menu-calculadora/side-menu-calculadora.component';
 import { RouterModule } from '@angular/router';
 import { ScrolltopComponent } from './scrolltop/scrolltop.component';
+import { RellenoComponent } from './relleno/relleno.component';
 
 
 
@@ -18,7 +19,7 @@ import { ScrolltopComponent } from './scrolltop/scrolltop.component';
     SideMenuInferenciaComponent,
     SideMenuCalculadoraComponent,
     ScrolltopComponent,
-
+    RellenoComponent,
   ],
   imports: [
     CommonModule,
@@ -31,8 +32,8 @@ import { ScrolltopComponent } from './scrolltop/scrolltop.component';
     SideMenuInferenciaComponent,
     SideMenuCalculadoraComponent,
     RouterModule,
-    ScrolltopComponent
-    
+    ScrolltopComponent,
+    RellenoComponent
   ]
 })
 export class SharedModule { }
