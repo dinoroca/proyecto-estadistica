@@ -123,7 +123,7 @@ export class ProporcionComponent {
       this.formCondiciones2.controls['pobN2'].value
     ){
       this.mensajeError = false;
-      this.mensajeSugerencia = 'Como se tiene N1 y N1, se debe usar la Z con el factor de corrección y la ecuación es:';
+      this.mensajeSugerencia = 'Como se tiene N1 y N2, se debe usar la Z con el factor de corrección y la ecuación es:';
       this.ecuacion = 'Z = \\dfrac{(\\hat{p_{1}} - \\hat{p_{2}})-(\\rho_{1} - \\rho_{2})}{\\sqrt{ \\dfrac{\\rho_{1} q_1}{n_1} \\left(\\dfrac{N_{1} -n_{1}}{N_{1} -1} \\right) + \\dfrac{\\rho_{2} q_2}{n_2} \\left(\\dfrac{N_{2} -n_{2}}{N_{2} -1} \\right)}} \\sim N(0, 1)';
     }
     else{

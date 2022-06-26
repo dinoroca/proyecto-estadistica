@@ -1,0 +1,69 @@
+.opciones{
+    margin-top: 13vh;
+}
+
+.-menu{
+    margin-top: 10vh;
+}
+
+.-content {
+    margin-top: 2vh;
+}
+
+.inicial-card{
+    background-color: rgb(210, 210, 210);
+    border-color: rgb(210, 210, 210);
+    margin-bottom: 2vh;
+}
+
+.formulas{
+    background-color: rgb(255, 225, 205);
+    border-color: rgb(255, 184, 137);
+}
+
+.formulas-hipo{
+    background-color: rgb(255, 205, 251);
+    border-color: rgb(255, 102, 242);
+}
+
+/* estilos - DISTRIBUCIONES DE PROBABILIDAD */
+table {
+  margin: 0 auto;
+}
+
+thead {
+  text-align: center;
+  font-weight: bold;
+}
+
+td {
+  padding:15px 8px;
+  border: 1px solid black;
+}
+
+.color {
+  background-color: rgb(240, 198, 170);
+}
+
+.nigga {
+  font-weight: bold;
+}
+
+.sin-esp {
+  margin-bottom: 0;
+}
+table,th{
+	border: solid 1px black;
+	border-collapse: collapse;
+	padding: 5px;
+}
+div{
+	text-align: center;
+}
+.tabla{
+	width: 100%;
+	height: 100%;
+	
+}
+
+

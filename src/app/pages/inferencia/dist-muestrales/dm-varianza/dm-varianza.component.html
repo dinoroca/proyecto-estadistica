@@ -1,9 +1,134 @@
 <div class="row">
-    <div class="col-12 col-md-3 -menu">
-        <app-side-menu-inferencia></app-side-menu-inferencia>
+  <div class="col-12 col-md-3 -menu">
+    <app-side-menu-inferencia></app-side-menu-inferencia>
+  </div>
+
+  <div class="col-12 col-md-9 -content">
+    
+    <h1 class="fw-bold mt-1">Distribución muestral de la varianza</h1>
+    <hr>
+    <h2 class="fw-bold mt-3"><em>Teorema</em></h2>
+    <p>Si <ng-katex [equation]="xn"></ng-katex>, es una muestra aleatoria escgida de una <b>distribución normal </b>
+      <ng-katex [equation]="Nnorm"></ng-katex>, y si.
+    <br>
+    </p>
+   
+    <section class="text-center">
+      <ng-katex [equation]="S2f"></ng-katex>
+    </section>
+    
+    <br> <br>
+    <p>
+      es la varianza muestral, entonces,
+      <br>
+      <br>
+    a) <ng-katex [equation]="ES2"></ng-katex> <br> <br>
+    b) <ng-katex [equation]="ecua"></ng-katex> tiene distribución 
+    <ng-katex [equation]="dischi"></ng-katex> 
+     <br>
+     <h2 class="fw-bold mt-3"><em>PRUEBA</em></h2>
+     <hr>
+     <p>     
+       a) Probaremos primero que:
+    </p>
+    <section class="text-center">
+      <ng-katex [equation]="for1"></ng-katex>
+    </section> 
+    <p>
+    En efecto. 
+    <br>
+    <ng-katex [equation]="for2"></ng-katex> 
+    <br>      
+    <ng-katex [equation]="for3"></ng-katex> 
+    <br>
+    <ng-katex [equation]="for4"></ng-katex> 
+    <br>
+    <ng-katex [equation]="for1"></ng-katex> 
+    <br>
+    <br>
+    Luego.
+    <br>
+    <ng-katex [equation]="ex4"></ng-katex>
+    <ng-katex [equation]="ES21"></ng-katex>
+    <br>
+    <br>
+    b) Probaremos primero que:
+    <br>
+    <ng-katex [equation]="for5"></ng-katex> 
+    <br>
+    En efecto.
+    <br>
+    <ng-katex [equation]="for6"></ng-katex> 
+    <br>
+    <ng-katex [equation]="for7"></ng-katex> 
+    <br>
+    <ng-katex [equation]="for8"></ng-katex>, ya que <ng-katex [equation]="for9"></ng-katex>
+    <br>
+    Dividiendo por <ng-katex [equation]="sigma2"></ng-katex> la identidad probada, resulta.
+    <br>     
+    <section class="text-center">
+      <ng-katex [equation]="for10"></ng-katex>
+    </section>
+    <br>
+    Por otra parte, se sabe que.
+    <br>
+
+    <section class="text-center">
+      <ng-katex [equation]="for11"></ng-katex> tiene distribución <ng-katex [equation]="for12"></ng-katex> y 
+      <br>
+      <ng-katex [equation]="for13"></ng-katex> tiene distribución  <ng-katex [equation]="for14"></ng-katex>
+      <br>
+    </section>
+    <p>
+      Utilizando métodos avanzados mas allá de este libro, puede demostrarse que estas dos
+      últimas variables son independientes. Luego, por la propiedad reproductiva de la 
+      cistribución chi-cuadrado resulta que:
+      <br>
+    </p>
+    <section class="text-center">
+      <ng-katex [equation]="for15"></ng-katex> tiene distribución <ng-katex [equation]="chi2n1"></ng-katex>
+    </section>
+
+    <h2 class="fw-bold mt-3"><em>NOTAS</em></h2>
+    <hr>
+    <p>
+      1. Si definimos la varianza. <ng-katex [equation]="Ss2"></ng-katex>, entonces, 
+    </p>
+    <section class="text-center">
+      <ng-katex [equation]="for16"></ng-katex>
+    </section>
+    <p>  
+      <br>
+      2. En <ng-katex [equation]="for17"></ng-katex>, se tiene que <ng-katex [equation]="for18"></ng-katex>, cuando 
+      <ng-katex [equation]="for19"></ng-katex> 
+      <br>
+      3. <ng-katex [equation]="for20"></ng-katex> tiene distribución <ng-katex [equation]="chi2n1"></ng-katex>
+      <br>
+      4. Se verifica que: <ng-katex [equation]="for21"></ng-katex>
+
+    </p>
+
+    <div class="text-center">
+      <!-- Atrás -->
+      <button class="btn btn-warning mx-1" routerLink="/inferencia-ma/dm-proporcion">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+        </svg>
+        Anterior
+      </button>
+
+      <!-- Siguiente -->
+      <button class="btn btn-primary mx-1" routerLink="/inferencia-ma/dm-dos-medias">
+        Siguiente
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+        </svg>
+      </button>
     </div>
 
-    <div class="col-12 col-md-9 -content">
-        Distribución muestral de la varianza
-    </div>
+  </div>
 </div>

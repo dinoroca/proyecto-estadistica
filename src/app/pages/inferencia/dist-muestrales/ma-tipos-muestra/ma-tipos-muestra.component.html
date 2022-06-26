@@ -30,9 +30,63 @@
         </p>
         <h3 class="fw-bold">Tipos de muestra</h3>
         <h4 class="fw-bold">Muestra al azar simple</h4>
+        <p>
+            Es aquella en la que los elementos se escogen del total de la población en forma individual con una oportunidad 
+            igual e independiente. Por lo general se utiliza una tabla de números aleatorios.
+            Si la población es infinita el muestreo aleatorio ocurre cuando la extracción de los elementos de la muestra se 
+            hace con o sin reemplazo. Si la población es finita de tamaño N, el muestreo aleatorio ocurre también si la 
+            extracción es con o sin reemplazo. Con reemplazo, la probabilidad de cada elemento de ser extraído es 1/N. 
+            Si es sin reemplazo, la probabilidad de cada elemento de ser elegido es 1/N es la primera extracción, 
+            es de 1/(N-1) en la segunda extracción, es 1/(N-2) en la tercera extracción, etc.
+            Por ejemplo, seleccionar una muestra al azar simple es similar a la que se realiza en la extracción 
+            aleatoria de números en una lotería.
+
+        </p>
         <h4 class="fw-bold">Muestra al azar sistemática</h4>
+        <p>
+            Una muestra aleatoria sistemática es aquella en que sus elementos se eligen de la población a intervalos uniformes a partir de un listado de la muestra y N el tamaño de la población.
+            Por ejemplo, al elegir una muestra de 100 alumnos de EE.GG.CC que tiene 3000 alumnos, k=3000/300=30.El primero se elige en forma aleatoria de los 30 primeros de la lista y los demás 
+            sistemáticamente cada 30 alumnos de la lista.
+
+        </p>
         <h4 class="fw-bold">Muestreo aleatorio estratificado</h4>
+        <p>
+            Primero se clasifican a los elementos de la población en subgrupos separados de acuerdo con 
+            una o más características importantes(estratos). Después se obtiene por separado una muestra 
+            aleatoria simple o sistémica en cada estrato. El tamaño de cada submuestra debe ser proporcional 
+            al tamaño del estrato para asegurar representatividad.
+            Por ejemplo, para obtener una muestra aleatoria de 600 electores de una población de 600 000 electores 
+            de los cuales 300 000 son de clase baja, 200 000 de clase media y 100 000 de clase alta. Se deben elegir al azar 300 de clase media y 100 de clase alta.
+
+        </p>
         <h4 class="fw-bold">Muestreo aleatorio agrupado</h4>
+        <p>
+            Denominado también por conglomerados. Los elementos de la población se dividen en forma natural en subgrupos. Luego se eligen al azar los subgrupos que forman la muestra.
+            Por ejemplo, al estudiar las pensiones que se pagan en los colegios particulares donde no es posible tener una lista de todas las pensiones, pero puede obtenerse una lista 
+            de los colegios particulares (grupos). Entonces, con esta lista puede obtener una muestra aleatoria de colegios y así obtener las pensiones que se pagan en estos colegios.
+            El muestreo aleatorio simple, es pues el proceso de selección de una muestra por el cual cada uno de los elementos de la población tienen una oportunidad igual e independiente
+            de ser incluidos en la muestra. En el muestreo aleatorio simple cada variable aleatoria <ng-katex [equation]="Ec1"></ng-katex> cuyo valor es <ng-katex [equation]="Ec2" ></ng-katex>, 
+            tiene la misma distribución de la población de la cual se obtiene. Por ejemplo, 
+            supongamos que una población consiste de 8 fichas, dos con el número 2, cuatro con el número 5, y dos con el número 7. Si se extrae una ficha al azar, la ficha puede tomar cualquiera 
+            de los tres valores: 2 con probabilidad 0.25, 5 con probabilidad 0.50, y 7 con probabilidad 0.25, que viene a ser la misma distribución de la población.
+            Luego, diremos que los valores <ng-katex [equation]="Ec3"></ng-katex> tomados respectivamente por las variables aleatorias <ng-katex [equation]="Ec4"></ng-katex> constituyen una muestra
+            aleatoria simple de tamaño <i>n</i> de una población <ng-katex [equation]="fx"></ng-katex> de la variable aleatoria <ng-katex [equation]="X"></ng-katex> si estas variables aleatorias están
+            distribuidas en forma idéntica a la distribución de la población y son independientes. Llamaremos también muestra aleatoria simple a este conjunto de 
+            variables aleatorias. Formalmente definimos una muestra aleatoria simple o brevemente muestra aleatoria de la forma siguiente:<br/>
+            <b>Definición. (muestra aleatoria simple).</b> Dada una población <ng-katex [equation]="fx"></ng-katex> con media <ng-katex [equation]="mu"></ng-katex> y varianza <ng-katex [equation]="Var"></ng-katex> 
+            se denomina muestra aleatoria de tamaño <ng-katex [equation]="n"></ng-katex> de esa población, a un conjunto de <ng-katex [equation]="n"></ng-katex> variables aleatorias <ng-katex [equation]="Ec4"></ng-katex> tales que:<br/>
+            <br/>
+            1) Son independientes <br/>
+            2) Cada una de ellas está distribuida de forma idéntica a <ng-katex [equation]="fx"></ng-katex>.<br/>
+            <b>La condición 1)</b> Implica que <b>distribución de la probabilidad conjunta</b> de la muestra aleatoria <ng-katex [equation]="Ec4"></ng-katex> es la expresión:<br/>
+            <ng-katex [equation]="fx1"></ng-katex><br/>
+            <b>La condición 2)</b> Significa que:<br/>
+            &nbsp;a) Cada variable aleatoria <ng-katex [equation]="Ec1"></ng-katex> tiene la misma media y varianza de la distribución de<ng-katex [equation]="X"></ng-katex>, es decir:<br/>
+            <ng-katex [equation]="media"></ng-katex>   y  <ng-katex [equation]="Varianza"></ng-katex> <br/>
+            b) La dsitribucion de la probabilidad de cada variable aleatoria <ng-katex [equation]="Ec1"></ng-katex> es la misma distribución de la probabilidad de<ng-katex [equation]="X"></ng-katex>
+            esto es <ng-katex [equation]="fxi"></ng-katex>
+        </p>
+        
 
         <div class="text-center">
             <!-- Atrás -->

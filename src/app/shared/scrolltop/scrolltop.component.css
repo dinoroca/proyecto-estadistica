@@ -1,0 +1,21 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+   }
+
+.scroll-to-top:hover {
+    color: rgb(112, 112, 112);
+    border-color: rgb(255, 255, 255);
+}
+
+.show-scrollTop {
+opacity: 1;
+transition: all .2s ease-in-out;
+}
+
+.active{
+    border-color: rgba(255, 255, 255, 0);
+}

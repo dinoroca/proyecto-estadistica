@@ -1,32 +1,75 @@
 <div class="row">
-    <div class="col-12 col-md-3 -menu">
-        <app-side-menu-inferencia></app-side-menu-inferencia>
+  <div class="col-12 col-md-3 -menu">
+    <app-side-menu-inferencia></app-side-menu-inferencia>
+  </div>
+
+  <div class="col-12 col-md-9 -content">
+    <h1 id="hipergeometrica">Distribución hipergeométrica</h1>
+    <hr>
+    <p><b>Definición.</b> Un <b>experimento hipergeométrico</b> consiste en escoger al azar una muestra de tamaño n , uno a uno sin restitución, de N elementos o resultados posibles, donde r de los cuales pueden clasificarse como éxitos, y los <em>N - r</em> restantes como fracasos.</p>
+    <p>En cada extracción, la probabilidad de que el elemento sea un éxito es diferente, ya que la extracción es sin reposición. </p>
+
+    <p><b>Definición.</b> Se denomina variable aleatoria hipergeométrica a la variable X que se define como el número de éxitos en el experimento hipergeométrico. </p>
+
+    <div class="def">
+      <p>Si <ng-katex [equation]="n"></ng-katex> el rango de <ng-katex [equation]="x"></ng-katex> es el conjunto <ng-katex [equation]="rx"></ng-katex></p>
+      <p>Sea <ng-katex [equation]="k"></ng-katex>, entonces, el evento <ng-katex [equation]="xk"></ng-katex> ocurre, si y solo si en las <em>n</em> extracciones sucesivas sin reposicion ocurren <em>k</em> exitos y <em>n - k</em> fracasos. El total de formas que puede ocurrir es:</p>
     </div>
 
-    <div class="col-12 col-md-9 -content">
-        Contenido VAD Hipergeométrica
+    <p class="formula"><ng-katex [equation]="cvv"></ng-katex></p>
 
-        <div class="text-center">
-          <!-- Atrás -->
-          <button class="btn btn-warning mx-1" routerLink="/inferencia/vad-pascal">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
-              viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-            </svg>
-            Anterior
-          </button>
+    <p>Por otra parte, el número de formas diferentes de escoger n elementos de <em>N</em> una a una sin reposición es igual a <ng-katex [equation]="v"></ng-katex></p>
+    <p>Luego, <em>la probabilidad de que ocurran k éxitos en el experimento hipergeométrico es:</em> </p>
 
-          <!-- Siguiente -->
-          <button class="btn btn-primary mx-1" routerLink="/inferencia/vad-poisson">
-            Siguiente
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
-              viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-            </svg>
-          </button>
-        </div>
+    <p class="formula"><ng-katex [equation]="ecuacion"></ng-katex></p>
+
+    <p><b>Definición.</b> Se dice que <b>la variable aleatoria <em>X</em> que se deiine como el número de éxitos en una muestra de tamaño <em>n</em> que se selecciona al azar uno por uno sin reposición</b> de <em>N</em> elementos o resultados posibles, de los cuales <em>r</em> son clasificados como éxitos y los restantes <em>N — r</em> como fracasos, tiene <b>distribución hipergeométrica y se escribe </b><ng-katex [equation]="xhnr"></ng-katex>, si su función de probabilidad es</p>
+
+    <p class="formula"><ng-katex [equation]="ecuacion2"></ng-katex></p>
+
+    <p>Para probar que la suma de las probabilidades es igual a 1, se usa la identidad:</p>
+
+    <p class="formula"><ng-katex [equation]="ecuacion3"></ng-katex></p>
+
+    <h2>nota</h2>
+    <p>En el numerador de la función de probabilidad hipergeométrica, se requiere que <ng-katex [equation]="Nr"></ng-katex>, de donde se resulta, <ng-katex [equation]="kn"></ng-katex>, luego, el menor valor que toma la variable aleatoria <em>X</em> es el numero:</p>
+
+    <p class="formula"><ng-katex [equation]="a"></ng-katex></p>
+
+    <p>Por otro lado, el mayor valor debe verificar <ng-katex [equation]="knr"></ng-katex></p>
+
+    <p class="formula"><ng-katex [equation]="b"></ng-katex></p>
+
+    <h2>teorema 1.5</h2>
+    <p>Sea <em>X</em> una variable aleatoria con distribución hipergeométrica <ng-katex [equation]="h"></ng-katex>, y sean, <ng-katex [equation]="p"></ng-katex>, entonces,</p>
+
+    <div class="def">
+      <p>a) <ng-katex [equation]="esp"></ng-katex></p>
+      <p>b) <ng-katex [equation]="vari"></ng-katex></p>
+      <p>c) <ng-katex [equation]="c"></ng-katex> Esto es, si <em>N</em> tiende a <ng-katex [equation]="inf"></ng-katex> es grande con respecto a <em>n</em>, entonces la distribución hipergeométrica <ng-katex [equation]="h"></ng-katex>se aproxima a una distribución binomial <ng-katex [equation]="bnp"></ng-katex></p>
     </div>
+
+
+    <div class="text-center">
+      <!-- Atrás -->
+      <button class="btn btn-warning mx-1" routerLink="/inferencia/vad-pascal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+        </svg>
+        Anterior
+      </button>
+
+      <!-- Siguiente -->
+      <button class="btn btn-primary mx-1" routerLink="/inferencia/vad-poisson">
+        Siguiente
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+        </svg>
+      </button>
+    </div>
+  </div>
 </div>
-

@@ -57,8 +57,176 @@
             <ng-katex [equation]="n2"></ng-katex> <ng-katex [equation]="mayig"></ng-katex> 2.
         </section>
 
-        <h2 class="fw-bold mt-4">Distribución m uestral de la diferencia de dos
+        <h2 class="fw-bold mt-4">Distribución muestral de la diferencia de dos
             m edias con varianzas poblacionales desconocidas</h2>
+        
+        <p>
+            Sea <ng-katex [equation]="x1bar"></ng-katex> la media de una muestra aleatoria de tamaño 
+            <ng-katex [equation]="n1"></ng-katex> extraída de la <b>población normal</b> 
+            <ng-katex [equation]="nmusigma1"></ng-katex>, y sea <ng-katex [equation]="x2bar"></ng-katex> 
+            la media de otra muestra aleatoria de
+            tamaño <ng-katex [equation]="n2"></ng-katex> extraída de la <b>población normal</b> <ng-katex [equation]="nmusigma1"></ng-katex>,
+            <b>independiente</b> de la anterior.
+        </p>
+
+        <h3 class="fw-bold">A) Varianzas poblacionales iguales: <small class="fs-6"><ng-katex [equation]="sigmaigual"></ng-katex></small></h3>
+
+        <p>
+            En este caso, la variable aleatoria <ng-katex [equation]="x1bar"></ng-katex> - 
+            <ng-katex [equation]="x2bar"></ng-katex> tiene distribución normal
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="nmu12"></ng-katex> <br>
+        </section>
+        <p>
+            y la variable aleatoria estándar:
+        </p>
+        <section class="text-center">
+            <ng-katex [equation]="zx1x2bar"></ng-katex> <br>
+        </section> <br>
+
+        <p>
+            tiene distribución normal <ng-katex [equation]="n01"></ng-katex>. Por otra parte,
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="n1men1"></ng-katex>, &nbsp; y &nbsp;
+            <ng-katex [equation]="n2men1"></ng-katex> <br><br>
+            y <ng-katex [equation]="v"></ng-katex>
+        </section> <br>
+
+        <p>
+            Por tanto, la variable aleatoria:
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="tz"></ng-katex>, <br>
+        </section> <br>
+
+        <p>
+            tiene distribución <em>T-student</em> con <ng-katex [equation]="n1"></ng-katex> + 
+            <ng-katex [equation]="n2"></ng-katex> - 2 grados de libertad.  <br>
+
+            Donde, <ng-katex [equation]="sc"></ng-katex> es <b>la varianza común</b> y tiene la espresión: 
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="sc2"></ng-katex>
+        </section>
+
+        <h3 class="fw-bold mt-4">B) Varianzas poblacionales diferentes: <small class="fs-6"><ng-katex [equation]="sigmadif"></ng-katex></small></h3>
+        <p>
+            En este caso la variable aleatoria:
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="tx1"></ng-katex>
+        </section><br>
+
+        <p>
+            tiene distribución <i>T</i>-student con <b>g</b> grados de libertad, donde,
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="g"></ng-katex>
+        </section><br>
+
+        <p>
+            Si <b>g</b> no es un número entero se redondea al entero más cercano.
+        </p>
+
+        <h2 class="fw-bold mt-4">Distribución muestral de la diferencia de dos proporciones</h2>
+        <hr>
+        <p>
+            Sean <ng-katex [equation]="x1xn"></ng-katex>, e <ng-katex [equation]="y1yn"></ng-katex> dos muestras 
+            aleatorias independientes de tamaños <ng-katex [equation]="n1"></ng-katex>, y 
+            <ng-katex [equation]="n2"></ng-katex> seleccionadas 
+            respectivamente de dos poblaciones independientes de Bernoullí 
+            <ng-katex [equation]="b1p"></ng-katex> y <ng-katex [equation]="b2p"></ng-katex> , donde 
+            <ng-katex [equation]="p1"></ng-katex> y <ng-katex [equation]="p2"></ng-katex> son las 
+            proporciones poblaciones de éxito respectivos. Sean las proporciones muéstrales
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="p1bar"></ng-katex> &nbsp; y &nbsp;
+                <ng-katex [equation]="p2bar"></ng-katex>
+        </section><br>
+
+        <p>
+            donde <ng-katex [equation]="xb"></ng-katex> &nbsp; y &nbsp; <ng-katex [equation]="yb"></ng-katex>.
+        </p>
+        <p>
+            Entonces, la variable aleatoria <ng-katex [equation]="p1b"></ng-katex> — 
+            <ng-katex [equation]="p2b"></ng-katex> tiene una distribución dc probabilidad cuyas 
+            propiedades son las siguientes:
+        </p>
+
+        <ol type="a">
+            <li><ng-katex [equation]="mup1p2"></ng-katex>.</li>
+            <li><ng-katex [equation]="sigp1p2"></ng-katex>.</li>
+            <li>Para <ng-katex [equation]="n1"></ng-katex> y
+                <ng-katex [equation]="n2"></ng-katex> <b> suficientemente grandes</b>, la variable aleatoria estándar:
+            </li>
+        </ol>
+
+        <section class="text-center">
+            <ng-katex [equation]="zp1p2"></ng-katex>, <br>
+        </section><br>
+
+        <p>
+            tiene distribución aproximadamente <ng-katex [equation]="n01"></ng-katex>, donde el 
+            <i>error estándar </i> <ng-katex [equation]="sigpp"></ng-katex>, es dado por:
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="sigppr"></ng-katex> <br>
+        </section><br>
+
+        <h2 class="fw-bold mt-4">Distribución muestral de la razón <small class="fs-6"><ng-katex [equation]="s1s2"></ng-katex></small></h2>
+        <hr>
+        <p>
+            <b>Teorema. </b> Si <ng-katex [equation]="s1"></ng-katex> y 
+            <ng-katex [equation]="s2"></ng-katex> son las varianzas de dos muestras aleatorias 
+            independientes de tamaños <ng-katex [equation]="n1"></ng-katex> y <ng-katex [equation]="n2"></ng-katex>
+            seleccionadas de dos <b> poblaciones normales </b> <ng-katex [equation]="nmu11"></ng-katex> y 
+            <ng-katex [equation]="nmu112"></ng-katex> respectivas, entonces, la variable aleatoria
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="fs"></ng-katex> <br>
+        </section><br>
+
+        <p>
+            tiene distribución <ng-katex [equation]="f | uppercase"></ng-katex> con grados de libertad con grados de libertad 
+            <ng-katex [equation]="n1"></ng-katex> - 1 y <ng-katex [equation]="n2"></ng-katex> - 1, esto es 
+            <ng-katex [equation]="ffn"></ng-katex>. <br>
+
+            En efecto, la variable aleatoria <ng-katex [equation]="un1"></ng-katex> se distribuye como 
+            <ng-katex [equation]="chi"></ng-katex> con <ng-katex [equation]="n1"></ng-katex> - 1 grados de libertad 
+            y la variable aleatoria <ng-katex [equation]="vn2"></ng-katex> se distribuye 
+            como <ng-katex [equation]="chi"></ng-katex> con <ng-katex [equation]="n2"></ng-katex> — 1 
+            grados de libertad. Además son independientes. Luego la variable:
+        </p>
+
+        <section class="text-center">
+            <ng-katex [equation]="fuv"></ng-katex>,
+        </section><br>
+
+        <p>
+            se distribuye según <ng-katex [equation]="f | uppercase"></ng-katex> con grados de 
+            libertad <ng-katex [equation]="n1"></ng-katex> - 1 y <ng-katex [equation]="n2"></ng-katex> - 1.
+        </p> <br>
+
+        <p>
+            <b>Observar </b> que si <ng-katex [equation]="sigma12"></ng-katex> = 
+            <ng-katex [equation]="sigma22"></ng-katex>, entonces, <ng-katex [equation]="fss"></ng-katex> 
+            se distribuye según <ng-katex [equation]="f | uppercase"></ng-katex> con grados de libertad 
+            <ng-katex [equation]="n1"></ng-katex> - 1 y <ng-katex [equation]="n2"></ng-katex> - 1, 
+            o <ng-katex [equation]="ffn"></ng-katex>.
+
+        </p>
+
 
         <div class="text-center">
             <!-- Atrás -->
