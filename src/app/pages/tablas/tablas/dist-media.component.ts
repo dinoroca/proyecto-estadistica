@@ -10,10 +10,15 @@ export class TablasComponent implements OnInit {
 
   //Ecuaciones
   zMenor = 'P[Z \\leq x]';
+  zMayor = 'P[Z \\geq x]';
   x = 'x';
 
   formZ: FormGroup = this.formBuilder.group({
     valorZ: ['', Validators.required]
+  });
+
+  formZ2: FormGroup = this.formBuilder.group({
+    valorZ2: ['', Validators.required]
   });
 
   mostrarValorZ: boolean = false;
@@ -21,8 +26,10 @@ export class TablasComponent implements OnInit {
   respZ: number = 0;
   res?: number;
 
-  pi = Math.PI;
-  e = Math.E;
+  mostrarValorZ2: boolean = false;
+  error2: boolean = false;
+  respZ2: number = 0;
+  res2?: number;
 
   constructor( private formBuilder: FormBuilder ) { }
 
@@ -52,6 +59,29 @@ export class TablasComponent implements OnInit {
 
   }
 
+  calcularZ2() {
+
+    this.mostrarValorZ2 = true;
+
+    var n = this.formZ2.controls['valorZ2'].value;
+    var x = n/(Math.sqrt(2));
+       
+        for (let i = 0; i <100; i++) {
+            var res = ((Math.pow(-1, i))*(Math.pow(x, 2*i +1)))/((2*i+1)*(this.factorial(i)));
+            this.respZ2 = this.respZ2 + res;
+        }        
+        var funErf2 = 2/(Math.sqrt(Math.PI)) * this.respZ2;        
+        console.log( funErf2 );
+        
+        var respuesta =  (funErf2) * 0.5 + 0.5;
+        console.log('la respuesta 2 es: ' + respuesta);
+        
+        this.res2 = 1 - respuesta;
+
+        this.borrar();
+
+  }
+
   public factorial( n: number ){
     var aux  = 1;
     for (let j = 2; j <= n; j++) {
@@ -62,6 +92,7 @@ export class TablasComponent implements OnInit {
 
 public borrar (){
   this.respZ = 0;
+  this.respZ2 = 0;
 }
 
 }
