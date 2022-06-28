@@ -13,7 +13,7 @@ export class FormularioComponent implements OnInit {
   });
 
   porDefecto = {
-    numPoblation: '1'
+    numTitulo: '1'
   }
 
   constructor( private formBuilder: FormBuilder ) { }

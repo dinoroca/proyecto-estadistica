@@ -14,7 +14,7 @@ export class VadBernoulliComponent implements OnInit {
   Chi =  '\\Chi';
   Epsilon ='\\Epsilon';
   rho ='\\rho';
-  rhoF ='\\rho = \\Rho[ \\Chi = 1]';
+  rhoF ='p = \\Rho[ \\Chi = 1]';
   x = 'x';
   X = 'X';
   p = 'p';
