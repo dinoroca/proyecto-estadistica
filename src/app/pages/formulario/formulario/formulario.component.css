@@ -21,6 +21,14 @@
     border-color: rgb(255, 184, 137);
 }
 
+@media screen and (max-width: 768px) {
+  .formulas {
+    background-color: rgb(255, 255, 255);
+    border-color: rgba(255, 184, 137, 0);
+    padding: 0;
+  }
+}
+
 .formulas-hipo{
     background-color: rgb(255, 205, 251);
     border-color: rgb(255, 102, 242);

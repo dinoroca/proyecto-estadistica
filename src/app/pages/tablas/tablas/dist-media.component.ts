@@ -53,7 +53,7 @@ export class TablasComponent implements OnInit {
         var respuesta =  (funErf2) * 0.5 + 0.5;
         console.log('la respuesta 2 es: ' + respuesta);
         
-        this.res = respuesta;
+        this.res = Number(respuesta.toFixed(5));
 
         this.borrar();
 
@@ -76,7 +76,7 @@ export class TablasComponent implements OnInit {
         var respuesta =  (funErf2) * 0.5 + 0.5;
         console.log('la respuesta 2 es: ' + respuesta);
         
-        this.res2 = 1 - respuesta;
+        this.res2 = Number((1 - respuesta).toFixed(5));
 
         this.borrar();
 
