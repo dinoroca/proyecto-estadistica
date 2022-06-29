@@ -15,15 +15,15 @@ export class SideMenuHomeComponent {
   templateMenu: MenuItem[] = [
     {
       texto: 'Distribución de la media',
-      ruta: '/home/home-medias'
+      ruta: '/inicio/home-medias'
     },
     {
       texto: 'Distribución de la proporción',
-      ruta: '/home/home-proporcion'
+      ruta: '/inicio/home-proporcion'
     },
     {
       texto: 'Distribución de la varianza',
-      ruta: '/home/home-varianza'
+      ruta: '/inicio/home-varianza'
     },
   ];
 }

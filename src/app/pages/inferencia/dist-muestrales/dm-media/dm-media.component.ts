@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-dm-media',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DmMediaComponent implements OnInit {
 
-  constructor() { }
+  ngOnInit(): void {
+    this.title.setTitle('Inferencia | d.m. Media');
+  }
+
+  constructor( private title: Title ) { }
+
   x = 'x';
   n = 'n';
   x2 = 'x_1 , X_2 , X_3 ,...';
@@ -34,12 +40,5 @@ export class DmMediaComponent implements OnInit {
   ninf='N \\rightarrow + \\infty';
   N = 'N';
   N01 = 'N(0,1)';
-
-
-
-
-
-  ngOnInit(): void {
-  }
 
 }

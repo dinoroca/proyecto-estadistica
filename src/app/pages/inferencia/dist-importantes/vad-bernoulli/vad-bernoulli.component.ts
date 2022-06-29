@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-vad-bernoulli',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VadBernoulliComponent implements OnInit {
 
-  constructor() { }
+  ngOnInit(): void {
+    this.title.setTitle('Inferencia | v.a.d. Bernoulli');
+  }
+
+  constructor( private title: Title ) { }
+
   // ecuaciones
   Ohmega = '\\Omega';
   OhmegaF = '\\Omega = \\{E,F\\}';
@@ -39,9 +45,4 @@ export class VadBernoulliComponent implements OnInit {
   pruebaB = '\\sigma^2 = E(X^2)-\\mu^2 = [(0)^2(1-p)+(1)^2( p )]-p^2 = p-p^2 = pq';
 
   nota = '\\sigma^2 = p - p^2  = -\\left(p-\\dfrac{1}{2}\\right)^2+\\dfrac{1}{4}\\leq\\dfrac{1}{4}';
-
-
-  ngOnInit(): void {
-  }
-
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-vad-binomial',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VadBinomialComponent implements OnInit {
 
-  constructor() { }
+  ngOnInit(): void {
+    this.title.setTitle('Inferencia | v.a.d. Binomial');
+  }
+
+  constructor( private title: Title ) { }
 
   //ecuaciones
   funcion = 'f(x)';
@@ -51,8 +56,5 @@ export class VadBinomialComponent implements OnInit {
   pme = 'p = 1/2';
   pderecha = 'p \\rightarrow 1';
   pizquierda = 'p \\arrow 0';
-
-  ngOnInit(): void {
-  }
 
 }

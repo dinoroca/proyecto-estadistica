@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-dm-proporcion',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DmProporcionComponent implements OnInit {
 
-  constructor() { }
+  ngOnInit(): void {
+    this.title.setTitle('Inferencia | d.m. Proporción');
+  }
+
+  constructor( private title: Title ) { }
+
+  //Ecuaciones
   x = 'x';
   X = 'X';
   n = 'n';
@@ -50,13 +57,5 @@ export class DmProporcionComponent implements OnInit {
   factorcpc = '\\dfrac{1}{2n}';
   p2 = 'P \\left[ \\bar{P} \\leq c\\right] \\cong P \\left[   Z \\leq \\dfrac{(c+1/(2n))-p)}{\\sigma_{\\bar{P}}} \\right]';
   z4 ='Z = \\dfrac{X-np}{\\sqrt{np(1-p)}}=\\dfrac{\\bar{P}-p}{\\sqrt{p(1-p)}}';
-
-
-
-
-
-
-  ngOnInit(): void {
-  }
 
 }

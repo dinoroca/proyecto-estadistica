@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-dist-media',
@@ -31,10 +32,12 @@ export class TablasComponent implements OnInit {
   respZ2: number = 0;
   res2?: number;
 
-  constructor( private formBuilder: FormBuilder ) { }
-
-  ngOnInit(): void {
-  }
+  constructor( private formBuilder: FormBuilder,
+    private title: Title ) { }
+  
+    ngOnInit(): void {
+      this.title.setTitle('Tablas');
+    }
 
   calcularZ() {
 

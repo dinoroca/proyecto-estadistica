@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-tlc-poisson-normal',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../importantes.css']
 })
 export class TlcPoissonNormalComponent implements OnInit {
+
+  ngOnInit(): void {
+    this.title.setTitle('Inferencia | Poisson - Normal');
+  }
+
+  constructor( private title: Title ) { }
 
   //Ecuaciones
   n = 'n';
@@ -15,10 +22,5 @@ export class TlcPoissonNormalComponent implements OnInit {
   lambda = '\\lambda';
   z = 'Z = \\dfrac{X - n\\lambda}{\\sqrt{n\\lambda}}';
   n01 = 'N(0, 1)';
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

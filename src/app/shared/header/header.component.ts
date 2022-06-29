@@ -14,8 +14,8 @@ export class HeaderComponent implements OnInit {
 
   headerMenu: MenuItem[] = [
     {
-      texto: 'Home',
-      ruta: '/home'
+      texto: 'Inicio',
+      ruta: '/inicio'
     },
     {
       texto: 'Inferencia estadística',

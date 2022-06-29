@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-vac-f',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VacFComponent implements OnInit {
 
-  constructor() { }
-
   ngOnInit(): void {
+    this.title.setTitle('Inferencia | v.a.c. F');
   }
+
+  constructor( private title: Title ) { }
 
 }

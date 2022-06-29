@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-dm-varianza',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DmVarianzaComponent implements OnInit {
 
-  constructor() { }
+  ngOnInit(): void {
+    this.title.setTitle('Inferencia | d.m. Varianza');
+  }
+
+  constructor( private title: Title ) { }
+
+  //Ecuaciones
   x = 'x';
   X = 'X';
   n = 'n';
@@ -78,12 +85,7 @@ export class DmVarianzaComponent implements OnInit {
   for17 ='\\hat{S}^2 = \\dfrac{n}{n-1}S^2';
   for18 ='\\dfrac{n}{n-1} \\rightarrow 1'
   for19 ='n \\rightarrow + \\infty';
-  for20 = '\\dfrac{(n-1)\\hat{S}^2}{\\sigma^2}=\\dfrac{\\displaystyle\\sum_{i=1}^{n} (X_{i} -\\bar{X})^2}{\\sigma^2}'
-  for21 = '\\hat{S}^2 = \\dfrac{ \\displaystyle\\sum_{i=1}^{n} X_{i}^2 - \\left( \\displaystyle\\sum_{i=1}^{n} X \\right)^2}{n(n-1)} = \\dfrac{ \\displaystyle\\sum_{i=1}^{n} X_{i}^2 - n(\\bar{X})^2 }{n-1}'
-
-
-
-  ngOnInit(): void {
-  }
+  for20 = '\\dfrac{(n-1)\\hat{S}^2}{\\sigma^2}=\\dfrac{\\displaystyle\\sum_{i=1}^{n} (X_{i} -\\bar{X})^2}{\\sigma^2}';
+  for21 = '\\hat{S}^2 = \\dfrac{ \\displaystyle\\sum_{i=1}^{n} X_{i}^2 - \\left( \\displaystyle\\sum_{i=1}^{n} X \\right)^2}{n(n-1)} = \\dfrac{ \\displaystyle\\sum_{i=1}^{n} X_{i}^2 - n(\\bar{X})^2 }{n-1}';
 
 }

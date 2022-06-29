@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-ma-pob-params',
@@ -17,9 +18,10 @@ export class MaPobParamsComponent implements OnInit {
   sigma = '\\sigma';
   sigma2 = '\\sigma^2';
 
-  constructor() { }
-
   ngOnInit(): void {
+    this.title.setTitle('Inferencia | Poblaciones y parámetros');
   }
+
+  constructor( private title: Title ) { }
 
 }

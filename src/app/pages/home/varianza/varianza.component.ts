@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-varianza',
@@ -7,6 +8,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./varianza.component.css']
 })
 export class VarianzaComponent implements OnInit {
+
+  ngOnInit(): void {
+    this.formCantidad.setValue( this.porDefecto, );
+    this.title.setTitle('Inicio | Dist. Varianza');
+  }
+
+  constructor( private formBuilder: FormBuilder,
+                private title: Title ) { }
 
   sigma = '\\sigma^2';
   mu = '\\mu';
@@ -56,12 +65,7 @@ export class VarianzaComponent implements OnInit {
     return this.formCondiciones2.controls[campo].errors && 
         this.formCondiciones2.controls[campo].touched;
   }
-
-  constructor( private formBuilder: FormBuilder ) { }
-
-  ngOnInit(): void {
-  }
-
+  
   guardar(){
     this.mostrarSugerencia = true;
 

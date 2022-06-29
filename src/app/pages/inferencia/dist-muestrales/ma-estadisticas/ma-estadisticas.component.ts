@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-ma-estadisticas',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaEstadisticasComponent implements OnInit {
 
-  constructor() { }
+  ngOnInit(): void {
+    this.title.setTitle('Inferencia | m.a. Estadísticas');
+  }
+
+  constructor( private title: Title ) { }
+
 //Ecuaciones
   Y = 'Y = H(X_1,X_2,...,X_n)';
   y = 'y = H(x_1,x_2,...,x_n)';
@@ -25,13 +31,5 @@ export class MaEstadisticasComponent implements OnInit {
   Pb = '\\overline{P}=\\displaystyle\\frac{X}{n}';
   X1 = ' X \\sim B(n,p)';
   X = 'X_i \\sim B(1,p)'
-
-
-
-
-
-
-  ngOnInit(): void {
-  }
 
 }
