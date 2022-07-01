@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-vad-hipergeo',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VadHipergeoComponent implements OnInit {
 
-  constructor() { }
+  ngOnInit(): void {
+    this.title.setTitle('Inferencia | v.a.d. Hipergeométrica');
+  }
+
+  constructor( private title: Title ) { }
 
   n = 'n \\leq r';
   x = 'X';
@@ -39,10 +44,4 @@ export class VadHipergeoComponent implements OnInit {
   c = 'H(N,n,r) \\cong B(n,p)'
   inf = '+\\infty\\  \\text{o} \\ \\  N'
   bnp = 'B(n,p).'
-
-
-
-  ngOnInit(): void {
-  }
-
 }

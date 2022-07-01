@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { KatexOptions } from 'ng-katex';
 
 @Component({
@@ -8,10 +9,11 @@ import { KatexOptions } from 'ng-katex';
 })
 export class TlcBimomialNormalComponent implements OnInit {
 
-  constructor() { }
-
   ngOnInit(): void {
+    this.title.setTitle('Inferencia | Binomial - Normal');
   }
+
+  constructor( private title: Title ) { }
 
   options: KatexOptions = {
     displayMode: true,

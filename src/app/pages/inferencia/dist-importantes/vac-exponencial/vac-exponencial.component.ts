@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-vac-exponencial',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VacExponencialComponent implements OnInit {
 
-  constructor() { }
-
   ngOnInit(): void {
+    this.title.setTitle('Inferencia | v.a.c. Exponencial');
   }
+
+  constructor( private title: Title ) { }
 
 }

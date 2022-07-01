@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-ma-tipos-muestra',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaTiposMuestraComponent implements OnInit {
 
-  constructor() { }
+  ngOnInit(): void {
+    this.title.setTitle('Inferencia | Tipos de muestras');
+  }
+
+  constructor( private title: Title ) { }
+  
   //Ecuaciones
   Ec1 = 'X_i';
   Ec2 = 'x_i';
@@ -22,7 +28,5 @@ export class MaTiposMuestraComponent implements OnInit {
   media = 'E(X_i)=\\mu';
   Varianza = 'Var(X_i)=\\sigma^2';
   fxi = 'f(x_i)=f(x)';
-  ngOnInit(): void {
-  }
 
 }

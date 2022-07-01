@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-dm-dif-dos-medias',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DmDifDosMediasComponent implements OnInit {
 
-  constructor() { }
+  ngOnInit(): void {
+    this.title.setTitle('Inferencia | d.m. dif. Medias');
+  }
+
+  constructor( private title: Title ) { }
+  
   x = 'x';
   n = 'n';
   x2 = 'x_1 , X_2 , X_3 ,...';
@@ -68,11 +74,6 @@ export class DmDifDosMediasComponent implements OnInit {
   sigmadiferente = '\\sigma_1^2  \\neq   \\sigma_2^2';
   Tb= 'T = \\dfrac{\\left( \\bar{X_1}-\\bar{X_2} \\right)- \\left( \\mu_1 - \\mu_2  \\right)}{\\sqrt{\\dfrac{\\hat{S}_1^2}{n_1} + \\dfrac{\\hat{S}_2^2}{n_2}}} ';
   gf ='g =\\dfrac{\\left[ \\dfrac{ \\hat{S}_1^2  }{n_1} +  \\dfrac{ \\hat{S}_2^2  }{n_2}  \\right]^2}{ \\dfrac{\\left[ \\dfrac{ \\hat{S}_1^2  }{n_1} \\right]^2 }{n_1 -1} + \\dfrac{\\left[ \\dfrac{ \\hat{S}_2^2  }{n_2} \\right]^2 }{n_2 -1}}';
-  g = 'g' 
-
-
-
-  ngOnInit(): void {
-  }
+  g = 'g';
 
 }

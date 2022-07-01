@@ -51,8 +51,9 @@
                   <div class="form-check col-12 col-sm-6">
                       <input class="form-check-input" 
                             type="checkbox"
-                            formControlName="distribucionN">
-                      <label class="form-check-label">
+                            formControlName="distribucionN"
+                            id="distribucionN">
+                      <label class="form-check-label" for="distribucionN">
                           La distribución es Normal
                       </label>
                   </div>
@@ -60,8 +61,9 @@
                   <div class="form-check col-12 col-sm-6">
                     <input class="form-check-input" 
                           type="checkbox"
-                          formControlName="varianza">
-                    <label class="form-check-label">
+                          formControlName="varianza"
+                          id="varianza">
+                    <label class="form-check-label" for="varianza">
                         Varianza <ng-katex [equation]="sigma"></ng-katex>
                     </label>
                 </div>
@@ -141,8 +143,9 @@
                         <div class="form-check col-12 col-sm-4">
                             <input class="form-check-input" 
                                     type="checkbox"
-                                    formControlName="varianza1">
-                            <label class="form-check-label">
+                                    formControlName="varianza1"
+                                    id="varianza1">
+                            <label class="form-check-label" for="varianza1">
                                 Varianza 1 <ng-katex [equation] ="sigma1"> </ng-katex>
                             </label>
                         </div>
@@ -150,8 +153,9 @@
                         <div class="form-check col-12 col-sm-4">
                             <input class="form-check-input" 
                                     type="checkbox"
-                                    formControlName="varianza2">
-                            <label class="form-check-label">
+                                    formControlName="varianza2"
+                                    id="varianza2">
+                            <label class="form-check-label" for="varianza2">
                                 Varianza 2 <ng-katex [equation] ="sigma2"> </ng-katex>
                             </label>
                         </div>
@@ -159,8 +163,9 @@
                         <div class="form-check col-12 col-sm-4">
                             <input class="form-check-input" 
                                     type="checkbox"
-                                    formControlName="varianzasIguales">
-                            <label class="form-check-label">
+                                    formControlName="varianzasIguales"
+                                    id="varianzasIguales">
+                            <label class="form-check-label" for="varianzasIguales">
                                 <ng-katex [equation] ="sigma1"> </ng-katex> = 
                                 <ng-katex [equation] ="sigma2"> </ng-katex>
                             </label>
@@ -169,8 +174,9 @@
                         <div class="form-check col-12 col-sm-4">
                             <input class="form-check-input" 
                                     type="checkbox"
-                                    formControlName="normal">
-                            <label class="form-check-label">
+                                    formControlName="normal"
+                                    id="normal">
+                            <label class="form-check-label" for="normal">
                                 Distribuciones Normales
                             </label>
                         </div>

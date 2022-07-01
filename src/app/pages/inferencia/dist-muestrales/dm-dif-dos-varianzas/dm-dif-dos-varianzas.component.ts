@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-dm-dif-dos-varianzas',
@@ -78,9 +79,11 @@ export class DmDifDosVarianzasComponent implements OnInit {
   sigma22 = '\\sigma_{2}^{2}';
   fss = 'F = \\hat{S}_{1}^{2} / \\hat{S}_{2}^{2}';
 
-  constructor() { }
-
   ngOnInit(): void {
+    this.title.setTitle('Inferencia | d.m. dif. Varianzas');
   }
+
+  constructor( private title: Title ) { }
+  
 
 }

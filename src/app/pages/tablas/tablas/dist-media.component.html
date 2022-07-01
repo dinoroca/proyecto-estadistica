@@ -1,10 +1,91 @@
+<!-- Calculadora de probabilidad -->
+<div class="row container dists">
+    <h2 class="text-center titulo">Calculadora de probabilidad</h2>
 
-<div class="row">
-    <iframe src="../../../../assets/docs/tablas.pdf" class="tabla col-12"></iframe>
+    <div class="btn-group mt-2" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-outline-secondary btn-dists">Z</button>
+        <button type="button" class="btn btn-outline-secondary btn-dists">T-student</button>
+        <button type="button" class="btn btn-outline-secondary btn-dists">X</button>
+    </div>
 </div>
 
+<div class="row container mt-2">
+        
+        <div class="card col-12 col-md-5 container mt-3">
+            <form (ngSubmit)="calcularZ()" [formGroup]="formZ" autocomplete="off">
+                <div class="mt-3 mb-3">
+                    <h5 class="text-center"> <ng-katex [equation]="zMenor"></ng-katex> </h5>
+                    <label class="col col-form-label">
+                        Ingrese el valor de <ng-katex [equation]="x"></ng-katex>
+                    </label>
+                    
+                    <div class="col">
+                      <input type="number" 
+                        class="form-control"
+                        formControlName="valorZ"
+                        placeholder="Ingrese el valor de x">
+                    </div>
 
-<!-- Tucno -->
-<!-- Rivera -->
-<!-- Jamil -->
-<!-- Mirko -->
+                    <div class="mt-3 text-center">
+                        <button class="btn btn-success btn-calcular1"
+                            type="submit"
+                            [disabled]="formZ.invalid">
+                            Calcular
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="card container text-center resultado mb-2 fs-5" *ngIf="mostrarValorZ && !error">
+                EL valor de Z es: {{res}}
+            </div>
+
+            <div class="card container text-center resultado mb-2" *ngIf="mostrarValorZ! && error">
+                Error
+            </div>
+
+        </div>
+
+        <!-- Mayor -->
+        <div class="card col-12 col-md-5 container mt-2">
+            <form (ngSubmit)="calcularZ2()" [formGroup]="formZ2" autocomplete="off">
+                <div class="mt-3 mb-3">
+                    <h5 class="text-center"> <ng-katex [equation]="zMayor"></ng-katex> </h5>
+                    <label class="col col-form-label">
+                        Ingrese el valor de <ng-katex [equation]="x"></ng-katex>
+                    </label>
+                    
+                    <div class="col">
+                      <input type="number" 
+                        class="form-control"
+                        formControlName="valorZ2"
+                        placeholder="Ingrese el valor de x">
+                    </div>
+
+                    <div class="mt-3 text-center">
+                        <button class="btn btn-success btn-calcular2"
+                            type="submit"
+                            [disabled]="formZ2.invalid">
+                            Calcular
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="card container text-center resultado mb-2 fs-5" *ngIf="mostrarValorZ2 && !error2">
+                EL valor de Z es: {{res2}}
+            </div>
+
+            <div class="card container text-center resultado mb-2" *ngIf="mostrarValorZ2! && error2">
+                Error
+            </div>
+
+        </div>
+</div>
+
+<!-- Visor de PDF -->
+<div class="row mt-4">
+    <h2 class="fw-light text-black-50 text-center">¿No encontró lo que busca?</h2>
+    <h6 class="fw-light text-black-50 text-center"><em>Puede buscar en esta tabla de probabilidades</em></h6>
+    <iframe src="../../../../assets/docs/tablas.pdf" class="tabla col-12"></iframe>
+</div>

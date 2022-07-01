@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-vac-chicuad',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VacChicuadComponent implements OnInit {
 
-  constructor() { }
-
   ngOnInit(): void {
+    this.title.setTitle('Inferencia | v.a.c. Chi-Cuadrado');
   }
+
+  constructor( private title: Title ) { }
 
 }

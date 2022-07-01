@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-vad-geometrica',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VadGeometricaComponent implements OnInit {
 
-  constructor() { }
+  ngOnInit(): void {
+    this.title.setTitle('Inferencia | v.a.d. Geométrica');
+  }
+
+  constructor( private title: Title ) { }
 
   //ecuaciones
   p = 'p';
@@ -22,13 +27,5 @@ export class VadGeometricaComponent implements OnInit {
   //teorema
   teoremaa = '\\ \\ \\mu = \\dfrac{1}{p}';
   teoremab = '\\ \\ \\sigma^2 = \\dfrac{q}{p^2}';
-
-
-
-
-
-
-  ngOnInit(): void {
-  }
 
 }

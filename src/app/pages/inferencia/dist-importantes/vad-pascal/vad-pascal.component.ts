@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-vad-pascal',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VadPascalComponent implements OnInit {
 
-  constructor() { }
+  ngOnInit(): void {
+    this.title.setTitle('Inferencia | v.a.d. Pascal');
+  }
+
+  constructor( private title: Title ) { }
+  
   //ecuacion
   r = 'r';
   p = 'p';
@@ -35,9 +41,5 @@ export class VadPascalComponent implements OnInit {
   ecuacion3 = 'E(X) = E\\left(\\displaystyle\\sum_{i=1}^{r}X_i\\right) = \\displaystyle\\sum_{i=1}^{r}E(X_i) = \\displaystyle\\sum_{i=1}^{r}\\dfrac{1}{p} = r\\dfrac{1}{p}';
 
   ecuacion4 = 'V(X) = V\\left(\\displaystyle\\sum_{i=1}^{r}X_i\\right) = \\displaystyle\\sum_{i=1}^{r}V(X_i) = \\displaystyle\\sum_{i=1}^{r}\\dfrac{q}{p^2} = r\\dfrac{q}{p^2} ';
-
-
-  ngOnInit(): void {
-  }
 
 }

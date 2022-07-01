@@ -1,12 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-proporcion',
   templateUrl: './proporcion.component.html',
   styleUrls: ['./proporcion.component.css']
 })
-export class ProporcionComponent {
+export class ProporcionComponent implements OnInit {
+
+  ngOnInit(): void {
+    this.formCantidad.setValue( this.porDefecto, );
+    this.title.setTitle('Inicio | Dist. Proporción');
+  }
+
+  constructor( private formBuilder: FormBuilder,
+                private title: Title ) { }
+
 
   sigma = '\\sigma^2';
   mu = '\\mu';
@@ -49,8 +59,6 @@ export class ProporcionComponent {
     return this.formCondiciones.controls[campo].errors && 
         this.formCondiciones.controls[campo].touched;
   }
-
-  constructor( private formBuilder: FormBuilder ) { }
 
   //Para una población
   guardar(){

@@ -11,7 +11,7 @@
                 value = "1"
                 formControlName="numTitulo"
                 id="onePob">
-          <label class="btn btn-outline-success"
+          <label class="btn btn-outline-success boton"
                 for="onePob">Distribuciones de probabilidad</label>
 
           <input type="radio"
@@ -20,7 +20,7 @@
                 value = "2"
                 formControlName="numTitulo"
                 id="twoPob">
-          <label class="btn btn-outline-primary" for="twoPob">Prueba de Hipótesis</label>
+          <label class="btn btn-outline-primary boton" for="twoPob">Prueba de Hipótesis</label>
 
         </div>
       </div>
@@ -40,7 +40,7 @@
       <div class="card-body">
 
         <div class="dis-probabilidad">
-          <table>
+          <table class="table">
 
             <colgroup>
               <col class="color">
@@ -156,11 +156,10 @@
         Fórmulas de <em class="fw-normal">prueba de hipótesis</em>
       </div>
     </div>
-
-    <div >
+    
       <div class="card-body">
         <div>
-          <table class="tabla">
+          <table class="table tabla">
             <tr>
               <th colspan="4">ESTIMACIÓN Y PRUEBA DE HIPOTESIS</th>
             </tr>
@@ -168,7 +167,7 @@
               <th>Parámetro </th>
               <th colspan="2">Intervalos de Confianza</th>
               <th >Estadístico de Prueba</th>
-              
+
             </tr>
             <tr>
               <td rowspan="2"> <ng-katex [equation]="mu"></ng-katex></td>
@@ -177,10 +176,10 @@
               <td rowspan="2"><ng-katex [equation]="Z1"></ng-katex>&nbsp; &nbsp;&nbsp;    <ng-katex [equation]="t1"></ng-katex></td>
             </tr>
             <tr>
-              
+
               <td> <ng-katex [equation]="IC1"></ng-katex></td>
               <td><ng-katex [equation]="IC2"></ng-katex></td>
-              
+
             </tr>
             <tr>
               <td><ng-katex [equation]="sigma2"></ng-katex></td>
@@ -197,16 +196,16 @@
               <td colspan="2">Varianzas conocidas</td>
             </tr>
             <tr>
-              
+
               <td colspan="2"><ng-katex [equation]="ICvc"></ng-katex></td>
               <td><ng-katex [equation]="Zvc"></ng-katex></td>
             </tr>
             <tr>
-              
+
               <td colspan="2">Varianzas desconocidas pero iguales (homogéneas)</td>
             </tr>
             <tr>
-              
+
               <td colspan="2">
                 <div><ng-katex [equation]="ICvdh"></ng-katex>  </div>
                 <br/>
@@ -221,11 +220,11 @@
               </td>
             </tr>
             <tr>
-              
+
               <td colspan="2">Varianzas desconocidas y diferentes (heterogéneas)</td>
             </tr>
             <tr>
-              
+
               <td colspan="2">Ecuacion 1</td>
               <td>Ecuacion 2</td>
             </tr>
@@ -234,7 +233,7 @@
               <td colspan="2">Ecuacion 1</td>
               <td>Ecuacion 2</td>
             </tr>
-      
+
           </table>
         </div>
   </div>

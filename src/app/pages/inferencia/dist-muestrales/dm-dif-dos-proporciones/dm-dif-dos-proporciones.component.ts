@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-dm-dif-dos-proporciones',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DmDifDosProporcionesComponent implements OnInit {
 
-  constructor() { }
+  ngOnInit(): void {
+    this.title.setTitle('Inferencia | d.m. dif. Proporciones');
+  }
+
+  constructor( private title: Title ) { }
+  
   //Ecuaciones
   X = 'X_1,X_2,...,X_{n_1}'
   Y = 'Y_1,Y_2,...,Y_{n_2}'
@@ -27,8 +33,6 @@ export class DmDifDosProporcionesComponent implements OnInit {
   Z = 'Z=\\displaystyle\\frac{{\\bar{P}}_1-{\\bar{P}}_2-({\\bar{p}}_1-{\\bar{p}}_2)}{\\sigma_{{\\bar{P}}_1-{\\bar{P}}_2}}';
   N = 'N(0,1)';
   EE = '\\sigma_{{\\bar{P}}_1-{\\bar{P}}_2}';
-  FEE ='\\sigma_{{\\bar{P}}_1-{\\bar{P}}_2}=\\displaystyle\\sqrt{\\frac{p_1(1-p_1)}{n_1}+\\frac{p_2(1-p_2)}{n_2}}'
-  ngOnInit(): void {
-  }
+  FEE ='\\sigma_{{\\bar{P}}_1-{\\bar{P}}_2}=\\displaystyle\\sqrt{\\frac{p_1(1-p_1)}{n_1}+\\frac{p_2(1-p_2)}{n_2}}';
 
 }

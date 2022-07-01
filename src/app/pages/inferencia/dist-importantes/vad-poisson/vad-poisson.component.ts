@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-vad-poisson',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VadPoissonComponent implements OnInit {
 
-  constructor() { }
+  ngOnInit(): void {
+    this.title.setTitle('Inferencia | v.a.d. Poisson');
+  }
+
+  constructor( private title: Title ) { }
 
   //ecuaciones
   landa = '\\lambda (\\lambda > 0)';
@@ -25,8 +30,5 @@ export class VadPoissonComponent implements OnInit {
   //teorema
   me = '\\mu = \\lambda';
   vari = '\\sigma^2 = \\lambda';
-
-  ngOnInit(): void {
-  }
 
 }

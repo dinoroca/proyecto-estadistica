@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-formulario',
@@ -13,10 +14,16 @@ export class FormularioComponent implements OnInit {
   });
 
   porDefecto = {
-    numPoblation: '1'
+    numTitulo: '1'
   }
 
-  constructor( private formBuilder: FormBuilder ) { }
+  constructor( private formBuilder: FormBuilder,
+              private title: Title ) { }
+
+  ngOnInit(): void {
+    this.formCantidad.setValue( this.porDefecto );
+    this.title.setTitle('Formulario');
+  }
 
   //ecuaciones DISTRIBUCIONES DE PROBABILIDAD
   //Bernoulli
@@ -112,9 +119,5 @@ media9 = 'E(X)=\\alpha \\beta';
     ICvdh2 ='S^2_p=\\displaystyle\\frac{(n_1-1)S^2_1 + (n_2-1)S^2_2 }{n_1+n_2-2}';
     gl = '(g.l.)=n_1+n_2-2'
     Tvch = 't =\\displaystyle\\frac{(\\bar{X_1}-\\bar{X_2})-(\\bar{\\mu_1}-\\bar{\\mu_2})}{\\sqrt{S^2_p \\left(\\frac{1}{n_1} + \\frac{1}{n_2}\\right)}}';
-    
-  ngOnInit(): void {
-    this.formCantidad.setValue( this.porDefecto );
-  }
 
 }

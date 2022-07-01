@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 import { KatexOptions } from 'ng-katex';
 
 @Component({
@@ -280,10 +281,12 @@ export class MediasComponent implements OnInit{
     }
   }
 
-  constructor( private formBuilder: FormBuilder ) { }
+  constructor( private formBuilder: FormBuilder,
+              private title: Title ) { }
 
   ngOnInit(): void {
     this.formCantidad.setValue( this.porDefecto );
+    this.title.setTitle('Inicio | Dist. Media');
   }
 
 }
