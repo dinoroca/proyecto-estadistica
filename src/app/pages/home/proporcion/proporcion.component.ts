@@ -21,6 +21,7 @@ export class ProporcionComponent implements OnInit {
   sigma = '\\sigma^2';
   mu = '\\mu';
   n = 'n';
+  p = 'p';
   n1 = 'n_1';
   n2 = 'n_2';
   rho = '\\rho';
