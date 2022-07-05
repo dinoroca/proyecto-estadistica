@@ -5,21 +5,10 @@
     <form [formGroup]="formCantidad">
       <div class="row num-poblacion">
         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-          <input type="radio"
-                class="btn-check"
-                autocomplete="off"
-                value = "1"
-                formControlName="numTitulo"
-                id="onePob">
-          <label class="btn btn-outline-success boton"
-                for="onePob">Distribuciones de probabilidad</label>
+          <input type="radio" class="btn-check" autocomplete="off" value="1" formControlName="numTitulo" id="onePob">
+          <label class="btn btn-outline-success boton" for="onePob">Distribuciones de probabilidad</label>
 
-          <input type="radio"
-                class="btn-check"
-                autocomplete="off"
-                value = "2"
-                formControlName="numTitulo"
-                id="twoPob">
+          <input type="radio" class="btn-check" autocomplete="off" value="2" formControlName="numTitulo" id="twoPob">
           <label class="btn btn-outline-primary boton" for="twoPob">Prueba de Hipótesis</label>
 
         </div>
@@ -55,88 +44,171 @@
             <tbody>
               <tr>
                 <td class="nigga">Bernoulli</td>
-                <td><ng-katex [equation]="dis1"></ng-katex></td>
-                <td><ng-katex [equation]="p1"></ng-katex></td>
-                <td><ng-katex [equation]="media1"></ng-katex></td>
-                <td><ng-katex [equation]="varianza1"></ng-katex></td>
+                <td>
+                  <ng-katex [equation]="dis1"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="p1"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="media1"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="varianza1"></ng-katex>
+                </td>
               </tr>
 
               <tr>
                 <td class="nigga">Binomial</td>
-                <td><ng-katex [equation]="dis2"></ng-katex></td>
-                <td><ng-katex [equation]="p2"></ng-katex></td>
-                <td><ng-katex [equation]="media2"></ng-katex></td>
-                <td><ng-katex [equation]="varianza2"></ng-katex></td>
+                <td>
+                  <ng-katex [equation]="dis2"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="p2"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="media2"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="varianza2"></ng-katex>
+                </td>
               </tr>
 
               <tr>
                 <td class="nigga">Hipergeométrica</td>
-                <td><ng-katex [equation]="dis3"></ng-katex></td>
-                <td><ng-katex [equation]="p3"></ng-katex></td>
-                <td><ng-katex [equation]="media3"></ng-katex></td>
-                <td><ng-katex [equation]="varianza3"></ng-katex></td>
+                <td>
+                  <ng-katex [equation]="dis3"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="p3"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="media3"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="varianza3"></ng-katex>
+                </td>
               </tr>
 
               <tr>
                 <td class="nigga">Poisson</td>
-                <td><ng-katex [equation]="dis4"></ng-katex></td>
-                <td><ng-katex [equation]="p4"></ng-katex></td>
-                <td><ng-katex [equation]="media4"></ng-katex></td>
-                <td><ng-katex [equation]="varianza4"></ng-katex></td>
+                <td>
+                  <ng-katex [equation]="dis4"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="p4"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="media4"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="varianza4"></ng-katex>
+                </td>
               </tr>
 
               <tr>
                 <td class="nigga">Geométrica</td>
-                <td><ng-katex [equation]="dis5"></ng-katex></td>
-                <td><ng-katex [equation]="p5"></ng-katex></td>
-                <td><ng-katex [equation]="media5"></ng-katex></td>
-                <td><ng-katex [equation]="varianza5"></ng-katex></td>
+                <td>
+                  <ng-katex [equation]="dis5"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="p5"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="media5"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="varianza5"></ng-katex>
+                </td>
               </tr>
 
               <tr>
                 <td class="nigga">Pascal</td>
-                <td><ng-katex [equation]="dis6"></ng-katex></td>
-                <td><ng-katex [equation]="p6"></ng-katex></td>
-                <td><ng-katex [equation]="media6"></ng-katex></td>
-                <td><ng-katex [equation]="varianza6"></ng-katex></td>
+                <td>
+                  <ng-katex [equation]="dis6"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="p6"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="media6"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="varianza6"></ng-katex>
+                </td>
               </tr>
 
               <tr>
                 <td class="nigga">Normal</td>
-                <td><ng-katex [equation]="dis7"></ng-katex></td>
-                <td><ng-katex [equation]="p7"></ng-katex></td>
-                <td><ng-katex [equation]="media7"></ng-katex></td>
-                <td><ng-katex [equation]="varianza7"></ng-katex></td>
+                <td>
+                  <ng-katex [equation]="dis7"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="p7"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="media7"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="varianza7"></ng-katex>
+                </td>
               </tr>
 
               <tr>
                 <td class="nigga">Uniforme</td>
-                <td><ng-katex [equation]="dis8"></ng-katex></td>
-                <td><ng-katex [equation]="p8"></ng-katex></td>
-                <td><ng-katex [equation]="media8"></ng-katex></td>
-                <td><ng-katex [equation]="varianza8"></ng-katex></td>
+                <td>
+                  <ng-katex [equation]="dis8"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="p8"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="media8"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="varianza8"></ng-katex>
+                </td>
               </tr>
 
               <tr>
                 <td class="nigga">Gamma</td>
-                <td><ng-katex [equation]="dis9"></ng-katex></td>
                 <td>
-                  <p><ng-katex [equation]="p9"></ng-katex>, cuando <ng-katex [equation]="p91"></ng-katex></p>
-                  <p class="sin-esp"><ng-katex [equation]="p92"></ng-katex></p>
+                  <ng-katex [equation]="dis9"></ng-katex>
                 </td>
-                <td><ng-katex [equation]="media9"></ng-katex></td>
-                <td><ng-katex [equation]="varianza9"></ng-katex></td>
+                <td>
+                  <p>
+                    <ng-katex [equation]="p9"></ng-katex>, cuando <ng-katex [equation]="p91"></ng-katex>
+                  </p>
+                  <p class="sin-esp">
+                    <ng-katex [equation]="p92"></ng-katex>
+                  </p>
+                </td>
+                <td>
+                  <ng-katex [equation]="media9"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="varianza9"></ng-katex>
+                </td>
               </tr>
 
               <tr>
                 <td class="nigga">Exponencial</td>
-                <td><ng-katex [equation]="dis10"></ng-katex></td>
                 <td>
-                  <p class="sin-esp"><ng-katex [equation]="p10"></ng-katex>, donde <ng-katex [equation]="p101"></ng-katex></p>
-                  <p class="sin-esp">Función acumulada: <ng-katex [equation]="p102"></ng-katex></p>
+                  <ng-katex [equation]="dis10"></ng-katex>
                 </td>
-                <td><ng-katex [equation]="media10"></ng-katex></td>
-                <td><ng-katex [equation]="varianza10"></ng-katex></td>
+                <td>
+                  <p class="sin-esp">
+                    <ng-katex [equation]="p10"></ng-katex>, donde <ng-katex [equation]="p101"></ng-katex>
+                  </p>
+                  <p class="sin-esp">Función acumulada: <ng-katex [equation]="p102"></ng-katex>
+                  </p>
+                </td>
+                <td>
+                  <ng-katex [equation]="media10"></ng-katex>
+                </td>
+                <td>
+                  <ng-katex [equation]="varianza10"></ng-katex>
+                </td>
               </tr>
             </tbody>
 
@@ -156,86 +228,168 @@
         Fórmulas de <em class="fw-normal">prueba de hipótesis</em>
       </div>
     </div>
-    
-      <div class="card-body">
-        <div>
-          <table class="table tabla">
-            <tr>
-              <th colspan="4">ESTIMACIÓN Y PRUEBA DE HIPOTESIS</th>
-            </tr>
-            <tr>
-              <th>Parámetro </th>
-              <th colspan="2">Intervalos de Confianza</th>
-              <th >Estadístico de Prueba</th>
 
-            </tr>
-            <tr>
-              <td rowspan="2"> <ng-katex [equation]="mu"></ng-katex></td>
-              <td>Varianza conocida</td>
-              <td>Varianza desconocida</td>
-              <td rowspan="2"><ng-katex [equation]="Z1"></ng-katex>&nbsp; &nbsp;&nbsp;    <ng-katex [equation]="t1"></ng-katex></td>
-            </tr>
-            <tr>
+    <div class="card-body">
+      <div>
+        <table class="table tabla">
+          <tr>
+            <th colspan="4">ESTIMACIÓN Y PRUEBA DE HIPOTESIS</th>
+          </tr>
+          <tr>
+            <th>Parámetro </th>
+            <th colspan="2">Intervalos de Confianza</th>
+            <th>Estadístico de Prueba</th>
 
-              <td> <ng-katex [equation]="IC1"></ng-katex></td>
-              <td><ng-katex [equation]="IC2"></ng-katex></td>
+          </tr>
+          <tr>
+            <td rowspan="2">
+              <ng-katex [equation]="mu"></ng-katex>
+            </td>
+            <td>Varianza conocida</td>
+            <td>Varianza desconocida</td>
+            <td rowspan="2">
+              <ng-katex [equation]="Z1"></ng-katex>&nbsp; &nbsp;&nbsp; <ng-katex [equation]="t1"></ng-katex>
+            </td>
+          </tr>
+          <tr>
 
-            </tr>
-            <tr>
-              <td><ng-katex [equation]="sigma2"></ng-katex></td>
-              <td colspan="2"> <ng-katex [equation]="LIC1"></ng-katex>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;   <ng-katex [equation]="LIC2"></ng-katex></td>
-              <td ><ng-katex [equation]="X2"></ng-katex></td>
-            </tr>
-            <tr>
-              <td><ng-katex [equation]="P"></ng-katex></td>
-              <td colspan="2"><ng-katex [equation]="ICp"></ng-katex> &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  <ng-katex [equation]="q"></ng-katex></td>
-              <td ><ng-katex [equation]="Zp"></ng-katex></td>
-            </tr>
-            <tr>
-              <td rowspan="6"> muestras <br/>independientes</td>
-              <td colspan="2">Varianzas conocidas</td>
-            </tr>
-            <tr>
+            <td>
+              <ng-katex [equation]="IC1"></ng-katex>
+            </td>
+            <td>
+              <ng-katex [equation]="IC2"></ng-katex>
+            </td>
 
-              <td colspan="2"><ng-katex [equation]="ICvc"></ng-katex></td>
-              <td><ng-katex [equation]="Zvc"></ng-katex></td>
-            </tr>
-            <tr>
+          </tr>
+          <tr>
+            <td>
+              <ng-katex [equation]="sigma2"></ng-katex>
+            </td>
+            <td colspan="2">
+              <ng-katex [equation]="LIC1"></ng-katex>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <ng-katex
+                [equation]="LIC2"></ng-katex>
+            </td>
+            <td>
+              <ng-katex [equation]="X2"></ng-katex>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ng-katex [equation]="P"></ng-katex>
+            </td>
+            <td colspan="2">
+              <ng-katex [equation]="ICp"></ng-katex> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ng-katex [equation]="q">
+              </ng-katex>
+            </td>
+            <td>
+              <ng-katex [equation]="Zp"></ng-katex>
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="6"> muestras <br />independientes</td>
+            <td colspan="2">Varianzas conocidas</td>
+          </tr>
+          <tr>
 
-              <td colspan="2">Varianzas desconocidas pero iguales (homogéneas)</td>
-            </tr>
-            <tr>
+            <td colspan="2">
+              <ng-katex [equation]="ICvc"></ng-katex>
+            </td>
+            <td>
+              <ng-katex [equation]="Zvc"></ng-katex>
+            </td>
+          </tr>
+          <tr>
 
-              <td colspan="2">
-                <div><ng-katex [equation]="ICvdh"></ng-katex>  </div>
-                <br/>
-                <div>donde:<ng-katex [equation]="ICvdh2"></ng-katex></div>
-                <br/>
-                <div>grados de libertad: <ng-katex [equation]="gl"></ng-katex></div>
+            <td colspan="2">Varianzas desconocidas pero iguales (homogéneas)</td>
+          </tr>
+          <tr>
+
+            <td colspan="2">
+              <div>
+                <ng-katex [equation]="ICvdh"></ng-katex>
+              </div>
+              <br />
+              <div>donde:<ng-katex [equation]="ICvdh2"></ng-katex>
+              </div>
+              <br />
+              <div>grados de libertad: <ng-katex [equation]="gl"></ng-katex>
+              </div>
+            </td>
+            <td>
+              <div>
+                <ng-katex [equation]="Tvch"></ng-katex>
+              </div>
+              <br />
+              <div>donde:<ng-katex [equation]="ICvdh2"></ng-katex>
+              </div>
+            </td>
+          </tr>
+          <tr>
+
+            <td colspan="2">Varianzas desconocidas y diferentes (heterogéneas)</td>
+          </tr>
+          <tr>
+
+            <td colspan="2">Ecuacion 1</td>
+            <td>Ecuacion 2</td>
+          </tr>
+          <tr>
+            <td>Muestras <br /> relacionadas</td>
+            <td colspan="2">Ecuacion 1</td>
+            <td>Ecuacion 2</td>
+          </tr>
+
+        </table>
+      </div>
+
+      <div class="card-table">
+        <table class="table">
+          <thead>
+            <tr>
+              <td colspan="2">Valores críticos para una prueba de hipótesis unilateral de una varianza</td>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>
+                <p>Cálculo del valor crítico “Cola izquierda”</p>
+                <p class="sin-esp"><ng-katex [equation]="cola_iz"></ng-katex></p>
               </td>
               <td>
-                <div><ng-katex [equation]="Tvch"></ng-katex>  </div>
-                <br/>
-                <div>donde:<ng-katex [equation]="ICvdh2"></ng-katex></div>
+                <p>Cálculo del valor crítico “Cola derecha”</p>
+                <p class="sin-esp"><ng-katex [equation]="cola_iz2"></ng-katex></p>
               </td>
             </tr>
-            <tr>
+          </tbody>
+        </table>
 
-              <td colspan="2">Varianzas desconocidas y diferentes (heterogéneas)</td>
-            </tr>
-            <tr>
+      </div>
 
-              <td colspan="2">Ecuacion 1</td>
-              <td>Ecuacion 2</td>
-            </tr>
+      <div class="card-table">
+        <table class="table">
+          <thead>
             <tr>
-              <td>Muestras <br/> relacionadas</td>
-              <td colspan="2">Ecuacion 1</td>
-              <td>Ecuacion 2</td>
+              <td colspan="2">Valores críticos para una prueba de hipótesis bilateral para el cociente de varianzas</td>
             </tr>
+          </thead>
 
-          </table>
-        </div>
+          <tbody>
+            <tr>
+              <td>
+                <p>Cálculo del valor crítico izquierda</p>
+                <p class="sin-esp"><ng-katex [equation]="Fizq"></ng-katex></p>
+              </td>
+              <td>
+                <p>Cálculo del valor crítico derecha</p>
+                <p class="sin-esp"><ng-katex [equation]="Fder"></ng-katex></p>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+
+    </div>
+
   </div>
-
-</div>
