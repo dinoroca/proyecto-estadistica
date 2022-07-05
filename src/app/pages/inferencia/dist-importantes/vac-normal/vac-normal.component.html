@@ -5,7 +5,46 @@
     </div>
 
     <div class="col-12 col-md-9 -content">
-        VAC Normal
+        <h2 class="fw-bold mt-1">Distribución Normal</h2>
+        <hr>
+        
+        <p>
+            <b>Definición.</b>
+            Se dice que una variable aleatoria continua, <ng-katex [equation]="x"></ng-katex>, toma los valores reales, <ng-katex [equation]="intervalo"></ng-katex>, se <b>distribuye normalmente</b> (o es <i>normal</i>) con parámetros <ng-katex [equation]="mu"></ng-katex> y <ng-katex [equation]="sigma"></ng-katex> y se describe por <ng-katex [equation]="dnormal"></ng-katex>, cuya función de densidad es:
+        </p>
+        <section class="text-center">
+            <ng-katex [equation]="fundensidnormal"></ng-katex>, <ng-katex [equation]="intervalo"></ng-katex> <br>
+            <p>donde <ng-katex [equation]="intervalomu"></ng-katex>.</p>
+        </section>
+        <p>
+            La distribución normal es el modelo probabilístico que se usa con mas frecuencia y sirve como una <b>buena aproximación</b> de muchas distribuciones que tienen aplicaciones importantes.
+        </p>
+        <h3 class="fw-bold">Propiedades de la distribución normal</h3>
+        <ol>
+            <li><b>Es simétrica</b> con respecto al eje <ng-katex [equation]="xmu"></ng-katex>, ya que <ng-katex [equation]="fdex"></ng-katex> solo depende de <ng-katex [equation]="xminus"></ng-katex> mediante la expresión <ng-katex [equation]="xmenosmu2"></ng-katex>, luego: <br>
+                <div class="text-center"><ng-katex [equation]="fmuigual"></ng-katex></div>
+            </li>
+            <li>Tiene <b>valor máximo</b> en <ng-katex [equation]="xminuscmu"></ng-katex> (su moda). Este valor máximo es: <br>
+                <div class="text-center"> <ng-katex [equation]="fdemu"></ng-katex></div>
+            </li>
+            <li>Tiene al eje <ng-katex [equation]="x"></ng-katex> como una <b><i>Asíntota horizontal</i></b>, ya que : <br>
+                <div class="text-center"><ng-katex [equation]="limfdex"></ng-katex>.</div>
+            </li>
+            <li>Tiene <b>puntos de inflexión</b> en <ng-katex [equation]="xmumenossigma"></ng-katex> y <ng-katex [equation]="xmumassigma"></ng-katex>. por tanto, es cóncava hacia abajo en el intervalo <ng-katex [equation]="intervaloxmu"></ng-katex>, y cóncava hacia arriba en cualquier otra parte.</li>
+            <li>El <b>área total</b> que encierra la curva y el eje <ng-katex [equation]="x"></ng-katex> es igual a 1.</li>
+        </ol>
+
+        <div class="text-center">
+            <!-- Siguiente -->
+            <button class="btn btn-primary mx-1" routerLink="/inferencia/vac-gamma">
+                Siguiente
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
+            </button>
+        </div>
     </div>
 </div>
 
