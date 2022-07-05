@@ -92,13 +92,13 @@ media9 = 'E(X)=\\alpha \\beta';
   //------------------------------------------
 
 // formulas de ESTIMACIÓN Y PRUEBA DE HIPOTESIS
-  //mu 
+  //mu
   mu ='\\mu';
   IC1 = 'IC(\\mu)=\\displaystyle\\bar{X}\\pm Z_{1-\\alpha/2}\\frac{\\sigma}{\\sqrt{n}}';
   IC2 = 'IC(\\mu)=\\displaystyle\\bar{x}\\pm t_{\\left(\\normalsize\\frac{\\alpha}{2},n-1\\right)}\\frac{s}{\\sqrt{n}}';
   Z1 = 'Z=\\displaystyle\\frac{\\bar{x}-\\mu}{\\frac{\\sigma}{\\sqrt{n}}}\\sim N(0,1)';
   t1 = 't=\\displaystyle\\frac{\\bar{x}-\\mu}{\\frac{S}{\\sqrt{n}}}\\sim t_(n-1)';
-  
+
   //sigma^2
   sigma2 ='\\sigma^2'
   LIC1 = 'LIC(\\sigma^2)=\\displaystyle\\frac{\\left(n-1\\right)S^2}{{X^2}_{(\\normalsize\\frac{\\alpha}{2},n-1)}}';
@@ -119,5 +119,11 @@ media9 = 'E(X)=\\alpha \\beta';
     ICvdh2 ='S^2_p=\\displaystyle\\frac{(n_1-1)S^2_1 + (n_2-1)S^2_2 }{n_1+n_2-2}';
     gl = '(g.l.)=n_1+n_2-2'
     Tvch = 't =\\displaystyle\\frac{(\\bar{X_1}-\\bar{X_2})-(\\bar{\\mu_1}-\\bar{\\mu_2})}{\\sqrt{S^2_p \\left(\\frac{1}{n_1} + \\frac{1}{n_2}\\right)}}';
+
+  //
+  cola_iz = '\\chi_{Crit-Izq}^{2} = \\chi_{tab}^{2}(1-\\alpha,n-1)';
+  cola_iz2 = '\\chi_{Crit-Izq}^{2} = \\chi_{tab}^{2}(\\alpha,n-1)';
+  Fizq = 'F_{Crit-Izq} = \\dfrac{1}{F_{tab}[\\dfrac{\\alpha}{2},(n_2-1);(n_1-1)]}';
+  Fder = 'F_{Crit-Der} = F_{tab}[\\dfrac{\\alpha}{2},(n_2-1);(n_1-1)]';
 
 }
