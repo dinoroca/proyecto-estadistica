@@ -1,4 +1,3 @@
-
 <div class="row">
     <div class="col-12 col-md-3 -menu">
         <app-side-menu-inferencia></app-side-menu-inferencia>
@@ -33,6 +32,10 @@
             <li>Tiene <b>puntos de inflexión</b> en <ng-katex [equation]="xmumenossigma"></ng-katex> y <ng-katex [equation]="xmumassigma"></ng-katex>. por tanto, es cóncava hacia abajo en el intervalo <ng-katex [equation]="intervaloxmu"></ng-katex>, y cóncava hacia arriba en cualquier otra parte.</li>
             <li>El <b>área total</b> que encierra la curva y el eje <ng-katex [equation]="x"></ng-katex> es igual a 1.</li>
         </ol>
+        <h3 class="fw-bold">Teorema</h3>
+        <p>Si la variable  aleatoria <ng-katex [equation]="x"></ng-katex> tiene distribución normal <ng-katex [equation]="dnormal2"></ng-katex>, entoces: <br>
+        </p>
+        <div class="text-center">a)<ng-katex class="px-1" [equation]="exmu"></ng-katex><span class="px-3">y</span>b) <ng-katex class="px-1" [equation]="varx"></ng-katex>. <br><br></div>
 
         <div class="text-center">
             <!-- Siguiente -->

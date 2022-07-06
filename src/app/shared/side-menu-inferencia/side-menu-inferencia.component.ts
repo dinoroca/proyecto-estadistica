@@ -41,23 +41,23 @@ export class SideMenuInferenciaComponent {
 
   distVacMenu: MenuItem[] = [
     {
-      texto: 'Distribución normal',
+      texto: 'Distribución Normal',
       ruta: '/inferencia/vac-normal'
     },
     {
-      texto: 'Distribución gamma',
+      texto: 'Distribución Gamma',
       ruta: '/inferencia/vac-gamma'
     },
     {
-      texto: 'Distribución exponencial',
+      texto: 'Distribución Exponencial',
       ruta: '/inferencia/vac-exponencial'
     },
     {
-      texto: 'Distribución Chi-cuacrado',
+      texto: 'Distribución Chi-Cuadrado',
       ruta: '/inferencia/vac-chicuadrado'
     },
     {
-      texto: 'Distribución t-Student',
+      texto: 'Distribución T-Student',
       ruta: '/inferencia/vac-tstudent'
     },
     {
