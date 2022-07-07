@@ -18,9 +18,10 @@
         <p>La distribución exponencial es un caso particular de la distribución gamma cuando <ng-katex [equation]="alpha1"></ng-katex>. Luego, si la variable aleatoria <ng-katex [equation]="x"></ng-katex> tiene distribución exponencial con parámetro <ng-katex [equation]="beta"></ng-katex> o <ng-katex [equation]="dgamma1"></ng-katex>, entonces tiene:</p>
         <p>a) Media: <ng-katex [equation]="medexp"></ng-katex> <span class="px-3">y</span> b) Varianza: <ng-katex [equation]="varexp"></ng-katex>
         </p>
-        <p>Por otra parte ...</p>
+        <p>Por otra parte, su función de distribución acumulada en el intervalo <ng-katex [equation]="interv1"></ng-katex> es:</p>
+        <div class="text-center pb-2"><ng-katex [equation]="fdistacum"></ng-katex>.</div>
 
-        <div class="text-center">
+        <div class="text-center py-3">
             <!-- Atrás -->
             <button class="btn btn-warning mx-1" routerLink="/inferencia/vac-gamma">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"

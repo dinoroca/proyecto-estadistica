@@ -29,4 +29,6 @@ export class VacExponencialComponent implements OnInit {
   dgamma1 = 'X \\sim \\Gamma(1,\\beta)';
   medexp = '\\mu=\\dfrac{1}{\\beta}';
   varexp = '\\sigma^2=\\dfrac{1}{\\beta^2}';
+  interv1 = '[0,+\\infty)';
+  fdistacum = 'f(x)=P[X \\leq x] = \\int_0^x \\beta e^{-\\beta x} dt = 1 - e^{-\\beta x}, 0 \\leq x < \\infty';
 }

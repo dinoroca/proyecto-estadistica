@@ -9,8 +9,46 @@
         <hr>
         
         <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam debitis dolorum incidunt distinctio dolores quos inventore tenetur aliquid quae, sint dolor? Quod libero accusantium facere cupiditate quae officia sint mollitia quia voluptates ratione vitae officiis quis adipisci, eveniet saepe architecto suscipit veritatis hic. Itaque suscipit incidunt nobis nisi nemo corrupti!
+            <b>Definición.</b> Se dice que la variable aleatoria continua <ng-katex [equation]="x"></ng-katex> tiene <b>distribución chi-cuadrado con <ng-katex [equation]="r"></ng-katex> grados de libertad</b>, y se representa por <ng-katex [equation]="dchicuad"></ng-katex>, si su función de densidad es:
         </p>
+        <section class="text-center">
+            <ng-katex [equation]="fundensidchi2"></ng-katex><br>
+            <p>donde <ng-katex [equation]="r"></ng-katex> es un número entero positivo.</p>
+        </section>
+        
+        <h3 class="fw-normal">Nota:</h3>
+        <p>La distribución chi-cuadrado es un caso particular de la distribución gamma cuando <ng-katex [equation]="alpha1"></ng-katex> y <ng-katex [equation]="beta1"></ng-katex>. Luego, si la variable aleatoria <ng-katex [equation]="x"></ng-katex> tiene distribución <ng-katex [equation]="dchicuad"></ng-katex> o si <ng-katex [equation]="dgamma1"></ng-katex>, entonces, su media y su varianza respectivamente son:</p>
+        <p>a) <ng-katex [equation]="medexp"></ng-katex> <span class="px-3">y</span> b) <ng-katex [equation]="varexp"></ng-katex>
+        </p>
+
+        <h3 class="fw-bold">Propiedades</h3>
+        <p>Las siguientes proposiciones son de importancia para esta distribución:</p>
+        <ol>
+            <li>Si <ng-katex [equation]="znorm"></ng-katex>, entonces,  <ng-katex [equation]="zchi2"></ng-katex>.</li>
+            <li>Si <ng-katex [equation]="znr"></ng-katex>, son <ng-katex [equation]="r"></ng-katex> variables aleatorias independientes tales que <ng-katex [equation]="zinorm"></ng-katex>, para cada <ng-katex [equation]="ir"></ng-katex>, entonces: <br> <div class="text-center"><ng-katex [equation]="sumzchi2"></ng-katex></div>Con frecuencia, <ng-katex [equation]="chi2r"></ng-katex>, se define como la suma de los cuadrados de <ng-katex [equation]="r"></ng-katex> variables aleatorias independientes distribuidas cada una como <ng-katex [equation]="dnorm"></ng-katex>.</li>
+            <li><b>Propiedad reproductiva de la distribución chi-cuadrado</b><br>Si <ng-katex [equation]="xk"></ng-katex>, son <ng-katex [equation]="k"></ng-katex> variables aleatorias independientes tales que <ng-katex [equation]="xichi2"></ng-katex>, para cada <ng-katex [equation]="ik"></ng-katex>, entonces: <br><div class="text-center"><ng-katex [equation]="sumxchi2"></ng-katex>.</div></li>
+        </ol>
+
+        <div class="text-center py-3">
+            <!-- Atrás -->
+            <button class="btn btn-warning mx-1" routerLink="/inferencia/vac-exponencial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                </svg>
+                Anterior
+            </button>
+            <!-- Siguiente -->
+            <button class="btn btn-primary mx-1" routerLink="/inferencia/vac-tstudent">
+                Siguiente
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
+            </button>
+        </div>
     </div>
 </div>
 
