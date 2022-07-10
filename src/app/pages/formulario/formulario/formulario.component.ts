@@ -134,5 +134,6 @@ media9 = 'E(X)=\\alpha \\beta';
   dbarra = '\\bar{d} = \\dfrac{\\displaystyle\\sum_{i=1}^n d_i}{n}';
   sd = 'S_d = \\sqrt{\\dfrac{\\displaystyle\\sum_{i=1}^{n}(d_i -\\bar{d})^2}{n-1}}';
   tsd = 't = \\dfrac{\\bar{d} -\\mu_d}{S_d / \\sqrt{n}} \\sim t_{(n-1)}';
-
+  di = 'd_i = x_{1i} - x_{2i} ';
+  mud = '\\mu_d = \\mu_1 - \\mu_2';
 }
