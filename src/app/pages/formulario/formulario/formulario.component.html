@@ -330,7 +330,15 @@
           </tr>
           <tr>
 
-            <td colspan="2">Ecuacion 1</td>
+            <td colspan="2">
+              <div>
+                <ng-katex [equation]="ICdifmu12"></ng-katex>
+              </div>
+              <div>
+                Grados de libertad (g.l.) = <ng-katex [equation]="v"></ng-katex> donde <ng-katex [equation]="vecuation"></ng-katex> 
+              </div>
+              <div>"<ng-katex [equation]="v"></ng-katex>" valor truncado, sin decimales</div>
+            </td>
             <td>Ecuacion 2</td>
           </tr>
           <tr>
