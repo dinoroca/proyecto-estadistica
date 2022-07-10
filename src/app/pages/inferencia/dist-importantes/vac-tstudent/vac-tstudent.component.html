@@ -9,7 +9,44 @@
         <hr>
         
         <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam debitis dolorum incidunt distinctio dolores quos inventore tenetur aliquid quae, sint dolor? Quod libero accusantium facere cupiditate quae officia sint mollitia quia voluptates ratione vitae officiis quis adipisci, eveniet saepe architecto suscipit veritatis hic. Itaque suscipit incidunt nobis nisi nemo corrupti!
+            <b>Definición.</b> Se dice que la variable aleatoria continua <ng-katex [equation]="t"></ng-katex> se distribuye según <b>t-Student</b> (o según t) <b>con <ng-katex [equation]="r"></ng-katex> grados de libertad</b> y se representa por <ng-katex [equation]="dt"></ng-katex>, si su función de densidad es:
         </p>
+        <section class="text-center">
+            <ng-katex [equation]="fundensidt"></ng-katex>.<br>
+            <p>donde <ng-katex [equation]="r"></ng-katex> es un entero positivo.</p>
+        </section>
+        
+        <h3 class="fw-bold">Propiedades</h3>
+        <p> La distribución t-Student tiene las siguientes propiedades:</p>
+        <ol>
+            <li>Si <ng-katex [equation]="x"></ng-katex> tiene distribución t-Student con <ng-katex [equation]="r"></ng-katex> grados de libertad, entonces su media y su varianza son respectivamente. <br>
+                <div class="text-center"><ng-katex [equation]="medt"></ng-katex> <span class="px-3"> y </span><ng-katex [equation]="vart"></ng-katex>.</div>
+            </li>
+            <li>Su gráfica tiene forma de campana de Gauss, simétrica en cero.</li>
+            <li>La varianza de la distribución <ng-katex [equation]="tmin"></ng-katex> es mayor que la distribución <ng-katex [equation]="norm"></ng-katex>. Pero cuando <ng-katex [equation]="rinf"></ng-katex>, la varianza de la <ng-katex [equation]="tmin"></ng-katex> tiende a 1.</li>
+            <li>La distribución <ng-katex [equation]="tmin"></ng-katex> se aproxima a una distribución <ng-katex [equation]="norm"></ng-katex>, cuando <ng-katex [equation]="rinf"></ng-katex>. La aproximación es buena, si <ng-katex [equation]="r30"></ng-katex>.</li>
+        </ol>
+        
+        <div class="text-center py-3">
+            <!-- Atrás -->
+            <button class="btn btn-warning mx-1" routerLink="/inferencia/vac-chicuadrado">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                </svg>
+                Anterior
+            </button>
+            <!-- Siguiente -->
+            <button class="btn btn-primary mx-1" routerLink="/inferencia/vac-f">
+                Siguiente
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
+            </button>
+        </div>
+
     </div>
 </div>

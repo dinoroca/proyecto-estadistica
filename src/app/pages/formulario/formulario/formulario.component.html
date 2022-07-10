@@ -330,13 +330,41 @@
           </tr>
           <tr>
 
-            <td colspan="2">Ecuacion 1</td>
-            <td>Ecuacion 2</td>
+            <td colspan="2">
+              <div>
+                <ng-katex [equation]="ICdifmu12"></ng-katex>
+              </div>
+              <div>
+                Grados de libertad (g.l.) = <ng-katex [equation]="v"></ng-katex> donde <ng-katex [equation]="vecuation"></ng-katex> 
+              </div>
+              <div>"<ng-katex [equation]="v"></ng-katex>" valor truncado, sin decimales</div>
+            </td>
+            <td>
+              <div>
+                <ng-katex [equation]="estadisticot"></ng-katex><br>
+                <ng-katex [equation]="vecuation"></ng-katex>
+              </div>
+              <div>"<ng-katex [equation]="v"></ng-katex>" valor truncado, sin decimales</div>
+            </td>
           </tr>
           <tr>
             <td>Muestras <br /> relacionadas</td>
-            <td colspan="2">Ecuacion 1</td>
-            <td>Ecuacion 2</td>
+            <td colspan="2">
+              <div><ng-katex [equation]="ICmud"></ng-katex></div>
+              <div>
+                <ng-katex [equation]="dbarra"></ng-katex> <span class="px-2"></span>
+                <ng-katex [equation]="sd"></ng-katex>
+              </div>
+            </td>
+            <td>
+              <div><ng-katex [equation]="tsd"></ng-katex></div>
+              <div>donde <ng-katex [equation]="di"></ng-katex> ;<span class="px-1"></span><ng-katex [equation]="mud"></ng-katex>
+              </div>
+              <div>
+                <ng-katex [equation]="dbarra"></ng-katex> <span class="px-2"></span>
+                <ng-katex [equation]="sd"></ng-katex>
+              </div>
+            </td>
           </tr>
 
         </table>
