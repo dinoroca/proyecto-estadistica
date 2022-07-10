@@ -122,12 +122,14 @@ media9 = 'E(X)=\\alpha \\beta';
     ICdifmu12 = 'IC(\\mu_1 - \\mu_2) = \\bar{x_1} - \\bar{x_2} \\pm t_{\\left( \\frac{\\alpha}{2}, V\\right)} \\sqrt{\\dfrac{S_1^2}{n_1} + \\dfrac{S_2^2}{n_2}}';
     v = 'v';
     vecuation = 'v =\\dfrac{\\left(\\dfrac{s_1^2}{n_1} + \\dfrac{s_2^2}{n_2} \\right)^2}{\\dfrac{\\left(\\dfrac{s_1^2}{n_1} \\right)^2}{n_1 - 1} + \\dfrac{\\left(\\dfrac{s_2^2}{n_2} \\right)^2}{n_2 - 1}}';
-  //
+    estadisticot = 't = \\dfrac{(\\bar{x_1} - \\bar{x_2})-(\\mu_1 - \\mu_2)}{\\sqrt{\\dfrac{S_1^2}{n_1} + \\dfrac{S_2^2}{n_2}}} \\sim t_{(v)}';
+    
   cola_iz = '\\chi_{Crit-Izq}^{2} = \\chi_{tab}^{2}(1-\\alpha,n-1)';
   cola_iz2 = '\\chi_{Crit-Izq}^{2} = \\chi_{tab}^{2}(\\alpha,n-1)';
   Fizq = 'F_{Crit-Izq} = \\dfrac{1}{F_{tab}[\\dfrac{\\alpha}{2},(n_2-1);(n_1-1)]}';
   Fder = 'F_{Crit-Der} = F_{tab}[\\dfrac{\\alpha}{2},(n_2-1);(n_1-1)]';
 
   //muestra relacionadas
+  
 
 }
