@@ -9,8 +9,43 @@
         <hr>
         
         <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam debitis dolorum incidunt distinctio dolores quos inventore tenetur aliquid quae, sint dolor? Quod libero accusantium facere cupiditate quae officia sint mollitia quia voluptates ratione vitae officiis quis adipisci, eveniet saepe architecto suscipit veritatis hic. Itaque suscipit incidunt nobis nisi nemo corrupti!
+            <b>Definición.</b> Se dice que la variable aleatoria continua <ng-katex [equation]="x"></ng-katex> se distribuye según <ng-katex [equation]="f"></ng-katex> con <ng-katex [equation]="r1"></ng-katex> y <ng-katex [equation]="r2"></ng-katex> <i> grados de libertad </i> y se representa por <ng-katex [equation]="df"></ng-katex>, si su función de densidad es:
         </p>
+        <section class="text-center">
+            <ng-katex [equation]="fundensidf"></ng-katex>.<br>
+            <p>donde <ng-katex [equation]="r1"></ng-katex>  y <ng-katex [equation]="r2"></ng-katex>, son números enteros positivos.</p>
+        </section>
+
+        <p>Se demuestra, en particular, que si <ng-katex [equation]="u"></ng-katex> y <ng-katex [equation]="v"></ng-katex> son dos variables aleatorias independientes tales que <ng-katex [equation]="distu"></ng-katex> y <ng-katex [equation]="distv"></ng-katex>, entonces, la variable aleatoria:</p>
+        <div class="text-center"><ng-katex [equation]="xuv"></ng-katex>
+          <p>tiene distribución <ng-katex [equation]="f"></ng-katex> con <ng-katex [equation]="r1"></ng-katex> y <ng-katex [equation]="r2"></ng-katex> grados de libertad.</p>
+        </div>
+        <p>Con frecuencia la distribución <ng-katex [equation]="dfr"></ng-katex> se define como la función de densidad de esta variable <ng-katex [equation]="x"></ng-katex>.</p>
+        
+        <h3 class="fw-bold">Teorema</h3>
+        <p>Si <ng-katex [equation]="x"></ng-katex> tiene distribución <ng-katex [equation]="f"></ng-katex> con grados de libertad <ng-katex [equation]="r1"></ng-katex> y <ng-katex [equation]="r2"></ng-katex>, entonces, <ng-katex [equation]="unox"></ng-katex> tiene distribución <ng-katex [equation]="f"></ng-katex> con grados de libertad <ng-katex [equation]="r1"></ng-katex> y <ng-katex [equation]="r2"></ng-katex>, esto es:</p>
+        <div class="text-center px-2"><ng-katex [equation]="finv"></ng-katex></div>
+        
+        <div class="text-center py-3">
+            <!-- Atrás -->
+            <button class="btn btn-warning mx-1" routerLink="/inferencia/vac-tstudent">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                </svg>
+                Anterior
+            </button>
+            <!-- Siguiente -->
+            <button class="btn btn-primary mx-1" routerLink="/inferencia/tlc-binomial-normal">
+                Siguiente
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
+            </button>
+        </div>
     </div>
 </div>
 
