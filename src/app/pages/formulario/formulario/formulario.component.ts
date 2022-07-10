@@ -130,6 +130,9 @@ media9 = 'E(X)=\\alpha \\beta';
   Fder = 'F_{Crit-Der} = F_{tab}[\\dfrac{\\alpha}{2},(n_2-1);(n_1-1)]';
 
   //muestra relacionadas
-  
+  ICmud = 'IC(\\mu_d) = \\bar{d} \\pm t_{(n-1, \\alpha/2)} \\dfrac{S_d}{\\sqrt{n}}';
+  dbarra = '\\bar{d} = \\dfrac{\\displaystyle\\sum_{i=1}^n d_i}{n}';
+  sd = 'S_d = \\sqrt{\\dfrac{\\displaystyle\\sum_{i=1}^{n}(d_i -\\bar{d})^2}{n-1}}';
+  tsd = 't = \\dfrac{\\bar{d} -\\mu_d}{S_d / \\sqrt{n}} \\sim t_{(n-1)}';
 
 }
