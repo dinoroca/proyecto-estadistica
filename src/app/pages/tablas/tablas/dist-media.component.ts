@@ -19,7 +19,7 @@ export class TablasComponent implements OnInit {
   });
 
   formZ2: FormGroup = this.formBuilder.group({
-    valorZ2: ['', Validators.required]
+    valorZ2: [, [Validators.required, Validators.min(-5), Validators.max(5)]]
   });
 
   mostrarValorZ: boolean = false;
